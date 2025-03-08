@@ -3,8 +3,8 @@
   "version": "1.0.1",
   "type": "module",
   "workspaces": [
-    "@phalcode/ts-apicalypse",
-    "@phalcode/ts-igdb-client"
+    "ts-apicalypse",
+    "ts-igdb-client"
   ],
   "scripts": {
     "test": "jest",
