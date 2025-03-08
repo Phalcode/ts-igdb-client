@@ -1,5 +1,5 @@
 {
-  "name": "ts-apicalypse",
+  "name": "@phalcode/ts-apicalypse",
   "type": "module",
   "version": "1.0.0",
   "description": "A Typescript client and request builder for Apicalypse",

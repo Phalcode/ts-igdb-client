@@ -1,5 +1,5 @@
 {
-  "name": "ts-igdb-client",
+  "name": "@phalcode/ts-igdb-client",
   "type": "module",
   "version": "1.0.0",
   "description": "A Typescript client and request builder for IGDB using ts-apicalypse",

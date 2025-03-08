@@ -1,3 +1,6 @@
 packages:
-  - "ts-igdb"
-  - "ts-apicalypse"
+  - ts-igdb
+  - ts-apicalypse
+onlyBuiltDependencies:
+  - esbuild
+  - protobufjs
