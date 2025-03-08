@@ -1,6 +1,6 @@
 {
   "name": "@phalcode/mono-ts-igdb-client",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "type": "module",
   "workspaces": [
     "ts-apicalypse",

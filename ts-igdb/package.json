@@ -1,7 +1,8 @@
 {
   "name": "@phalcode/ts-igdb-client",
   "type": "module",
-  "version": "1.0.13",
+  "version": "1.0.14",
+  "private": true,
   "description": "A Typescript client and request builder for IGDB using ts-apicalypse",
   "author": "Phalcode <contact@phalco.de>",
   "keywords": [
