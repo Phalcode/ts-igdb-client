@@ -50,8 +50,5 @@
     "dts": {
       "resolve": true
     }
-  },
-  "publishConfig": {
-    "access": "public"
   }
 }
