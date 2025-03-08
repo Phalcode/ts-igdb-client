@@ -54,6 +54,9 @@ export namespace proto {
         rating_cover_url?: (string|null);
         synopsis?: (string|null);
         checksum?: (string|null);
+        organization?: (proto.IAgeRatingOrganization|null);
+        rating_category?: (proto.IAgeRatingCategory|null);
+        rating_content_descriptions?: (proto.IAgeRatingContentDescriptionV2[]|null);
     }
 
     class AgeRating implements IAgeRating {
@@ -65,6 +68,9 @@ export namespace proto {
         public rating_cover_url: string;
         public synopsis: string;
         public checksum: string;
+        public organization?: (proto.IAgeRatingOrganization|null);
+        public rating_category?: (proto.IAgeRatingCategory|null);
+        public rating_content_descriptions: proto.IAgeRatingContentDescriptionV2[];
         public static getTypeUrl(typeUrlPrefix?: string): string;
     }
 
@@ -120,6 +126,36 @@ export namespace proto {
         ACB_MA15 = 37,
         ACB_R18 = 38,
         ACB_RC = 39
+    }
+
+    interface IAgeRatingCategoryResult {
+        ageratingcategories?: (proto.IAgeRatingCategory[]|null);
+    }
+
+    class AgeRatingCategoryResult implements IAgeRatingCategoryResult {
+        constructor(properties?: proto.IAgeRatingCategoryResult);
+        public ageratingcategories: proto.IAgeRatingCategory[];
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    interface IAgeRatingCategory {
+        id?: (number|null);
+        rating?: (string|null);
+        organization?: (proto.IAgeRatingOrganization|null);
+        created_at?: (number|null);
+        updated_at?: (number|null);
+        checksum?: (string|null);
+    }
+
+    class AgeRatingCategory implements IAgeRatingCategory {
+        constructor(properties?: proto.IAgeRatingCategory);
+        public id: number;
+        public rating: string;
+        public organization?: (proto.IAgeRatingOrganization|null);
+        public created_at?: (number|null);
+        public updated_at?: (number|null);
+        public checksum: string;
+        public static getTypeUrl(typeUrlPrefix?: string): string;
     }
 
     interface IAgeRatingContentDescriptionResult {
@@ -237,6 +273,64 @@ export namespace proto {
         CLASS_IND_ATOS_CRIMINOSOS = 85
     }
 
+    interface IAgeRatingContentDescriptionV2Result {
+        ageratingcontentdescriptionsv2?: (proto.IAgeRatingContentDescriptionV2[]|null);
+    }
+
+    class AgeRatingContentDescriptionV2Result implements IAgeRatingContentDescriptionV2Result {
+        constructor(properties?: proto.IAgeRatingContentDescriptionV2Result);
+        public ageratingcontentdescriptionsv2: proto.IAgeRatingContentDescriptionV2[];
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    interface IAgeRatingContentDescriptionV2 {
+        id?: (number|null);
+        description?: (string|null);
+        organization?: (proto.IAgeRatingOrganization|null);
+        created_at?: (number|null);
+        updated_at?: (number|null);
+        checksum?: (string|null);
+    }
+
+    class AgeRatingContentDescriptionV2 implements IAgeRatingContentDescriptionV2 {
+        constructor(properties?: proto.IAgeRatingContentDescriptionV2);
+        public id: number;
+        public description: string;
+        public organization?: (proto.IAgeRatingOrganization|null);
+        public created_at?: (number|null);
+        public updated_at?: (number|null);
+        public checksum: string;
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    interface IAgeRatingOrganizationResult {
+        ageratingorganizations?: (proto.IAgeRatingOrganization[]|null);
+    }
+
+    class AgeRatingOrganizationResult implements IAgeRatingOrganizationResult {
+        constructor(properties?: proto.IAgeRatingOrganizationResult);
+        public ageratingorganizations: proto.IAgeRatingOrganization[];
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    interface IAgeRatingOrganization {
+        id?: (number|null);
+        name?: (string|null);
+        created_at?: (number|null);
+        updated_at?: (number|null);
+        checksum?: (string|null);
+    }
+
+    class AgeRatingOrganization implements IAgeRatingOrganization {
+        constructor(properties?: proto.IAgeRatingOrganization);
+        public id: number;
+        public name: string;
+        public created_at?: (number|null);
+        public updated_at?: (number|null);
+        public checksum: string;
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
     interface IAlternativeNameResult {
         alternativenames?: (proto.IAlternativeName[]|null);
     }
@@ -326,6 +420,8 @@ export namespace proto {
         updated_at?: (number|null);
         url?: (string|null);
         checksum?: (string|null);
+        character_gender?: (proto.ICharacterGender|null);
+        character_species?: (proto.ICharacterSpecie|null);
     }
 
     class Character implements ICharacter {
@@ -344,6 +440,8 @@ export namespace proto {
         public updated_at?: (number|null);
         public url: string;
         public checksum: string;
+        public character_gender?: (proto.ICharacterGender|null);
+        public character_species?: (proto.ICharacterSpecie|null);
         public static getTypeUrl(typeUrlPrefix?: string): string;
     }
 
@@ -360,6 +458,34 @@ export namespace proto {
         ANIMAL = 3,
         ANDROID = 4,
         UNKNOWN = 5
+    }
+
+    interface ICharacterGenderResult {
+        charactergenders?: (proto.ICharacterGender[]|null);
+    }
+
+    class CharacterGenderResult implements ICharacterGenderResult {
+        constructor(properties?: proto.ICharacterGenderResult);
+        public charactergenders: proto.ICharacterGender[];
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    interface ICharacterGender {
+        id?: (number|null);
+        name?: (string|null);
+        created_at?: (number|null);
+        updated_at?: (number|null);
+        checksum?: (string|null);
+    }
+
+    class CharacterGender implements ICharacterGender {
+        constructor(properties?: proto.ICharacterGender);
+        public id: number;
+        public name: string;
+        public created_at?: (number|null);
+        public updated_at?: (number|null);
+        public checksum: string;
+        public static getTypeUrl(typeUrlPrefix?: string): string;
     }
 
     interface ICharacterMugShotResult {
@@ -396,6 +522,34 @@ export namespace proto {
         public static getTypeUrl(typeUrlPrefix?: string): string;
     }
 
+    interface ICharacterSpecieResult {
+        characterspecies?: (proto.ICharacterSpecie[]|null);
+    }
+
+    class CharacterSpecieResult implements ICharacterSpecieResult {
+        constructor(properties?: proto.ICharacterSpecieResult);
+        public characterspecies: proto.ICharacterSpecie[];
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    interface ICharacterSpecie {
+        id?: (number|null);
+        name?: (string|null);
+        created_at?: (number|null);
+        updated_at?: (number|null);
+        checksum?: (string|null);
+    }
+
+    class CharacterSpecie implements ICharacterSpecie {
+        constructor(properties?: proto.ICharacterSpecie);
+        public id: number;
+        public name: string;
+        public created_at?: (number|null);
+        public updated_at?: (number|null);
+        public checksum: string;
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
     interface ICollectionResult {
         collections?: (proto.ICollection[]|null);
     }
@@ -415,6 +569,9 @@ export namespace proto {
         updated_at?: (number|null);
         url?: (string|null);
         checksum?: (string|null);
+        type?: (proto.ICollectionType|null);
+        as_parent_relations?: (proto.ICollectionRelation[]|null);
+        as_child_relations?: (proto.ICollectionRelation[]|null);
     }
 
     class Collection implements ICollection {
@@ -426,6 +583,169 @@ export namespace proto {
         public slug: string;
         public updated_at?: (number|null);
         public url: string;
+        public checksum: string;
+        public type?: (proto.ICollectionType|null);
+        public as_parent_relations: proto.ICollectionRelation[];
+        public as_child_relations: proto.ICollectionRelation[];
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    interface ICollectionMembershipResult {
+        collectionmemberships?: (proto.ICollectionMembership[]|null);
+    }
+
+    class CollectionMembershipResult implements ICollectionMembershipResult {
+        constructor(properties?: proto.ICollectionMembershipResult);
+        public collectionmemberships: proto.ICollectionMembership[];
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    interface ICollectionMembership {
+        id?: (number|null);
+        game?: (proto.IGame|null);
+        collection?: (proto.ICollection|null);
+        type?: (proto.ICollectionMembershipType|null);
+        updated_at?: (number|null);
+        created_at?: (number|null);
+        checksum?: (string|null);
+    }
+
+    class CollectionMembership implements ICollectionMembership {
+        constructor(properties?: proto.ICollectionMembership);
+        public id: number;
+        public game?: (proto.IGame|null);
+        public collection?: (proto.ICollection|null);
+        public type?: (proto.ICollectionMembershipType|null);
+        public updated_at?: (number|null);
+        public created_at?: (number|null);
+        public checksum: string;
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    interface ICollectionMembershipTypeResult {
+        collectionmembershiptypes?: (proto.ICollectionMembershipType[]|null);
+    }
+
+    class CollectionMembershipTypeResult implements ICollectionMembershipTypeResult {
+        constructor(properties?: proto.ICollectionMembershipTypeResult);
+        public collectionmembershiptypes: proto.ICollectionMembershipType[];
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    interface ICollectionMembershipType {
+        id?: (number|null);
+        name?: (string|null);
+        description?: (string|null);
+        allowed_collection_type?: (proto.ICollectionType|null);
+        updated_at?: (number|null);
+        created_at?: (number|null);
+        checksum?: (string|null);
+    }
+
+    class CollectionMembershipType implements ICollectionMembershipType {
+        constructor(properties?: proto.ICollectionMembershipType);
+        public id: number;
+        public name: string;
+        public description: string;
+        public allowed_collection_type?: (proto.ICollectionType|null);
+        public updated_at?: (number|null);
+        public created_at?: (number|null);
+        public checksum: string;
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    interface ICollectionRelationResult {
+        collectionrelations?: (proto.ICollectionRelation[]|null);
+    }
+
+    class CollectionRelationResult implements ICollectionRelationResult {
+        constructor(properties?: proto.ICollectionRelationResult);
+        public collectionrelations: proto.ICollectionRelation[];
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    interface ICollectionRelation {
+        id?: (number|null);
+        child_collection?: (proto.ICollection|null);
+        parent_collection?: (proto.ICollection|null);
+        type?: (proto.ICollectionRelationType|null);
+        updated_at?: (number|null);
+        created_at?: (number|null);
+        checksum?: (string|null);
+    }
+
+    class CollectionRelation implements ICollectionRelation {
+        constructor(properties?: proto.ICollectionRelation);
+        public id: number;
+        public child_collection?: (proto.ICollection|null);
+        public parent_collection?: (proto.ICollection|null);
+        public type?: (proto.ICollectionRelationType|null);
+        public updated_at?: (number|null);
+        public created_at?: (number|null);
+        public checksum: string;
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    interface ICollectionRelationTypeResult {
+        collectionrelationtypes?: (proto.ICollectionRelationType[]|null);
+    }
+
+    class CollectionRelationTypeResult implements ICollectionRelationTypeResult {
+        constructor(properties?: proto.ICollectionRelationTypeResult);
+        public collectionrelationtypes: proto.ICollectionRelationType[];
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    interface ICollectionRelationType {
+        id?: (number|null);
+        name?: (string|null);
+        description?: (string|null);
+        allowed_child_type?: (proto.ICollectionType|null);
+        allowed_parent_type?: (proto.ICollectionType|null);
+        updated_at?: (number|null);
+        created_at?: (number|null);
+        checksum?: (string|null);
+    }
+
+    class CollectionRelationType implements ICollectionRelationType {
+        constructor(properties?: proto.ICollectionRelationType);
+        public id: number;
+        public name: string;
+        public description: string;
+        public allowed_child_type?: (proto.ICollectionType|null);
+        public allowed_parent_type?: (proto.ICollectionType|null);
+        public updated_at?: (number|null);
+        public created_at?: (number|null);
+        public checksum: string;
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    interface ICollectionTypeResult {
+        collectiontypes?: (proto.ICollectionType[]|null);
+    }
+
+    class CollectionTypeResult implements ICollectionTypeResult {
+        constructor(properties?: proto.ICollectionTypeResult);
+        public collectiontypes: proto.ICollectionType[];
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    interface ICollectionType {
+        id?: (number|null);
+        name?: (string|null);
+        description?: (string|null);
+        updated_at?: (number|null);
+        created_at?: (number|null);
+        checksum?: (string|null);
+    }
+
+    class CollectionType implements ICollectionType {
+        constructor(properties?: proto.ICollectionType);
+        public id: number;
+        public name: string;
+        public description: string;
+        public updated_at?: (number|null);
+        public created_at?: (number|null);
         public checksum: string;
         public static getTypeUrl(typeUrlPrefix?: string): string;
     }
@@ -460,6 +780,9 @@ export namespace proto {
         url?: (string|null);
         websites?: (proto.ICompanyWebsite[]|null);
         checksum?: (string|null);
+        status?: (proto.ICompanyStatus|null);
+        start_date_format?: (proto.IDateFormat|null);
+        change_date_format?: (proto.IDateFormat|null);
     }
 
     class Company implements ICompany {
@@ -483,6 +806,9 @@ export namespace proto {
         public url: string;
         public websites: proto.ICompanyWebsite[];
         public checksum: string;
+        public status?: (proto.ICompanyStatus|null);
+        public start_date_format?: (proto.IDateFormat|null);
+        public change_date_format?: (proto.IDateFormat|null);
         public static getTypeUrl(typeUrlPrefix?: string): string;
     }
 
@@ -531,6 +857,34 @@ export namespace proto {
         public static getTypeUrl(typeUrlPrefix?: string): string;
     }
 
+    interface ICompanyStatusResult {
+        companystatuses?: (proto.ICompanyStatus[]|null);
+    }
+
+    class CompanyStatusResult implements ICompanyStatusResult {
+        constructor(properties?: proto.ICompanyStatusResult);
+        public companystatuses: proto.ICompanyStatus[];
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    interface ICompanyStatus {
+        id?: (number|null);
+        name?: (string|null);
+        created_at?: (number|null);
+        updated_at?: (number|null);
+        checksum?: (string|null);
+    }
+
+    class CompanyStatus implements ICompanyStatus {
+        constructor(properties?: proto.ICompanyStatus);
+        public id: number;
+        public name: string;
+        public created_at?: (number|null);
+        public updated_at?: (number|null);
+        public checksum: string;
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
     interface ICompanyWebsiteResult {
         companywebsites?: (proto.ICompanyWebsite[]|null);
     }
@@ -547,6 +901,7 @@ export namespace proto {
         trusted?: (boolean|null);
         url?: (string|null);
         checksum?: (string|null);
+        type?: (proto.IWebsiteType|null);
     }
 
     class CompanyWebsite implements ICompanyWebsite {
@@ -556,6 +911,7 @@ export namespace proto {
         public trusted: boolean;
         public url: string;
         public checksum: string;
+        public type?: (proto.IWebsiteType|null);
         public static getTypeUrl(typeUrlPrefix?: string): string;
     }
 
@@ -577,7 +933,8 @@ export namespace proto {
         WEBSITE_ITCH = 15,
         WEBSITE_EPICGAMES = 16,
         WEBSITE_GOG = 17,
-        WEBSITE_DISCORD = 18
+        WEBSITE_DISCORD = 18,
+        WEBSITE_BLUESKY = 19
     }
 
     interface ICoverResult {
@@ -618,6 +975,154 @@ export namespace proto {
         public static getTypeUrl(typeUrlPrefix?: string): string;
     }
 
+    interface IDateFormatResult {
+        dateformats?: (proto.IDateFormat[]|null);
+    }
+
+    class DateFormatResult implements IDateFormatResult {
+        constructor(properties?: proto.IDateFormatResult);
+        public dateformats: proto.IDateFormat[];
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    interface IDateFormat {
+        id?: (number|null);
+        format?: (string|null);
+        created_at?: (number|null);
+        updated_at?: (number|null);
+        checksum?: (string|null);
+    }
+
+    class DateFormat implements IDateFormat {
+        constructor(properties?: proto.IDateFormat);
+        public id: number;
+        public format: string;
+        public created_at?: (number|null);
+        public updated_at?: (number|null);
+        public checksum: string;
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    interface IEventResult {
+        events?: (proto.IEvent[]|null);
+    }
+
+    class EventResult implements IEventResult {
+        constructor(properties?: proto.IEventResult);
+        public events: proto.IEvent[];
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    interface IEvent {
+        id?: (number|null);
+        name?: (string|null);
+        description?: (string|null);
+        slug?: (string|null);
+        event_logo?: (proto.IEventLogo|null);
+        start_time?: (number|null);
+        time_zone?: (string|null);
+        end_time?: (number|null);
+        live_stream_url?: (string|null);
+        games?: (proto.IGame[]|null);
+        videos?: (proto.IGameVideo[]|null);
+        event_networks?: (proto.IEventNetwork[]|null);
+        created_at?: (number|null);
+        updated_at?: (number|null);
+        checksum?: (string|null);
+    }
+
+    class Event implements IEvent {
+        constructor(properties?: proto.IEvent);
+        public id: number;
+        public name: string;
+        public description: string;
+        public slug: string;
+        public event_logo?: (proto.IEventLogo|null);
+        public start_time?: (number|null);
+        public time_zone: string;
+        public end_time?: (number|null);
+        public live_stream_url: string;
+        public games: proto.IGame[];
+        public videos: proto.IGameVideo[];
+        public event_networks: proto.IEventNetwork[];
+        public created_at?: (number|null);
+        public updated_at?: (number|null);
+        public checksum: string;
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    interface IEventLogoResult {
+        eventlogos?: (proto.IEventLogo[]|null);
+    }
+
+    class EventLogoResult implements IEventLogoResult {
+        constructor(properties?: proto.IEventLogoResult);
+        public eventlogos: proto.IEventLogo[];
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    interface IEventLogo {
+        id?: (number|null);
+        event?: (proto.IEvent|null);
+        alpha_channel?: (boolean|null);
+        animated?: (boolean|null);
+        height?: (number|null);
+        image_id?: (string|null);
+        url?: (string|null);
+        width?: (number|null);
+        created_at?: (number|null);
+        updated_at?: (number|null);
+        checksum?: (string|null);
+    }
+
+    class EventLogo implements IEventLogo {
+        constructor(properties?: proto.IEventLogo);
+        public id: number;
+        public event?: (proto.IEvent|null);
+        public alpha_channel: boolean;
+        public animated: boolean;
+        public height: number;
+        public image_id: string;
+        public url: string;
+        public width: number;
+        public created_at?: (number|null);
+        public updated_at?: (number|null);
+        public checksum: string;
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    interface IEventNetworkResult {
+        eventnetworks?: (proto.IEventNetwork[]|null);
+    }
+
+    class EventNetworkResult implements IEventNetworkResult {
+        constructor(properties?: proto.IEventNetworkResult);
+        public eventnetworks: proto.IEventNetwork[];
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    interface IEventNetwork {
+        id?: (number|null);
+        event?: (proto.IEvent|null);
+        url?: (string|null);
+        network_type?: (proto.INetworkType|null);
+        created_at?: (number|null);
+        updated_at?: (number|null);
+        checksum?: (string|null);
+    }
+
+    class EventNetwork implements IEventNetwork {
+        constructor(properties?: proto.IEventNetwork);
+        public id: number;
+        public event?: (proto.IEvent|null);
+        public url: string;
+        public network_type?: (proto.INetworkType|null);
+        public created_at?: (number|null);
+        public updated_at?: (number|null);
+        public checksum: string;
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
     interface IExternalGameResult {
         externalgames?: (proto.IExternalGame[]|null);
     }
@@ -642,6 +1147,8 @@ export namespace proto {
         platform?: (proto.IPlatform|null);
         countries?: (number[]|null);
         checksum?: (string|null);
+        external_game_source?: (proto.IExternalGameSource|null);
+        game_release_format?: (proto.IGameReleaseFormat|null);
     }
 
     class ExternalGame implements IExternalGame {
@@ -659,6 +1166,8 @@ export namespace proto {
         public platform?: (proto.IPlatform|null);
         public countries: number[];
         public checksum: string;
+        public external_game_source?: (proto.IExternalGameSource|null);
+        public game_release_format?: (proto.IGameReleaseFormat|null);
         public static getTypeUrl(typeUrlPrefix?: string): string;
     }
 
@@ -690,6 +1199,34 @@ export namespace proto {
         EXTERNALGAME_MEDIA_NULL = 0,
         EXTERNALGAME_DIGITAL = 1,
         EXTERNALGAME_PHYSICAL = 2
+    }
+
+    interface IExternalGameSourceResult {
+        externalgamesources?: (proto.IExternalGameSource[]|null);
+    }
+
+    class ExternalGameSourceResult implements IExternalGameSourceResult {
+        constructor(properties?: proto.IExternalGameSourceResult);
+        public externalgamesources: proto.IExternalGameSource[];
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    interface IExternalGameSource {
+        id?: (number|null);
+        name?: (string|null);
+        created_at?: (number|null);
+        updated_at?: (number|null);
+        checksum?: (string|null);
+    }
+
+    class ExternalGameSource implements IExternalGameSource {
+        constructor(properties?: proto.IExternalGameSource);
+        public id: number;
+        public name: string;
+        public created_at?: (number|null);
+        public updated_at?: (number|null);
+        public checksum: string;
+        public static getTypeUrl(typeUrlPrefix?: string): string;
     }
 
     interface IFranchiseResult {
@@ -794,6 +1331,9 @@ export namespace proto {
         forks?: (proto.IGame[]|null);
         language_supports?: (proto.ILanguageSupport[]|null);
         game_localizations?: (proto.IGameLocalization[]|null);
+        collections?: (proto.ICollection[]|null);
+        game_status?: (proto.IGameStatus|null);
+        game_type?: (proto.IGameType|null);
     }
 
     class Game implements IGame {
@@ -855,6 +1395,9 @@ export namespace proto {
         public forks: proto.IGame[];
         public language_supports: proto.ILanguageSupport[];
         public game_localizations: proto.IGameLocalization[];
+        public collections: proto.ICollection[];
+        public game_status?: (proto.IGameStatus|null);
+        public game_type?: (proto.IGameType|null);
         public static getTypeUrl(typeUrlPrefix?: string): string;
     }
 
@@ -1023,6 +1566,126 @@ export namespace proto {
         public slug: string;
         public updated_at?: (number|null);
         public url: string;
+        public checksum: string;
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    interface IGameReleaseFormatResult {
+        gamereleaseformats?: (proto.IGameReleaseFormat[]|null);
+    }
+
+    class GameReleaseFormatResult implements IGameReleaseFormatResult {
+        constructor(properties?: proto.IGameReleaseFormatResult);
+        public gamereleaseformats: proto.IGameReleaseFormat[];
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    interface IGameReleaseFormat {
+        id?: (number|null);
+        format?: (string|null);
+        created_at?: (number|null);
+        updated_at?: (number|null);
+        checksum?: (string|null);
+    }
+
+    class GameReleaseFormat implements IGameReleaseFormat {
+        constructor(properties?: proto.IGameReleaseFormat);
+        public id: number;
+        public format: string;
+        public created_at?: (number|null);
+        public updated_at?: (number|null);
+        public checksum: string;
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    interface IGameStatusResult {
+        gamestatuses?: (proto.IGameStatus[]|null);
+    }
+
+    class GameStatusResult implements IGameStatusResult {
+        constructor(properties?: proto.IGameStatusResult);
+        public gamestatuses: proto.IGameStatus[];
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    interface IGameStatus {
+        id?: (number|null);
+        status?: (string|null);
+        created_at?: (number|null);
+        updated_at?: (number|null);
+        checksum?: (string|null);
+    }
+
+    class GameStatus implements IGameStatus {
+        constructor(properties?: proto.IGameStatus);
+        public id: number;
+        public status: string;
+        public created_at?: (number|null);
+        public updated_at?: (number|null);
+        public checksum: string;
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    interface IGameTimeToBeatResult {
+        gametimetobeats?: (proto.IGameTimeToBeat[]|null);
+    }
+
+    class GameTimeToBeatResult implements IGameTimeToBeatResult {
+        constructor(properties?: proto.IGameTimeToBeatResult);
+        public gametimetobeats: proto.IGameTimeToBeat[];
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    interface IGameTimeToBeat {
+        id?: (number|null);
+        game_id?: (number|null);
+        hastily?: (number|null);
+        normally?: (number|null);
+        completely?: (number|null);
+        count?: (number|null);
+        created_at?: (number|null);
+        updated_at?: (number|null);
+        checksum?: (string|null);
+    }
+
+    class GameTimeToBeat implements IGameTimeToBeat {
+        constructor(properties?: proto.IGameTimeToBeat);
+        public id: number;
+        public game_id: number;
+        public hastily: number;
+        public normally: number;
+        public completely: number;
+        public count: number;
+        public created_at?: (number|null);
+        public updated_at?: (number|null);
+        public checksum: string;
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    interface IGameTypeResult {
+        gametypes?: (proto.IGameType[]|null);
+    }
+
+    class GameTypeResult implements IGameTypeResult {
+        constructor(properties?: proto.IGameTypeResult);
+        public gametypes: proto.IGameType[];
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    interface IGameType {
+        id?: (number|null);
+        type?: (string|null);
+        created_at?: (number|null);
+        updated_at?: (number|null);
+        checksum?: (string|null);
+    }
+
+    class GameType implements IGameType {
+        constructor(properties?: proto.IGameType);
+        public id: number;
+        public type: string;
+        public created_at?: (number|null);
+        public updated_at?: (number|null);
         public checksum: string;
         public static getTypeUrl(typeUrlPrefix?: string): string;
     }
@@ -1404,6 +2067,36 @@ export namespace proto {
         public static getTypeUrl(typeUrlPrefix?: string): string;
     }
 
+    interface INetworkTypeResult {
+        networktypes?: (proto.INetworkType[]|null);
+    }
+
+    class NetworkTypeResult implements INetworkTypeResult {
+        constructor(properties?: proto.INetworkTypeResult);
+        public networktypes: proto.INetworkType[];
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    interface INetworkType {
+        id?: (number|null);
+        name?: (string|null);
+        event_networks?: (proto.IEventNetwork[]|null);
+        created_at?: (number|null);
+        updated_at?: (number|null);
+        checksum?: (string|null);
+    }
+
+    class NetworkType implements INetworkType {
+        constructor(properties?: proto.INetworkType);
+        public id: number;
+        public name: string;
+        public event_networks: proto.IEventNetwork[];
+        public created_at?: (number|null);
+        public updated_at?: (number|null);
+        public checksum: string;
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
     interface IPlatformResult {
         platforms?: (proto.IPlatform[]|null);
     }
@@ -1431,6 +2124,7 @@ export namespace proto {
         versions?: (proto.IPlatformVersion[]|null);
         websites?: (proto.IPlatformWebsite[]|null);
         checksum?: (string|null);
+        platform_type?: (proto.IPlatformType|null);
     }
 
     class Platform implements IPlatform {
@@ -1451,6 +2145,7 @@ export namespace proto {
         public versions: proto.IPlatformVersion[];
         public websites: proto.IPlatformWebsite[];
         public checksum: string;
+        public platform_type?: (proto.IPlatformType|null);
         public static getTypeUrl(typeUrlPrefix?: string): string;
     }
 
@@ -1524,6 +2219,34 @@ export namespace proto {
         public static getTypeUrl(typeUrlPrefix?: string): string;
     }
 
+    interface IPlatformTypeResult {
+        platformtypes?: (proto.IPlatformType[]|null);
+    }
+
+    class PlatformTypeResult implements IPlatformTypeResult {
+        constructor(properties?: proto.IPlatformTypeResult);
+        public platformtypes: proto.IPlatformType[];
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    interface IPlatformType {
+        id?: (number|null);
+        name?: (string|null);
+        created_at?: (number|null);
+        updated_at?: (number|null);
+        checksum?: (string|null);
+    }
+
+    class PlatformType implements IPlatformType {
+        constructor(properties?: proto.IPlatformType);
+        public id: number;
+        public name: string;
+        public created_at?: (number|null);
+        public updated_at?: (number|null);
+        public checksum: string;
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
     interface IPlatformVersionResult {
         platformversions?: (proto.IPlatformVersion[]|null);
     }
@@ -1544,7 +2267,6 @@ export namespace proto {
         media?: (string|null);
         memory?: (string|null);
         name?: (string|null);
-        online?: (string|null);
         os?: (string|null);
         output?: (string|null);
         platform_logo?: (proto.IPlatformLogo|null);
@@ -1569,7 +2291,6 @@ export namespace proto {
         public media: string;
         public memory: string;
         public name: string;
-        public online: string;
         public os: string;
         public output: string;
         public platform_logo?: (proto.IPlatformLogo|null);
@@ -1636,6 +2357,8 @@ export namespace proto {
         updated_at?: (number|null);
         y?: (number|null);
         checksum?: (string|null);
+        date_format?: (proto.IDateFormat|null);
+        release_region?: (proto.IReleaseDateRegion|null);
     }
 
     class PlatformVersionReleaseDate implements IPlatformVersionReleaseDate {
@@ -1651,6 +2374,8 @@ export namespace proto {
         public updated_at?: (number|null);
         public y: number;
         public checksum: string;
+        public date_format?: (proto.IDateFormat|null);
+        public release_region?: (proto.IReleaseDateRegion|null);
         public static getTypeUrl(typeUrlPrefix?: string): string;
     }
 
@@ -1728,6 +2453,81 @@ export namespace proto {
         public static getTypeUrl(typeUrlPrefix?: string): string;
     }
 
+    interface IPopularityPrimitiveResult {
+        popularityprimitives?: (proto.IPopularityPrimitive[]|null);
+    }
+
+    class PopularityPrimitiveResult implements IPopularityPrimitiveResult {
+        constructor(properties?: proto.IPopularityPrimitiveResult);
+        public popularityprimitives: proto.IPopularityPrimitive[];
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    interface IPopularityPrimitive {
+        id?: (number|null);
+        game_id?: (number|null);
+        popularity_type?: (proto.IPopularityType|null);
+        popularity_source?: (proto.PopularitySourcePopularitySourceEnum|null);
+        value?: (number|null);
+        calculated_at?: (number|null);
+        created_at?: (number|null);
+        updated_at?: (number|null);
+        checksum?: (string|null);
+        external_popularity_source?: (proto.IExternalGameSource|null);
+    }
+
+    class PopularityPrimitive implements IPopularityPrimitive {
+        constructor(properties?: proto.IPopularityPrimitive);
+        public id: number;
+        public game_id: number;
+        public popularity_type?: (proto.IPopularityType|null);
+        public popularity_source: proto.PopularitySourcePopularitySourceEnum;
+        public value: number;
+        public calculated_at?: (number|null);
+        public created_at?: (number|null);
+        public updated_at?: (number|null);
+        public checksum: string;
+        public external_popularity_source?: (proto.IExternalGameSource|null);
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    enum PopularitySourcePopularitySourceEnum {
+        POPULARITYSOURCE_POPULARITY_SOURCE_NULL = 0,
+        IGDB = 121
+    }
+
+    interface IPopularityTypeResult {
+        popularitytypes?: (proto.IPopularityType[]|null);
+    }
+
+    class PopularityTypeResult implements IPopularityTypeResult {
+        constructor(properties?: proto.IPopularityTypeResult);
+        public popularitytypes: proto.IPopularityType[];
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    interface IPopularityType {
+        id?: (number|null);
+        popularity_source?: (proto.PopularitySourcePopularitySourceEnum|null);
+        name?: (string|null);
+        created_at?: (number|null);
+        updated_at?: (number|null);
+        checksum?: (string|null);
+        external_popularity_source?: (proto.IExternalGameSource|null);
+    }
+
+    class PopularityType implements IPopularityType {
+        constructor(properties?: proto.IPopularityType);
+        public id: number;
+        public popularity_source: proto.PopularitySourcePopularitySourceEnum;
+        public name: string;
+        public created_at?: (number|null);
+        public updated_at?: (number|null);
+        public checksum: string;
+        public external_popularity_source?: (proto.IExternalGameSource|null);
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
     interface IRegionResult {
         regions?: (proto.IRegion[]|null);
     }
@@ -1784,6 +2584,8 @@ export namespace proto {
         y?: (number|null);
         checksum?: (string|null);
         status?: (proto.IReleaseDateStatus|null);
+        date_format?: (proto.IDateFormat|null);
+        release_region?: (proto.IReleaseDateRegion|null);
     }
 
     class ReleaseDate implements IReleaseDate {
@@ -1801,6 +2603,36 @@ export namespace proto {
         public y: number;
         public checksum: string;
         public status?: (proto.IReleaseDateStatus|null);
+        public date_format?: (proto.IDateFormat|null);
+        public release_region?: (proto.IReleaseDateRegion|null);
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    interface IReleaseDateRegionResult {
+        releasedateregions?: (proto.IReleaseDateRegion[]|null);
+    }
+
+    class ReleaseDateRegionResult implements IReleaseDateRegionResult {
+        constructor(properties?: proto.IReleaseDateRegionResult);
+        public releasedateregions: proto.IReleaseDateRegion[];
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    interface IReleaseDateRegion {
+        id?: (number|null);
+        region?: (string|null);
+        created_at?: (number|null);
+        updated_at?: (number|null);
+        checksum?: (string|null);
+    }
+
+    class ReleaseDateRegion implements IReleaseDateRegion {
+        constructor(properties?: proto.IReleaseDateRegion);
+        public id: number;
+        public region: string;
+        public created_at?: (number|null);
+        public updated_at?: (number|null);
+        public checksum: string;
         public static getTypeUrl(typeUrlPrefix?: string): string;
     }
 
@@ -2023,6 +2855,7 @@ export namespace proto {
         trusted?: (boolean|null);
         url?: (string|null);
         checksum?: (string|null);
+        type?: (proto.IWebsiteType|null);
     }
 
     class Website implements IWebsite {
@@ -2032,6 +2865,35 @@ export namespace proto {
         public game?: (proto.IGame|null);
         public trusted: boolean;
         public url: string;
+        public checksum: string;
+        public type?: (proto.IWebsiteType|null);
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    interface IWebsiteTypeResult {
+        websitetypes?: (proto.IWebsiteType[]|null);
+    }
+
+    class WebsiteTypeResult implements IWebsiteTypeResult {
+        constructor(properties?: proto.IWebsiteTypeResult);
+        public websitetypes: proto.IWebsiteType[];
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    interface IWebsiteType {
+        id?: (number|null);
+        type?: (string|null);
+        created_at?: (number|null);
+        updated_at?: (number|null);
+        checksum?: (string|null);
+    }
+
+    class WebsiteType implements IWebsiteType {
+        constructor(properties?: proto.IWebsiteType);
+        public id: number;
+        public type: string;
+        public created_at?: (number|null);
+        public updated_at?: (number|null);
         public checksum: string;
         public static getTypeUrl(typeUrlPrefix?: string): string;
     }
