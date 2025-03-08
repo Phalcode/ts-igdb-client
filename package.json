@@ -4,6 +4,7 @@
   "type": "module",
   "workspaces": [
     "@phalcode/ts-apicalypse",
+    "@phalcode/ts-igdb-client"
   ],
   "scripts": {
     "test": "jest",
