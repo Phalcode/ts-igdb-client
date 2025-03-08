@@ -54,5 +54,8 @@
     ],
     "clean": true,
     "dts": true
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
