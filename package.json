@@ -1,7 +1,6 @@
 {
   "name": "@phalcode/mono-ts-apicalypse",
   "version": "1.0.0",
-  "private": true,
   "type": "module",
   "workspaces": [
     "ts-apicalypse",
