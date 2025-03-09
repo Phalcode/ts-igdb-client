@@ -8,9 +8,9 @@ import type {
   PipeSub,
   ResultMultiMono,
   Stringifiable
-} from "ts-apicalypse";
+} from "@phalcode/ts-apicalypse";
 import type { proto } from "../proto/compiled";
-import type { FallbackIfUnknown } from "ts-apicalypse";
+import type { FallbackIfUnknown } from "@phalcode/ts-apicalypse";
 
 export interface Executor<T, mode extends 'result' | 'count' = 'result'> {
   execute(options?: Options): AxiosPromise<{

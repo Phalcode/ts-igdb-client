@@ -1,6 +1,6 @@
 packages:
-  - ts-igdb
-  - ts-apicalypse
+  - "ts-igdb-client"
+  - "ts-apicalypse"
 onlyBuiltDependencies:
   - esbuild
   - protobufjs

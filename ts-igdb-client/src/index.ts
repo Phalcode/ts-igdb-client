@@ -1,24 +1,15 @@
-import { type Builder, multi as multiA, type Options, request as requestA, type Stringifiable } from "ts-apicalypse";
-import type { ExecutorMulti, IgdbRequest, InferMode, Routes, WebhooksRegister, WebhooksRegisterOptions } from "./types";
 import axios, { type AxiosPromise } from "axios";
+import { multi as multiA, request as requestA, type Builder, type Options, type Stringifiable } from "@phalcode/ts-apicalypse";
+import type { ExecutorMulti, IgdbRequest, InferMode, Routes, WebhooksRegister, WebhooksRegisterOptions } from "./types";
 
+export { WhereFlags, WhereInFlags, and, exclude, fields, limit, offset, or, search, sort, where, whereIn } from "@phalcode/ts-apicalypse";
 export type {
   Builder,
   BuilderOperator,
-  BuilderOperatorNarrow,
-  ExecutorMulti,
-  ResultMultiMono,
-  NamedBuilder,
-  Options,
+  BuilderOperatorNarrow, Executor, ExecutorMulti, NamedBuilder, NamedBuilderOperator, Options,
   Pipe,
-  PipeSub,
-  Stringifiable,
-  Executor,
-  NamedBuilderOperator,
-} from "ts-apicalypse";
-export {
-  and, exclude, fields, limit, offset, or, search, sort, where, whereIn, WhereFlags, WhereInFlags
-} from "ts-apicalypse";
+  PipeSub, ResultMultiMono, Stringifiable
+} from "@phalcode/ts-apicalypse";
 export { twitchAccessToken } from './twitch';
 
 const BASE_URL = 'https://api.igdb.com/v4';
@@ -216,5 +207,6 @@ export function igdb(clientId: string, accessToken: string) {
   }
 }
 
+export * from '../proto/compiled';
 export * from './types';
-export type * from '../proto/compiled';
+
