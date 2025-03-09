@@ -1,9 +1,9 @@
-import { dirname, resolve } from "node:path";
-import { readFile, writeFile } from "fs/promises";
 import axios from "axios";
-import { promisify } from "node:util";
+import { readFile, writeFile } from "fs/promises";
 import { createRequire } from "node:module";
+import { dirname, resolve } from "node:path";
 import { fileURLToPath } from 'node:url';
+import { promisify } from "node:util";
 
 const require = createRequire(import.meta.url);
 const __filename = fileURLToPath(import.meta.url);

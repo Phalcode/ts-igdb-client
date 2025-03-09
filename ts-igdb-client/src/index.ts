@@ -27,7 +27,7 @@ export {
   search,
   sort,
   where,
-  whereIn
+  whereIn,
 } from "@phalcode/ts-apicalypse";
 export type {
   Builder,
@@ -41,7 +41,7 @@ export type {
   Pipe,
   PipeSub,
   ResultMultiMono,
-  Stringifiable
+  Stringifiable,
 } from "@phalcode/ts-apicalypse";
 export { twitchAccessToken } from "./twitch";
 
@@ -268,8 +268,5 @@ export function igdb(clientId: string, accessToken: string) {
     webhooks: wrappedFns.webhooks,
   };
 }
-
 export type * from "../proto/compiled";
-export { proto } from "../proto/compiled";
 export * from "./types";
-

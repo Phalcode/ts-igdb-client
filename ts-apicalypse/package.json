@@ -33,10 +33,10 @@
     "axios": "^1.4.0"
   },
   "devDependencies": {
-    "@types/jest": "^29.5.3",
+    "@types/jest": "^29.5.14",
     "ts-toolbelt": "^9.6.0",
-    "tsup": "^7.1.0",
-    "typescript": "^5.1.6"
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.2"
   },
   "tsup": {
     "entry": [
