@@ -43,7 +43,10 @@ export type {
   ResultMultiMono,
   Stringifiable,
 } from "@phalcode/ts-apicalypse";
+export type * from "../proto/compiled";
+export * as igdbModels from "../proto/compiled";
 export { twitchAccessToken } from "./twitch";
+export * from "./types";
 
 const BASE_URL = "https://api.igdb.com/v4";
 const BASE_URL_MULTI = `${BASE_URL}/multiquery`;
@@ -268,5 +271,3 @@ export function igdb(clientId: string, accessToken: string) {
     webhooks: wrappedFns.webhooks,
   };
 }
-export type * from "../proto/compiled";
-export * from "./types";
