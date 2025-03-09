@@ -27,7 +27,7 @@ export {
   search,
   sort,
   where,
-  whereIn,
+  whereIn
 } from "@phalcode/ts-apicalypse";
 export type {
   Builder,
@@ -41,10 +41,9 @@ export type {
   Pipe,
   PipeSub,
   ResultMultiMono,
-  Stringifiable,
+  Stringifiable
 } from "@phalcode/ts-apicalypse";
 export type * from "../proto/compiled";
-export * as igdbModels from "../proto/compiled";
 export { twitchAccessToken } from "./twitch";
 export * from "./types";
 
