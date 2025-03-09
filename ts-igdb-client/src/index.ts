@@ -1,22 +1,55 @@
+import {
+  multi as multiA,
+  request as requestA,
+  type Builder,
+  type Options,
+  type Stringifiable,
+} from "@phalcode/ts-apicalypse";
 import axios, { type AxiosPromise } from "axios";
-import { multi as multiA, request as requestA, type Builder, type Options, type Stringifiable } from "@phalcode/ts-apicalypse";
-import type { ExecutorMulti, IgdbRequest, InferMode, Routes, WebhooksRegister, WebhooksRegisterOptions } from "./types";
+import type {
+  ExecutorMulti,
+  IgdbRequest,
+  InferMode,
+  Routes,
+  WebhooksRegister,
+  WebhooksRegisterOptions,
+} from "./types";
 
-export { WhereFlags, WhereInFlags, and, exclude, fields, limit, offset, or, search, sort, where, whereIn } from "@phalcode/ts-apicalypse";
+export {
+  WhereFlags,
+  WhereInFlags,
+  and,
+  exclude,
+  fields,
+  limit,
+  offset,
+  or,
+  search,
+  sort,
+  where,
+  whereIn
+} from "@phalcode/ts-apicalypse";
 export type {
   Builder,
   BuilderOperator,
-  BuilderOperatorNarrow, Executor, ExecutorMulti, NamedBuilder, NamedBuilderOperator, Options,
+  BuilderOperatorNarrow,
+  Executor,
+  ExecutorMulti,
+  NamedBuilder,
+  NamedBuilderOperator,
+  Options,
   Pipe,
-  PipeSub, ResultMultiMono, Stringifiable
+  PipeSub,
+  ResultMultiMono,
+  Stringifiable
 } from "@phalcode/ts-apicalypse";
-export { twitchAccessToken } from './twitch';
+export { twitchAccessToken } from "./twitch";
 
-const BASE_URL = 'https://api.igdb.com/v4';
+const BASE_URL = "https://api.igdb.com/v4";
 const BASE_URL_MULTI = `${BASE_URL}/multiquery`;
 
 function buildUrl(key: string) {
-  return `${BASE_URL}/${key}`
+  return `${BASE_URL}/${key}`;
 }
 
 function getFunctions(defaultHeaders: Record<string, string> = {}) {
@@ -26,7 +59,7 @@ function getFunctions(defaultHeaders: Record<string, string> = {}) {
 
       return {
         pipe(...steps) {
-          const ex = x.pipe(...steps)
+          const ex = x.pipe(...steps);
 
           return {
             ...ex,
@@ -35,19 +68,21 @@ function getFunctions(defaultHeaders: Record<string, string> = {}) {
                 ...options,
                 headers: {
                   ...options?.headers,
-                  ...defaultHeaders
-                }
+                  ...defaultHeaders,
+                },
               });
-            }
-          }
+            },
+          };
         },
         alias(alias) {
           return x.sub(key, alias);
         },
-      }
+      };
     },
 
-    multi<B extends Builder<any>[]>(...builders: B): Stringifiable & ExecutorMulti<B> {
+    multi<B extends Builder<any>[]>(
+      ...builders: B
+    ): Stringifiable & ExecutorMulti<B> {
       const ex = multiA(...builders);
       return {
         ...ex,
@@ -56,59 +91,80 @@ function getFunctions(defaultHeaders: Record<string, string> = {}) {
             ...options,
             headers: {
               ...options?.headers,
-              ...defaultHeaders
-            }
+              ...defaultHeaders,
+            },
           });
-        }
-      }
+        },
+      };
     },
 
     webhooks: {
-      register<K extends keyof Routes>(key: K, params: WebhooksRegisterOptions, options: Options = {}): AxiosPromise<WebhooksRegister> {
-        const encodedParams = new URLSearchParams(params as unknown as Record<string, string>);
+      register<K extends keyof Routes>(
+        key: K,
+        params: WebhooksRegisterOptions,
+        options: Options = {}
+      ): AxiosPromise<WebhooksRegister> {
+        const encodedParams = new URLSearchParams(
+          params as unknown as Record<string, string>
+        );
 
         return axios.create()(buildUrl(`${key}/webhooks`), {
-          method: 'post',
+          method: "post",
           data: encodedParams.toString(),
           ...options,
           headers: {
-            'content-type': 'application/x-www-form-urlencoded',
+            "content-type": "application/x-www-form-urlencoded",
             ...options?.headers,
-            ...defaultHeaders
-          }
+            ...defaultHeaders,
+          },
         });
       },
-      get(key?: string | number, options: Options = {}): AxiosPromise<WebhooksRegister[]> {
-        return axios.create()(buildUrl(key ? `webhooks/${key}` : 'webhooks'), {
-          method: 'get',
+      get(
+        key?: string | number,
+        options: Options = {}
+      ): AxiosPromise<WebhooksRegister[]> {
+        return axios.create()(buildUrl(key ? `webhooks/${key}` : "webhooks"), {
+          method: "get",
           ...options,
           headers: {
             ...options?.headers,
-            ...defaultHeaders
-          }
+            ...defaultHeaders,
+          },
         });
       },
-      delete(key: string | number, options: Options = {}): AxiosPromise<[WebhooksRegister]> {
+      delete(
+        key: string | number,
+        options: Options = {}
+      ): AxiosPromise<[WebhooksRegister]> {
         return axios.create()(buildUrl(`webhooks/${key}`), {
-          method: 'delete',
+          method: "delete",
           ...options,
           headers: {
             ...options?.headers,
-            ...defaultHeaders
-          }
+            ...defaultHeaders,
+          },
         });
       },
-      test<K extends keyof Routes>(key: K, id: number | string, entityId: number | string, options: Options = {}) {
-        return axios.post(buildUrl(`${key}/webhooks/test/${id}?entityId=${entityId}`), null, {
-          ...options,
-          headers: {
-            ...options?.headers,
-            ...defaultHeaders
+      test<K extends keyof Routes>(
+        key: K,
+        id: number | string,
+        entityId: number | string,
+        options: Options = {}
+      ) {
+        return axios.post(
+          buildUrl(`${key}/webhooks/test/${id}?entityId=${entityId}`),
+          null,
+          {
+            ...options,
+            headers: {
+              ...options?.headers,
+              ...defaultHeaders,
+            },
           }
-        })
+        );
       },
-    }
-  }
+    },
+  };
 }
 
 const topLevelFns = getFunctions();
@@ -128,7 +184,9 @@ const topLevelFns = getFunctions();
  * ```
  * @param key
  */
-export function request<K extends keyof Routes>(key: K): IgdbRequest<K, InferMode<K>> {
+export function request<K extends keyof Routes>(
+  key: K
+): IgdbRequest<K, InferMode<K>> {
   return topLevelFns.request<K>(key);
 }
 
@@ -159,7 +217,9 @@ export function request<K extends keyof Routes>(key: K): IgdbRequest<K, InferMod
  * @see {@link https://api-docs.igdb.com/?shell#multi-query}
  * @param builders
  */
-export function multi<B extends Builder<any>[]>(...builders: B): Stringifiable & ExecutorMulti<B> {
+export function multi<B extends Builder<any>[]>(
+  ...builders: B
+): Stringifiable & ExecutorMulti<B> {
   return topLevelFns.multi<B>(...builders);
 }
 
@@ -188,8 +248,8 @@ export function multi<B extends Builder<any>[]>(...builders: B): Stringifiable &
  */
 export function igdb(clientId: string, accessToken: string) {
   const headers = {
-    'client-id': clientId,
-    'authorization': `Bearer ${accessToken}`,
+    "client-id": clientId,
+    authorization: `Bearer ${accessToken}`,
   };
 
   const wrappedFns = getFunctions(headers);
@@ -199,14 +259,17 @@ export function igdb(clientId: string, accessToken: string) {
       return wrappedFns.request<K>(key);
     },
 
-    multi<B extends Builder<any>[]>(...builders: B): Stringifiable & ExecutorMulti<B> {
+    multi<B extends Builder<any>[]>(
+      ...builders: B
+    ): Stringifiable & ExecutorMulti<B> {
       return wrappedFns.multi<B>(...builders);
     },
 
-    webhooks: wrappedFns.webhooks
-  }
+    webhooks: wrappedFns.webhooks,
+  };
 }
 
-export * from '../proto/compiled';
-export * from './types';
+export type * from "../proto/compiled";
+export { proto } from "../proto/compiled";
+export * from "./types";
 
