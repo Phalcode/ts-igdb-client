@@ -30,13 +30,13 @@
     "build": "tsup"
   },
   "dependencies": {
-    "axios": "^1.4.0"
+    "axios": "^1.11.0"
   },
   "devDependencies": {
-    "@types/jest": "^29.5.14",
+    "@types/jest": "^30.0.0",
     "ts-toolbelt": "^9.6.0",
-    "tsup": "^8.4.0",
-    "typescript": "^5.8.2"
+    "tsup": "^8.5.0",
+    "typescript": "^5.9.2"
   },
   "tsup": {
     "entry": [
