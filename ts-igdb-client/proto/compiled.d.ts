@@ -273,6 +273,36 @@ export namespace proto {
         CLASS_IND_ATOS_CRIMINOSOS = 85
     }
 
+    interface IAgeRatingContentDescriptionTypeResult {
+        ageratingcontentdescriptiontypes?: (proto.IAgeRatingContentDescriptionType[]|null);
+    }
+
+    class AgeRatingContentDescriptionTypeResult implements IAgeRatingContentDescriptionTypeResult {
+        constructor(properties?: proto.IAgeRatingContentDescriptionTypeResult);
+        public ageratingcontentdescriptiontypes: proto.IAgeRatingContentDescriptionType[];
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    interface IAgeRatingContentDescriptionType {
+        id?: (number|null);
+        slug?: (string|null);
+        name?: (string|null);
+        created_at?: (number|null);
+        updated_at?: (number|null);
+        checksum?: (string|null);
+    }
+
+    class AgeRatingContentDescriptionType implements IAgeRatingContentDescriptionType {
+        constructor(properties?: proto.IAgeRatingContentDescriptionType);
+        public id: number;
+        public slug: string;
+        public name: string;
+        public created_at?: (number|null);
+        public updated_at?: (number|null);
+        public checksum: string;
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
     interface IAgeRatingContentDescriptionV2Result {
         ageratingcontentdescriptionsv2?: (proto.IAgeRatingContentDescriptionV2[]|null);
     }
@@ -290,6 +320,7 @@ export namespace proto {
         created_at?: (number|null);
         updated_at?: (number|null);
         checksum?: (string|null);
+        description_type?: (proto.IAgeRatingContentDescriptionType|null);
     }
 
     class AgeRatingContentDescriptionV2 implements IAgeRatingContentDescriptionV2 {
@@ -300,6 +331,7 @@ export namespace proto {
         public created_at?: (number|null);
         public updated_at?: (number|null);
         public checksum: string;
+        public description_type?: (proto.IAgeRatingContentDescriptionType|null);
         public static getTypeUrl(typeUrlPrefix?: string): string;
     }
 
@@ -379,6 +411,7 @@ export namespace proto {
         url?: (string|null);
         width?: (number|null);
         checksum?: (string|null);
+        artwork_type?: (proto.IArtworkType|null);
     }
 
     class Artwork implements IArtwork {
@@ -391,6 +424,37 @@ export namespace proto {
         public image_id: string;
         public url: string;
         public width: number;
+        public checksum: string;
+        public artwork_type?: (proto.IArtworkType|null);
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    interface IArtworkTypeResult {
+        artworktypes?: (proto.IArtworkType[]|null);
+    }
+
+    class ArtworkTypeResult implements IArtworkTypeResult {
+        constructor(properties?: proto.IArtworkTypeResult);
+        public artworktypes: proto.IArtworkType[];
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    interface IArtworkType {
+        id?: (number|null);
+        slug?: (string|null);
+        name?: (string|null);
+        created_at?: (number|null);
+        updated_at?: (number|null);
+        checksum?: (string|null);
+    }
+
+    class ArtworkType implements IArtworkType {
+        constructor(properties?: proto.IArtworkType);
+        public id: number;
+        public slug: string;
+        public name: string;
+        public created_at?: (number|null);
+        public updated_at?: (number|null);
         public checksum: string;
         public static getTypeUrl(typeUrlPrefix?: string): string;
     }
@@ -2409,6 +2473,7 @@ export namespace proto {
         trusted?: (boolean|null);
         url?: (string|null);
         checksum?: (string|null);
+        type?: (proto.IWebsiteType|null);
     }
 
     class PlatformWebsite implements IPlatformWebsite {
@@ -2418,6 +2483,7 @@ export namespace proto {
         public trusted: boolean;
         public url: string;
         public checksum: string;
+        public type?: (proto.IWebsiteType|null);
         public static getTypeUrl(typeUrlPrefix?: string): string;
     }
 
@@ -2586,6 +2652,7 @@ export namespace proto {
         status?: (proto.IReleaseDateStatus|null);
         date_format?: (proto.IDateFormat|null);
         release_region?: (proto.IReleaseDateRegion|null);
+        d?: (number|null);
     }
 
     class ReleaseDate implements IReleaseDate {
@@ -2605,6 +2672,7 @@ export namespace proto {
         public status?: (proto.IReleaseDateStatus|null);
         public date_format?: (proto.IDateFormat|null);
         public release_region?: (proto.IReleaseDateRegion|null);
+        public d: number;
         public static getTypeUrl(typeUrlPrefix?: string): string;
     }
 
