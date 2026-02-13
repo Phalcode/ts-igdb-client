@@ -1001,6 +1001,66 @@ export namespace proto {
         WEBSITE_BLUESKY = 19
     }
 
+    interface IContentSafetyRatingResult {
+        contentsafetyratings?: (proto.IContentSafetyRating[]|null);
+    }
+
+    class ContentSafetyRatingResult implements IContentSafetyRatingResult {
+        constructor(properties?: proto.IContentSafetyRatingResult);
+        public contentsafetyratings: proto.IContentSafetyRating[];
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    interface IContentSafetyRating {
+        id?: (number|null);
+        name?: (string|null);
+        created_at?: (number|null);
+        updated_at?: (number|null);
+        checksum?: (string|null);
+    }
+
+    class ContentSafetyRating implements IContentSafetyRating {
+        constructor(properties?: proto.IContentSafetyRating);
+        public id: number;
+        public name: string;
+        public created_at?: (number|null);
+        public updated_at?: (number|null);
+        public checksum: string;
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    interface IContentSafetyRatingDimensionResult {
+        contentsafetyratingdimensions?: (proto.IContentSafetyRatingDimension[]|null);
+    }
+
+    class ContentSafetyRatingDimensionResult implements IContentSafetyRatingDimensionResult {
+        constructor(properties?: proto.IContentSafetyRatingDimensionResult);
+        public contentsafetyratingdimensions: proto.IContentSafetyRatingDimension[];
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    interface IContentSafetyRatingDimension {
+        id?: (number|null);
+        content_safety_rating?: (proto.IContentSafetyRating|null);
+        value?: (number|null);
+        description?: (string|null);
+        created_at?: (number|null);
+        updated_at?: (number|null);
+        checksum?: (string|null);
+    }
+
+    class ContentSafetyRatingDimension implements IContentSafetyRatingDimension {
+        constructor(properties?: proto.IContentSafetyRatingDimension);
+        public id: number;
+        public content_safety_rating?: (proto.IContentSafetyRating|null);
+        public value: number;
+        public description: string;
+        public created_at?: (number|null);
+        public updated_at?: (number|null);
+        public checksum: string;
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
     interface ICoverResult {
         covers?: (proto.ICover[]|null);
     }
@@ -1492,6 +1552,38 @@ export namespace proto {
         CANCELLED = 6,
         RUMORED = 7,
         DELISTED = 8
+    }
+
+    interface IGameContentSafetyRatingResult {
+        gamecontentsafetyratings?: (proto.IGameContentSafetyRating[]|null);
+    }
+
+    class GameContentSafetyRatingResult implements IGameContentSafetyRatingResult {
+        constructor(properties?: proto.IGameContentSafetyRatingResult);
+        public gamecontentsafetyratings: proto.IGameContentSafetyRating[];
+        public static getTypeUrl(typeUrlPrefix?: string): string;
+    }
+
+    interface IGameContentSafetyRating {
+        id?: (number|null);
+        game?: (proto.IGame|null);
+        content_safety_rating_dimension?: (proto.IContentSafetyRatingDimension|null);
+        content_safety_rating?: (proto.IContentSafetyRating|null);
+        created_at?: (number|null);
+        updated_at?: (number|null);
+        checksum?: (string|null);
+    }
+
+    class GameContentSafetyRating implements IGameContentSafetyRating {
+        constructor(properties?: proto.IGameContentSafetyRating);
+        public id: number;
+        public game?: (proto.IGame|null);
+        public content_safety_rating_dimension?: (proto.IContentSafetyRatingDimension|null);
+        public content_safety_rating?: (proto.IContentSafetyRating|null);
+        public created_at?: (number|null);
+        public updated_at?: (number|null);
+        public checksum: string;
+        public static getTypeUrl(typeUrlPrefix?: string): string;
     }
 
     interface IGameEngineResult {
