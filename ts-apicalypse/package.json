@@ -1,7 +1,7 @@
 {
   "name": "@phalcode/ts-apicalypse",
   "type": "module",
-  "version": "1.0.26",
+  "version": "1.0.27",
   "description": "A Typescript client and request builder for Apicalypse",
   "author": "Phalcode <contact@phalco.de>",
   "keywords": [
@@ -30,13 +30,13 @@
     "build": "tsup"
   },
   "dependencies": {
-    "axios": "^1.11.0"
+    "axios": "^1.17.0"
   },
   "devDependencies": {
     "@types/jest": "^30.0.0",
     "ts-toolbelt": "^9.6.0",
-    "tsup": "^8.5.0",
-    "typescript": "^5.9.2"
+    "tsup": "^8.5.1",
+    "typescript": "^6.0.3"
   },
   "tsup": {
     "entry": [
