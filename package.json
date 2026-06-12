@@ -1,6 +1,6 @@
 {
   "name": "@phalcode/mono-ts-igdb-client",
-  "version": "1.0.29",
+  "version": "1.0.30",
   "private": true,
   "type": "module",
   "workspaces": [
@@ -12,7 +12,7 @@
     "clean": "rimraf \"ts-apicalypse/dist\" \"ts-igdb/dist\" \"**/*.tsbuildinfo\"",
     "compile": "pnpm run clean && pnpm run -r build",
     "build": "pnpm run compile && pnpm run test",
-    "publish": "pnpm run build && bumpp package.json ts-apicalypse/package.json ts-igdb-client/package.json && pnpm publish --access public -r"
+    "publish": "pnpm run build && bumpp --all package.json ts-apicalypse/package.json ts-igdb-client/package.json && pnpm publish --access public -r"
   },
   "devDependencies": {
     "@types/jest": "^30.0.0",

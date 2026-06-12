@@ -1,6 +1,7 @@
 packages:
   - "ts-igdb-client"
   - "ts-apicalypse"
-onlyBuiltDependencies:
-  - esbuild
-  - protobufjs
+allowBuilds:
+  esbuild: true
+  protobufjs: true
+  unrs-resolver: true

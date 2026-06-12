@@ -1,77 +1,117 @@
-// DO NOT EDIT! This is a generated file. Edit the JSDoc in src/*.js instead and run 'npm run build:types'.
+// DO NOT EDIT! This is a generated file. Edit the source file instead and regenerate.
 
 export namespace proto {
 
-    interface ICount {
-        count?: (number|null);
+    interface ICount extends proto.Count.$Properties {
     }
 
-    class Count implements ICount {
-        constructor(properties?: proto.ICount);
-        public count: number;
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    class Count {
+        constructor(properties?: proto.Count.$Properties);
+        $unknowns?: Uint8Array[];
+        count: number;
+        static getTypeUrl(prefix?: string): string;
     }
 
-    interface IMultiQueryResult {
-        name?: (string|null);
-        results?: (Uint8Array[]|null);
-        count?: (number|null);
+    namespace Count {
+        interface $Properties {
+            count?: (number|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.Count.$Properties;
     }
 
-    class MultiQueryResult implements IMultiQueryResult {
-        constructor(properties?: proto.IMultiQueryResult);
-        public name: string;
-        public results: Uint8Array[];
-        public count: number;
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    interface IMultiQueryResult extends proto.MultiQueryResult.$Properties {
     }
 
-    interface IMultiQueryResultArray {
-        result?: (proto.IMultiQueryResult[]|null);
+    class MultiQueryResult {
+        constructor(properties?: proto.MultiQueryResult.$Properties);
+        $unknowns?: Uint8Array[];
+        name: string;
+        results: Uint8Array[];
+        count: number;
+        static getTypeUrl(prefix?: string): string;
     }
 
-    class MultiQueryResultArray implements IMultiQueryResultArray {
-        constructor(properties?: proto.IMultiQueryResultArray);
-        public result: proto.IMultiQueryResult[];
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    namespace MultiQueryResult {
+        interface $Properties {
+            name?: (string|null);
+            results?: (Uint8Array[]|null);
+            count?: (number|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.MultiQueryResult.$Properties;
     }
 
-    interface IAgeRatingResult {
-        ageratings?: (proto.IAgeRating[]|null);
+    interface IMultiQueryResultArray extends proto.MultiQueryResultArray.$Properties {
     }
 
-    class AgeRatingResult implements IAgeRatingResult {
-        constructor(properties?: proto.IAgeRatingResult);
-        public ageratings: proto.IAgeRating[];
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    class MultiQueryResultArray {
+        constructor(properties?: proto.MultiQueryResultArray.$Properties);
+        $unknowns?: Uint8Array[];
+        result: proto.MultiQueryResult.$Properties[];
+        static getTypeUrl(prefix?: string): string;
     }
 
-    interface IAgeRating {
-        id?: (number|null);
-        category?: (proto.AgeRatingCategoryEnum|null);
-        content_descriptions?: (proto.IAgeRatingContentDescription[]|null);
-        rating?: (proto.AgeRatingRatingEnum|null);
-        rating_cover_url?: (string|null);
-        synopsis?: (string|null);
-        checksum?: (string|null);
-        organization?: (proto.IAgeRatingOrganization|null);
-        rating_category?: (proto.IAgeRatingCategory|null);
-        rating_content_descriptions?: (proto.IAgeRatingContentDescriptionV2[]|null);
+    namespace MultiQueryResultArray {
+        interface $Properties {
+            result?: (proto.MultiQueryResult.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.MultiQueryResultArray.$Properties;
     }
 
-    class AgeRating implements IAgeRating {
-        constructor(properties?: proto.IAgeRating);
-        public id: number;
-        public category: proto.AgeRatingCategoryEnum;
-        public content_descriptions: proto.IAgeRatingContentDescription[];
-        public rating: proto.AgeRatingRatingEnum;
-        public rating_cover_url: string;
-        public synopsis: string;
-        public checksum: string;
-        public organization?: (proto.IAgeRatingOrganization|null);
-        public rating_category?: (proto.IAgeRatingCategory|null);
-        public rating_content_descriptions: proto.IAgeRatingContentDescriptionV2[];
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    interface IAgeRatingResult extends proto.AgeRatingResult.$Properties {
+    }
+
+    class AgeRatingResult {
+        constructor(properties?: proto.AgeRatingResult.$Properties);
+        $unknowns?: Uint8Array[];
+        ageratings: proto.AgeRating.$Properties[];
+        static getTypeUrl(prefix?: string): string;
+    }
+
+    namespace AgeRatingResult {
+        interface $Properties {
+            ageratings?: (proto.AgeRating.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.AgeRatingResult.$Properties;
+    }
+
+    interface IAgeRating extends proto.AgeRating.$Properties {
+    }
+
+    class AgeRating {
+        constructor(properties?: proto.AgeRating.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        category: proto.AgeRatingCategoryEnum;
+        content_descriptions: proto.AgeRatingContentDescription.$Properties[];
+        rating: proto.AgeRatingRatingEnum;
+        rating_cover_url: string;
+        synopsis: string;
+        checksum: string;
+        organization?: (proto.AgeRatingOrganization.$Properties|null);
+        rating_category?: (proto.AgeRatingCategory.$Properties|null);
+        rating_content_descriptions: proto.AgeRatingContentDescriptionV2.$Properties[];
+        static getTypeUrl(prefix?: string): string;
+    }
+
+    namespace AgeRating {
+        interface $Properties {
+            id?: (number|null);
+            category?: (proto.AgeRatingCategoryEnum|null);
+            content_descriptions?: (proto.AgeRatingContentDescription.$Properties[]|null);
+            rating?: (proto.AgeRatingRatingEnum|null);
+            rating_cover_url?: (string|null);
+            synopsis?: (string|null);
+            checksum?: (string|null);
+            organization?: (proto.AgeRatingOrganization.$Properties|null);
+            rating_category?: (proto.AgeRatingCategory.$Properties|null);
+            rating_content_descriptions?: (proto.AgeRatingContentDescriptionV2.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.AgeRating.$Properties;
     }
 
     enum AgeRatingCategoryEnum {
@@ -128,60 +168,92 @@ export namespace proto {
         ACB_RC = 39
     }
 
-    interface IAgeRatingCategoryResult {
-        ageratingcategories?: (proto.IAgeRatingCategory[]|null);
+    interface IAgeRatingCategoryResult extends proto.AgeRatingCategoryResult.$Properties {
     }
 
-    class AgeRatingCategoryResult implements IAgeRatingCategoryResult {
-        constructor(properties?: proto.IAgeRatingCategoryResult);
-        public ageratingcategories: proto.IAgeRatingCategory[];
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    class AgeRatingCategoryResult {
+        constructor(properties?: proto.AgeRatingCategoryResult.$Properties);
+        $unknowns?: Uint8Array[];
+        ageratingcategories: proto.AgeRatingCategory.$Properties[];
+        static getTypeUrl(prefix?: string): string;
     }
 
-    interface IAgeRatingCategory {
-        id?: (number|null);
-        rating?: (string|null);
-        organization?: (proto.IAgeRatingOrganization|null);
-        created_at?: (number|null);
-        updated_at?: (number|null);
-        checksum?: (string|null);
+    namespace AgeRatingCategoryResult {
+        interface $Properties {
+            ageratingcategories?: (proto.AgeRatingCategory.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.AgeRatingCategoryResult.$Properties;
     }
 
-    class AgeRatingCategory implements IAgeRatingCategory {
-        constructor(properties?: proto.IAgeRatingCategory);
-        public id: number;
-        public rating: string;
-        public organization?: (proto.IAgeRatingOrganization|null);
-        public created_at?: (number|null);
-        public updated_at?: (number|null);
-        public checksum: string;
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    interface IAgeRatingCategory extends proto.AgeRatingCategory.$Properties {
     }
 
-    interface IAgeRatingContentDescriptionResult {
-        ageratingcontentdescriptions?: (proto.IAgeRatingContentDescription[]|null);
+    class AgeRatingCategory {
+        constructor(properties?: proto.AgeRatingCategory.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        rating: string;
+        organization?: (proto.AgeRatingOrganization.$Properties|null);
+        created_at?: (google.protobuf.Timestamp.$Properties|null);
+        updated_at?: (google.protobuf.Timestamp.$Properties|null);
+        checksum: string;
+        static getTypeUrl(prefix?: string): string;
     }
 
-    class AgeRatingContentDescriptionResult implements IAgeRatingContentDescriptionResult {
-        constructor(properties?: proto.IAgeRatingContentDescriptionResult);
-        public ageratingcontentdescriptions: proto.IAgeRatingContentDescription[];
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    namespace AgeRatingCategory {
+        interface $Properties {
+            id?: (number|null);
+            rating?: (string|null);
+            organization?: (proto.AgeRatingOrganization.$Properties|null);
+            created_at?: (google.protobuf.Timestamp.$Properties|null);
+            updated_at?: (google.protobuf.Timestamp.$Properties|null);
+            checksum?: (string|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.AgeRatingCategory.$Properties;
     }
 
-    interface IAgeRatingContentDescription {
-        id?: (number|null);
-        category?: (proto.AgeRatingContentDescriptionCategoryEnum|null);
-        description?: (string|null);
-        checksum?: (string|null);
+    interface IAgeRatingContentDescriptionResult extends proto.AgeRatingContentDescriptionResult.$Properties {
     }
 
-    class AgeRatingContentDescription implements IAgeRatingContentDescription {
-        constructor(properties?: proto.IAgeRatingContentDescription);
-        public id: number;
-        public category: proto.AgeRatingContentDescriptionCategoryEnum;
-        public description: string;
-        public checksum: string;
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    class AgeRatingContentDescriptionResult {
+        constructor(properties?: proto.AgeRatingContentDescriptionResult.$Properties);
+        $unknowns?: Uint8Array[];
+        ageratingcontentdescriptions: proto.AgeRatingContentDescription.$Properties[];
+        static getTypeUrl(prefix?: string): string;
+    }
+
+    namespace AgeRatingContentDescriptionResult {
+        interface $Properties {
+            ageratingcontentdescriptions?: (proto.AgeRatingContentDescription.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.AgeRatingContentDescriptionResult.$Properties;
+    }
+
+    interface IAgeRatingContentDescription extends proto.AgeRatingContentDescription.$Properties {
+    }
+
+    class AgeRatingContentDescription {
+        constructor(properties?: proto.AgeRatingContentDescription.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        category: proto.AgeRatingContentDescriptionCategoryEnum;
+        description: string;
+        checksum: string;
+        static getTypeUrl(prefix?: string): string;
+    }
+
+    namespace AgeRatingContentDescription {
+        interface $Properties {
+            id?: (number|null);
+            category?: (proto.AgeRatingContentDescriptionCategoryEnum|null);
+            description?: (string|null);
+            checksum?: (string|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.AgeRatingContentDescription.$Properties;
     }
 
     enum AgeRatingContentDescriptionCategoryEnum {
@@ -273,240 +345,352 @@ export namespace proto {
         CLASS_IND_ATOS_CRIMINOSOS = 85
     }
 
-    interface IAgeRatingContentDescriptionTypeResult {
-        ageratingcontentdescriptiontypes?: (proto.IAgeRatingContentDescriptionType[]|null);
+    interface IAgeRatingContentDescriptionTypeResult extends proto.AgeRatingContentDescriptionTypeResult.$Properties {
     }
 
-    class AgeRatingContentDescriptionTypeResult implements IAgeRatingContentDescriptionTypeResult {
-        constructor(properties?: proto.IAgeRatingContentDescriptionTypeResult);
-        public ageratingcontentdescriptiontypes: proto.IAgeRatingContentDescriptionType[];
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    class AgeRatingContentDescriptionTypeResult {
+        constructor(properties?: proto.AgeRatingContentDescriptionTypeResult.$Properties);
+        $unknowns?: Uint8Array[];
+        ageratingcontentdescriptiontypes: proto.AgeRatingContentDescriptionType.$Properties[];
+        static getTypeUrl(prefix?: string): string;
     }
 
-    interface IAgeRatingContentDescriptionType {
-        id?: (number|null);
-        slug?: (string|null);
-        name?: (string|null);
-        created_at?: (number|null);
-        updated_at?: (number|null);
-        checksum?: (string|null);
+    namespace AgeRatingContentDescriptionTypeResult {
+        interface $Properties {
+            ageratingcontentdescriptiontypes?: (proto.AgeRatingContentDescriptionType.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.AgeRatingContentDescriptionTypeResult.$Properties;
     }
 
-    class AgeRatingContentDescriptionType implements IAgeRatingContentDescriptionType {
-        constructor(properties?: proto.IAgeRatingContentDescriptionType);
-        public id: number;
-        public slug: string;
-        public name: string;
-        public created_at?: (number|null);
-        public updated_at?: (number|null);
-        public checksum: string;
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    interface IAgeRatingContentDescriptionType extends proto.AgeRatingContentDescriptionType.$Properties {
     }
 
-    interface IAgeRatingContentDescriptionV2Result {
-        ageratingcontentdescriptionsv2?: (proto.IAgeRatingContentDescriptionV2[]|null);
+    class AgeRatingContentDescriptionType {
+        constructor(properties?: proto.AgeRatingContentDescriptionType.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        slug: string;
+        name: string;
+        created_at?: (google.protobuf.Timestamp.$Properties|null);
+        updated_at?: (google.protobuf.Timestamp.$Properties|null);
+        checksum: string;
+        static getTypeUrl(prefix?: string): string;
     }
 
-    class AgeRatingContentDescriptionV2Result implements IAgeRatingContentDescriptionV2Result {
-        constructor(properties?: proto.IAgeRatingContentDescriptionV2Result);
-        public ageratingcontentdescriptionsv2: proto.IAgeRatingContentDescriptionV2[];
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    namespace AgeRatingContentDescriptionType {
+        interface $Properties {
+            id?: (number|null);
+            slug?: (string|null);
+            name?: (string|null);
+            created_at?: (google.protobuf.Timestamp.$Properties|null);
+            updated_at?: (google.protobuf.Timestamp.$Properties|null);
+            checksum?: (string|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.AgeRatingContentDescriptionType.$Properties;
     }
 
-    interface IAgeRatingContentDescriptionV2 {
-        id?: (number|null);
-        description?: (string|null);
-        organization?: (proto.IAgeRatingOrganization|null);
-        created_at?: (number|null);
-        updated_at?: (number|null);
-        checksum?: (string|null);
-        description_type?: (proto.IAgeRatingContentDescriptionType|null);
+    interface IAgeRatingContentDescriptionV2Result extends proto.AgeRatingContentDescriptionV2Result.$Properties {
     }
 
-    class AgeRatingContentDescriptionV2 implements IAgeRatingContentDescriptionV2 {
-        constructor(properties?: proto.IAgeRatingContentDescriptionV2);
-        public id: number;
-        public description: string;
-        public organization?: (proto.IAgeRatingOrganization|null);
-        public created_at?: (number|null);
-        public updated_at?: (number|null);
-        public checksum: string;
-        public description_type?: (proto.IAgeRatingContentDescriptionType|null);
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    class AgeRatingContentDescriptionV2Result {
+        constructor(properties?: proto.AgeRatingContentDescriptionV2Result.$Properties);
+        $unknowns?: Uint8Array[];
+        ageratingcontentdescriptionsv2: proto.AgeRatingContentDescriptionV2.$Properties[];
+        static getTypeUrl(prefix?: string): string;
     }
 
-    interface IAgeRatingOrganizationResult {
-        ageratingorganizations?: (proto.IAgeRatingOrganization[]|null);
+    namespace AgeRatingContentDescriptionV2Result {
+        interface $Properties {
+            ageratingcontentdescriptionsv2?: (proto.AgeRatingContentDescriptionV2.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.AgeRatingContentDescriptionV2Result.$Properties;
     }
 
-    class AgeRatingOrganizationResult implements IAgeRatingOrganizationResult {
-        constructor(properties?: proto.IAgeRatingOrganizationResult);
-        public ageratingorganizations: proto.IAgeRatingOrganization[];
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    interface IAgeRatingContentDescriptionV2 extends proto.AgeRatingContentDescriptionV2.$Properties {
     }
 
-    interface IAgeRatingOrganization {
-        id?: (number|null);
-        name?: (string|null);
-        created_at?: (number|null);
-        updated_at?: (number|null);
-        checksum?: (string|null);
+    class AgeRatingContentDescriptionV2 {
+        constructor(properties?: proto.AgeRatingContentDescriptionV2.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        description: string;
+        organization?: (proto.AgeRatingOrganization.$Properties|null);
+        created_at?: (google.protobuf.Timestamp.$Properties|null);
+        updated_at?: (google.protobuf.Timestamp.$Properties|null);
+        checksum: string;
+        description_type?: (proto.AgeRatingContentDescriptionType.$Properties|null);
+        static getTypeUrl(prefix?: string): string;
     }
 
-    class AgeRatingOrganization implements IAgeRatingOrganization {
-        constructor(properties?: proto.IAgeRatingOrganization);
-        public id: number;
-        public name: string;
-        public created_at?: (number|null);
-        public updated_at?: (number|null);
-        public checksum: string;
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    namespace AgeRatingContentDescriptionV2 {
+        interface $Properties {
+            id?: (number|null);
+            description?: (string|null);
+            organization?: (proto.AgeRatingOrganization.$Properties|null);
+            created_at?: (google.protobuf.Timestamp.$Properties|null);
+            updated_at?: (google.protobuf.Timestamp.$Properties|null);
+            checksum?: (string|null);
+            description_type?: (proto.AgeRatingContentDescriptionType.$Properties|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.AgeRatingContentDescriptionV2.$Properties;
     }
 
-    interface IAlternativeNameResult {
-        alternativenames?: (proto.IAlternativeName[]|null);
+    interface IAgeRatingOrganizationResult extends proto.AgeRatingOrganizationResult.$Properties {
     }
 
-    class AlternativeNameResult implements IAlternativeNameResult {
-        constructor(properties?: proto.IAlternativeNameResult);
-        public alternativenames: proto.IAlternativeName[];
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    class AgeRatingOrganizationResult {
+        constructor(properties?: proto.AgeRatingOrganizationResult.$Properties);
+        $unknowns?: Uint8Array[];
+        ageratingorganizations: proto.AgeRatingOrganization.$Properties[];
+        static getTypeUrl(prefix?: string): string;
     }
 
-    interface IAlternativeName {
-        id?: (number|null);
-        comment?: (string|null);
-        game?: (proto.IGame|null);
-        name?: (string|null);
-        checksum?: (string|null);
+    namespace AgeRatingOrganizationResult {
+        interface $Properties {
+            ageratingorganizations?: (proto.AgeRatingOrganization.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.AgeRatingOrganizationResult.$Properties;
     }
 
-    class AlternativeName implements IAlternativeName {
-        constructor(properties?: proto.IAlternativeName);
-        public id: number;
-        public comment: string;
-        public game?: (proto.IGame|null);
-        public name: string;
-        public checksum: string;
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    interface IAgeRatingOrganization extends proto.AgeRatingOrganization.$Properties {
     }
 
-    interface IArtworkResult {
-        artworks?: (proto.IArtwork[]|null);
+    class AgeRatingOrganization {
+        constructor(properties?: proto.AgeRatingOrganization.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        name: string;
+        created_at?: (google.protobuf.Timestamp.$Properties|null);
+        updated_at?: (google.protobuf.Timestamp.$Properties|null);
+        checksum: string;
+        static getTypeUrl(prefix?: string): string;
     }
 
-    class ArtworkResult implements IArtworkResult {
-        constructor(properties?: proto.IArtworkResult);
-        public artworks: proto.IArtwork[];
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    namespace AgeRatingOrganization {
+        interface $Properties {
+            id?: (number|null);
+            name?: (string|null);
+            created_at?: (google.protobuf.Timestamp.$Properties|null);
+            updated_at?: (google.protobuf.Timestamp.$Properties|null);
+            checksum?: (string|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.AgeRatingOrganization.$Properties;
     }
 
-    interface IArtwork {
-        id?: (number|null);
-        alpha_channel?: (boolean|null);
-        animated?: (boolean|null);
-        game?: (proto.IGame|null);
-        height?: (number|null);
-        image_id?: (string|null);
-        url?: (string|null);
-        width?: (number|null);
-        checksum?: (string|null);
-        artwork_type?: (proto.IArtworkType|null);
+    interface IAlternativeNameResult extends proto.AlternativeNameResult.$Properties {
     }
 
-    class Artwork implements IArtwork {
-        constructor(properties?: proto.IArtwork);
-        public id: number;
-        public alpha_channel: boolean;
-        public animated: boolean;
-        public game?: (proto.IGame|null);
-        public height: number;
-        public image_id: string;
-        public url: string;
-        public width: number;
-        public checksum: string;
-        public artwork_type?: (proto.IArtworkType|null);
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    class AlternativeNameResult {
+        constructor(properties?: proto.AlternativeNameResult.$Properties);
+        $unknowns?: Uint8Array[];
+        alternativenames: proto.AlternativeName.$Properties[];
+        static getTypeUrl(prefix?: string): string;
     }
 
-    interface IArtworkTypeResult {
-        artworktypes?: (proto.IArtworkType[]|null);
+    namespace AlternativeNameResult {
+        interface $Properties {
+            alternativenames?: (proto.AlternativeName.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.AlternativeNameResult.$Properties;
     }
 
-    class ArtworkTypeResult implements IArtworkTypeResult {
-        constructor(properties?: proto.IArtworkTypeResult);
-        public artworktypes: proto.IArtworkType[];
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    interface IAlternativeName extends proto.AlternativeName.$Properties {
     }
 
-    interface IArtworkType {
-        id?: (number|null);
-        slug?: (string|null);
-        name?: (string|null);
-        created_at?: (number|null);
-        updated_at?: (number|null);
-        checksum?: (string|null);
+    class AlternativeName {
+        constructor(properties?: proto.AlternativeName.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        comment: string;
+        game?: (proto.Game.$Properties|null);
+        name: string;
+        checksum: string;
+        static getTypeUrl(prefix?: string): string;
     }
 
-    class ArtworkType implements IArtworkType {
-        constructor(properties?: proto.IArtworkType);
-        public id: number;
-        public slug: string;
-        public name: string;
-        public created_at?: (number|null);
-        public updated_at?: (number|null);
-        public checksum: string;
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    namespace AlternativeName {
+        interface $Properties {
+            id?: (number|null);
+            comment?: (string|null);
+            game?: (proto.Game.$Properties|null);
+            name?: (string|null);
+            checksum?: (string|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.AlternativeName.$Properties;
     }
 
-    interface ICharacterResult {
-        characters?: (proto.ICharacter[]|null);
+    interface IArtworkResult extends proto.ArtworkResult.$Properties {
     }
 
-    class CharacterResult implements ICharacterResult {
-        constructor(properties?: proto.ICharacterResult);
-        public characters: proto.ICharacter[];
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    class ArtworkResult {
+        constructor(properties?: proto.ArtworkResult.$Properties);
+        $unknowns?: Uint8Array[];
+        artworks: proto.Artwork.$Properties[];
+        static getTypeUrl(prefix?: string): string;
     }
 
-    interface ICharacter {
-        id?: (number|null);
-        akas?: (string[]|null);
-        country_name?: (string|null);
-        created_at?: (number|null);
-        description?: (string|null);
-        games?: (proto.IGame[]|null);
-        gender?: (proto.GenderGenderEnum|null);
-        mug_shot?: (proto.ICharacterMugShot|null);
-        name?: (string|null);
-        slug?: (string|null);
-        species?: (proto.CharacterSpeciesEnum|null);
-        updated_at?: (number|null);
-        url?: (string|null);
-        checksum?: (string|null);
-        character_gender?: (proto.ICharacterGender|null);
-        character_species?: (proto.ICharacterSpecie|null);
+    namespace ArtworkResult {
+        interface $Properties {
+            artworks?: (proto.Artwork.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.ArtworkResult.$Properties;
     }
 
-    class Character implements ICharacter {
-        constructor(properties?: proto.ICharacter);
-        public id: number;
-        public akas: string[];
-        public country_name: string;
-        public created_at?: (number|null);
-        public description: string;
-        public games: proto.IGame[];
-        public gender: proto.GenderGenderEnum;
-        public mug_shot?: (proto.ICharacterMugShot|null);
-        public name: string;
-        public slug: string;
-        public species: proto.CharacterSpeciesEnum;
-        public updated_at?: (number|null);
-        public url: string;
-        public checksum: string;
-        public character_gender?: (proto.ICharacterGender|null);
-        public character_species?: (proto.ICharacterSpecie|null);
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    interface IArtwork extends proto.Artwork.$Properties {
+    }
+
+    class Artwork {
+        constructor(properties?: proto.Artwork.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        alpha_channel: boolean;
+        animated: boolean;
+        game?: (proto.Game.$Properties|null);
+        height: number;
+        image_id: string;
+        url: string;
+        width: number;
+        checksum: string;
+        artwork_type?: (proto.ArtworkType.$Properties|null);
+        static getTypeUrl(prefix?: string): string;
+    }
+
+    namespace Artwork {
+        interface $Properties {
+            id?: (number|null);
+            alpha_channel?: (boolean|null);
+            animated?: (boolean|null);
+            game?: (proto.Game.$Properties|null);
+            height?: (number|null);
+            image_id?: (string|null);
+            url?: (string|null);
+            width?: (number|null);
+            checksum?: (string|null);
+            artwork_type?: (proto.ArtworkType.$Properties|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.Artwork.$Properties;
+    }
+
+    interface IArtworkTypeResult extends proto.ArtworkTypeResult.$Properties {
+    }
+
+    class ArtworkTypeResult {
+        constructor(properties?: proto.ArtworkTypeResult.$Properties);
+        $unknowns?: Uint8Array[];
+        artworktypes: proto.ArtworkType.$Properties[];
+        static getTypeUrl(prefix?: string): string;
+    }
+
+    namespace ArtworkTypeResult {
+        interface $Properties {
+            artworktypes?: (proto.ArtworkType.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.ArtworkTypeResult.$Properties;
+    }
+
+    interface IArtworkType extends proto.ArtworkType.$Properties {
+    }
+
+    class ArtworkType {
+        constructor(properties?: proto.ArtworkType.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        slug: string;
+        name: string;
+        created_at?: (google.protobuf.Timestamp.$Properties|null);
+        updated_at?: (google.protobuf.Timestamp.$Properties|null);
+        checksum: string;
+        static getTypeUrl(prefix?: string): string;
+    }
+
+    namespace ArtworkType {
+        interface $Properties {
+            id?: (number|null);
+            slug?: (string|null);
+            name?: (string|null);
+            created_at?: (google.protobuf.Timestamp.$Properties|null);
+            updated_at?: (google.protobuf.Timestamp.$Properties|null);
+            checksum?: (string|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.ArtworkType.$Properties;
+    }
+
+    interface ICharacterResult extends proto.CharacterResult.$Properties {
+    }
+
+    class CharacterResult {
+        constructor(properties?: proto.CharacterResult.$Properties);
+        $unknowns?: Uint8Array[];
+        characters: proto.Character.$Properties[];
+        static getTypeUrl(prefix?: string): string;
+    }
+
+    namespace CharacterResult {
+        interface $Properties {
+            characters?: (proto.Character.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.CharacterResult.$Properties;
+    }
+
+    interface ICharacter extends proto.Character.$Properties {
+    }
+
+    class Character {
+        constructor(properties?: proto.Character.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        akas: string[];
+        country_name: string;
+        created_at?: (google.protobuf.Timestamp.$Properties|null);
+        description: string;
+        games: proto.Game.$Properties[];
+        gender: proto.GenderGenderEnum;
+        mug_shot?: (proto.CharacterMugShot.$Properties|null);
+        name: string;
+        slug: string;
+        species: proto.CharacterSpeciesEnum;
+        updated_at?: (google.protobuf.Timestamp.$Properties|null);
+        url: string;
+        checksum: string;
+        character_gender?: (proto.CharacterGender.$Properties|null);
+        character_species?: (proto.CharacterSpecie.$Properties|null);
+        static getTypeUrl(prefix?: string): string;
+    }
+
+    namespace Character {
+        interface $Properties {
+            id?: (number|null);
+            akas?: (string[]|null);
+            country_name?: (string|null);
+            created_at?: (google.protobuf.Timestamp.$Properties|null);
+            description?: (string|null);
+            games?: (proto.Game.$Properties[]|null);
+            gender?: (proto.GenderGenderEnum|null);
+            mug_shot?: (proto.CharacterMugShot.$Properties|null);
+            name?: (string|null);
+            slug?: (string|null);
+            species?: (proto.CharacterSpeciesEnum|null);
+            updated_at?: (google.protobuf.Timestamp.$Properties|null);
+            url?: (string|null);
+            checksum?: (string|null);
+            character_gender?: (proto.CharacterGender.$Properties|null);
+            character_species?: (proto.CharacterSpecie.$Properties|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.Character.$Properties;
     }
 
     enum GenderGenderEnum {
@@ -524,356 +708,520 @@ export namespace proto {
         UNKNOWN = 5
     }
 
-    interface ICharacterGenderResult {
-        charactergenders?: (proto.ICharacterGender[]|null);
+    interface ICharacterGenderResult extends proto.CharacterGenderResult.$Properties {
     }
 
-    class CharacterGenderResult implements ICharacterGenderResult {
-        constructor(properties?: proto.ICharacterGenderResult);
-        public charactergenders: proto.ICharacterGender[];
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    class CharacterGenderResult {
+        constructor(properties?: proto.CharacterGenderResult.$Properties);
+        $unknowns?: Uint8Array[];
+        charactergenders: proto.CharacterGender.$Properties[];
+        static getTypeUrl(prefix?: string): string;
     }
 
-    interface ICharacterGender {
-        id?: (number|null);
-        name?: (string|null);
-        created_at?: (number|null);
-        updated_at?: (number|null);
-        checksum?: (string|null);
+    namespace CharacterGenderResult {
+        interface $Properties {
+            charactergenders?: (proto.CharacterGender.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.CharacterGenderResult.$Properties;
     }
 
-    class CharacterGender implements ICharacterGender {
-        constructor(properties?: proto.ICharacterGender);
-        public id: number;
-        public name: string;
-        public created_at?: (number|null);
-        public updated_at?: (number|null);
-        public checksum: string;
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    interface ICharacterGender extends proto.CharacterGender.$Properties {
     }
 
-    interface ICharacterMugShotResult {
-        charactermugshots?: (proto.ICharacterMugShot[]|null);
+    class CharacterGender {
+        constructor(properties?: proto.CharacterGender.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        name: string;
+        created_at?: (google.protobuf.Timestamp.$Properties|null);
+        updated_at?: (google.protobuf.Timestamp.$Properties|null);
+        checksum: string;
+        static getTypeUrl(prefix?: string): string;
     }
 
-    class CharacterMugShotResult implements ICharacterMugShotResult {
-        constructor(properties?: proto.ICharacterMugShotResult);
-        public charactermugshots: proto.ICharacterMugShot[];
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    namespace CharacterGender {
+        interface $Properties {
+            id?: (number|null);
+            name?: (string|null);
+            created_at?: (google.protobuf.Timestamp.$Properties|null);
+            updated_at?: (google.protobuf.Timestamp.$Properties|null);
+            checksum?: (string|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.CharacterGender.$Properties;
     }
 
-    interface ICharacterMugShot {
-        id?: (number|null);
-        alpha_channel?: (boolean|null);
-        animated?: (boolean|null);
-        height?: (number|null);
-        image_id?: (string|null);
-        url?: (string|null);
-        width?: (number|null);
-        checksum?: (string|null);
+    interface ICharacterMugShotResult extends proto.CharacterMugShotResult.$Properties {
     }
 
-    class CharacterMugShot implements ICharacterMugShot {
-        constructor(properties?: proto.ICharacterMugShot);
-        public id: number;
-        public alpha_channel: boolean;
-        public animated: boolean;
-        public height: number;
-        public image_id: string;
-        public url: string;
-        public width: number;
-        public checksum: string;
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    class CharacterMugShotResult {
+        constructor(properties?: proto.CharacterMugShotResult.$Properties);
+        $unknowns?: Uint8Array[];
+        charactermugshots: proto.CharacterMugShot.$Properties[];
+        static getTypeUrl(prefix?: string): string;
     }
 
-    interface ICharacterSpecieResult {
-        characterspecies?: (proto.ICharacterSpecie[]|null);
+    namespace CharacterMugShotResult {
+        interface $Properties {
+            charactermugshots?: (proto.CharacterMugShot.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.CharacterMugShotResult.$Properties;
     }
 
-    class CharacterSpecieResult implements ICharacterSpecieResult {
-        constructor(properties?: proto.ICharacterSpecieResult);
-        public characterspecies: proto.ICharacterSpecie[];
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    interface ICharacterMugShot extends proto.CharacterMugShot.$Properties {
     }
 
-    interface ICharacterSpecie {
-        id?: (number|null);
-        name?: (string|null);
-        created_at?: (number|null);
-        updated_at?: (number|null);
-        checksum?: (string|null);
+    class CharacterMugShot {
+        constructor(properties?: proto.CharacterMugShot.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        alpha_channel: boolean;
+        animated: boolean;
+        height: number;
+        image_id: string;
+        url: string;
+        width: number;
+        checksum: string;
+        static getTypeUrl(prefix?: string): string;
     }
 
-    class CharacterSpecie implements ICharacterSpecie {
-        constructor(properties?: proto.ICharacterSpecie);
-        public id: number;
-        public name: string;
-        public created_at?: (number|null);
-        public updated_at?: (number|null);
-        public checksum: string;
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    namespace CharacterMugShot {
+        interface $Properties {
+            id?: (number|null);
+            alpha_channel?: (boolean|null);
+            animated?: (boolean|null);
+            height?: (number|null);
+            image_id?: (string|null);
+            url?: (string|null);
+            width?: (number|null);
+            checksum?: (string|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.CharacterMugShot.$Properties;
     }
 
-    interface ICollectionResult {
-        collections?: (proto.ICollection[]|null);
+    interface ICharacterSpecieResult extends proto.CharacterSpecieResult.$Properties {
     }
 
-    class CollectionResult implements ICollectionResult {
-        constructor(properties?: proto.ICollectionResult);
-        public collections: proto.ICollection[];
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    class CharacterSpecieResult {
+        constructor(properties?: proto.CharacterSpecieResult.$Properties);
+        $unknowns?: Uint8Array[];
+        characterspecies: proto.CharacterSpecie.$Properties[];
+        static getTypeUrl(prefix?: string): string;
     }
 
-    interface ICollection {
-        id?: (number|null);
-        created_at?: (number|null);
-        games?: (proto.IGame[]|null);
-        name?: (string|null);
-        slug?: (string|null);
-        updated_at?: (number|null);
-        url?: (string|null);
-        checksum?: (string|null);
-        type?: (proto.ICollectionType|null);
-        as_parent_relations?: (proto.ICollectionRelation[]|null);
-        as_child_relations?: (proto.ICollectionRelation[]|null);
+    namespace CharacterSpecieResult {
+        interface $Properties {
+            characterspecies?: (proto.CharacterSpecie.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.CharacterSpecieResult.$Properties;
     }
 
-    class Collection implements ICollection {
-        constructor(properties?: proto.ICollection);
-        public id: number;
-        public created_at?: (number|null);
-        public games: proto.IGame[];
-        public name: string;
-        public slug: string;
-        public updated_at?: (number|null);
-        public url: string;
-        public checksum: string;
-        public type?: (proto.ICollectionType|null);
-        public as_parent_relations: proto.ICollectionRelation[];
-        public as_child_relations: proto.ICollectionRelation[];
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    interface ICharacterSpecie extends proto.CharacterSpecie.$Properties {
     }
 
-    interface ICollectionMembershipResult {
-        collectionmemberships?: (proto.ICollectionMembership[]|null);
+    class CharacterSpecie {
+        constructor(properties?: proto.CharacterSpecie.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        name: string;
+        created_at?: (google.protobuf.Timestamp.$Properties|null);
+        updated_at?: (google.protobuf.Timestamp.$Properties|null);
+        checksum: string;
+        static getTypeUrl(prefix?: string): string;
     }
 
-    class CollectionMembershipResult implements ICollectionMembershipResult {
-        constructor(properties?: proto.ICollectionMembershipResult);
-        public collectionmemberships: proto.ICollectionMembership[];
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    namespace CharacterSpecie {
+        interface $Properties {
+            id?: (number|null);
+            name?: (string|null);
+            created_at?: (google.protobuf.Timestamp.$Properties|null);
+            updated_at?: (google.protobuf.Timestamp.$Properties|null);
+            checksum?: (string|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.CharacterSpecie.$Properties;
     }
 
-    interface ICollectionMembership {
-        id?: (number|null);
-        game?: (proto.IGame|null);
-        collection?: (proto.ICollection|null);
-        type?: (proto.ICollectionMembershipType|null);
-        updated_at?: (number|null);
-        created_at?: (number|null);
-        checksum?: (string|null);
+    interface ICollectionResult extends proto.CollectionResult.$Properties {
     }
 
-    class CollectionMembership implements ICollectionMembership {
-        constructor(properties?: proto.ICollectionMembership);
-        public id: number;
-        public game?: (proto.IGame|null);
-        public collection?: (proto.ICollection|null);
-        public type?: (proto.ICollectionMembershipType|null);
-        public updated_at?: (number|null);
-        public created_at?: (number|null);
-        public checksum: string;
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    class CollectionResult {
+        constructor(properties?: proto.CollectionResult.$Properties);
+        $unknowns?: Uint8Array[];
+        collections: proto.Collection.$Properties[];
+        static getTypeUrl(prefix?: string): string;
     }
 
-    interface ICollectionMembershipTypeResult {
-        collectionmembershiptypes?: (proto.ICollectionMembershipType[]|null);
+    namespace CollectionResult {
+        interface $Properties {
+            collections?: (proto.Collection.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.CollectionResult.$Properties;
     }
 
-    class CollectionMembershipTypeResult implements ICollectionMembershipTypeResult {
-        constructor(properties?: proto.ICollectionMembershipTypeResult);
-        public collectionmembershiptypes: proto.ICollectionMembershipType[];
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    interface ICollection extends proto.Collection.$Properties {
     }
 
-    interface ICollectionMembershipType {
-        id?: (number|null);
-        name?: (string|null);
-        description?: (string|null);
-        allowed_collection_type?: (proto.ICollectionType|null);
-        updated_at?: (number|null);
-        created_at?: (number|null);
-        checksum?: (string|null);
+    class Collection {
+        constructor(properties?: proto.Collection.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        created_at?: (google.protobuf.Timestamp.$Properties|null);
+        games: proto.Game.$Properties[];
+        name: string;
+        slug: string;
+        updated_at?: (google.protobuf.Timestamp.$Properties|null);
+        url: string;
+        checksum: string;
+        type?: (proto.CollectionType.$Properties|null);
+        as_parent_relations: proto.CollectionRelation.$Properties[];
+        as_child_relations: proto.CollectionRelation.$Properties[];
+        static getTypeUrl(prefix?: string): string;
     }
 
-    class CollectionMembershipType implements ICollectionMembershipType {
-        constructor(properties?: proto.ICollectionMembershipType);
-        public id: number;
-        public name: string;
-        public description: string;
-        public allowed_collection_type?: (proto.ICollectionType|null);
-        public updated_at?: (number|null);
-        public created_at?: (number|null);
-        public checksum: string;
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    namespace Collection {
+        interface $Properties {
+            id?: (number|null);
+            created_at?: (google.protobuf.Timestamp.$Properties|null);
+            games?: (proto.Game.$Properties[]|null);
+            name?: (string|null);
+            slug?: (string|null);
+            updated_at?: (google.protobuf.Timestamp.$Properties|null);
+            url?: (string|null);
+            checksum?: (string|null);
+            type?: (proto.CollectionType.$Properties|null);
+            as_parent_relations?: (proto.CollectionRelation.$Properties[]|null);
+            as_child_relations?: (proto.CollectionRelation.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.Collection.$Properties;
     }
 
-    interface ICollectionRelationResult {
-        collectionrelations?: (proto.ICollectionRelation[]|null);
+    interface ICollectionMembershipResult extends proto.CollectionMembershipResult.$Properties {
     }
 
-    class CollectionRelationResult implements ICollectionRelationResult {
-        constructor(properties?: proto.ICollectionRelationResult);
-        public collectionrelations: proto.ICollectionRelation[];
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    class CollectionMembershipResult {
+        constructor(properties?: proto.CollectionMembershipResult.$Properties);
+        $unknowns?: Uint8Array[];
+        collectionmemberships: proto.CollectionMembership.$Properties[];
+        static getTypeUrl(prefix?: string): string;
     }
 
-    interface ICollectionRelation {
-        id?: (number|null);
-        child_collection?: (proto.ICollection|null);
-        parent_collection?: (proto.ICollection|null);
-        type?: (proto.ICollectionRelationType|null);
-        updated_at?: (number|null);
-        created_at?: (number|null);
-        checksum?: (string|null);
+    namespace CollectionMembershipResult {
+        interface $Properties {
+            collectionmemberships?: (proto.CollectionMembership.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.CollectionMembershipResult.$Properties;
     }
 
-    class CollectionRelation implements ICollectionRelation {
-        constructor(properties?: proto.ICollectionRelation);
-        public id: number;
-        public child_collection?: (proto.ICollection|null);
-        public parent_collection?: (proto.ICollection|null);
-        public type?: (proto.ICollectionRelationType|null);
-        public updated_at?: (number|null);
-        public created_at?: (number|null);
-        public checksum: string;
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    interface ICollectionMembership extends proto.CollectionMembership.$Properties {
     }
 
-    interface ICollectionRelationTypeResult {
-        collectionrelationtypes?: (proto.ICollectionRelationType[]|null);
+    class CollectionMembership {
+        constructor(properties?: proto.CollectionMembership.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        game?: (proto.Game.$Properties|null);
+        collection?: (proto.Collection.$Properties|null);
+        type?: (proto.CollectionMembershipType.$Properties|null);
+        updated_at?: (google.protobuf.Timestamp.$Properties|null);
+        created_at?: (google.protobuf.Timestamp.$Properties|null);
+        checksum: string;
+        static getTypeUrl(prefix?: string): string;
     }
 
-    class CollectionRelationTypeResult implements ICollectionRelationTypeResult {
-        constructor(properties?: proto.ICollectionRelationTypeResult);
-        public collectionrelationtypes: proto.ICollectionRelationType[];
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    namespace CollectionMembership {
+        interface $Properties {
+            id?: (number|null);
+            game?: (proto.Game.$Properties|null);
+            collection?: (proto.Collection.$Properties|null);
+            type?: (proto.CollectionMembershipType.$Properties|null);
+            updated_at?: (google.protobuf.Timestamp.$Properties|null);
+            created_at?: (google.protobuf.Timestamp.$Properties|null);
+            checksum?: (string|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.CollectionMembership.$Properties;
     }
 
-    interface ICollectionRelationType {
-        id?: (number|null);
-        name?: (string|null);
-        description?: (string|null);
-        allowed_child_type?: (proto.ICollectionType|null);
-        allowed_parent_type?: (proto.ICollectionType|null);
-        updated_at?: (number|null);
-        created_at?: (number|null);
-        checksum?: (string|null);
+    interface ICollectionMembershipTypeResult extends proto.CollectionMembershipTypeResult.$Properties {
     }
 
-    class CollectionRelationType implements ICollectionRelationType {
-        constructor(properties?: proto.ICollectionRelationType);
-        public id: number;
-        public name: string;
-        public description: string;
-        public allowed_child_type?: (proto.ICollectionType|null);
-        public allowed_parent_type?: (proto.ICollectionType|null);
-        public updated_at?: (number|null);
-        public created_at?: (number|null);
-        public checksum: string;
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    class CollectionMembershipTypeResult {
+        constructor(properties?: proto.CollectionMembershipTypeResult.$Properties);
+        $unknowns?: Uint8Array[];
+        collectionmembershiptypes: proto.CollectionMembershipType.$Properties[];
+        static getTypeUrl(prefix?: string): string;
     }
 
-    interface ICollectionTypeResult {
-        collectiontypes?: (proto.ICollectionType[]|null);
+    namespace CollectionMembershipTypeResult {
+        interface $Properties {
+            collectionmembershiptypes?: (proto.CollectionMembershipType.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.CollectionMembershipTypeResult.$Properties;
     }
 
-    class CollectionTypeResult implements ICollectionTypeResult {
-        constructor(properties?: proto.ICollectionTypeResult);
-        public collectiontypes: proto.ICollectionType[];
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    interface ICollectionMembershipType extends proto.CollectionMembershipType.$Properties {
     }
 
-    interface ICollectionType {
-        id?: (number|null);
-        name?: (string|null);
-        description?: (string|null);
-        updated_at?: (number|null);
-        created_at?: (number|null);
-        checksum?: (string|null);
+    class CollectionMembershipType {
+        constructor(properties?: proto.CollectionMembershipType.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        name: string;
+        description: string;
+        allowed_collection_type?: (proto.CollectionType.$Properties|null);
+        updated_at?: (google.protobuf.Timestamp.$Properties|null);
+        created_at?: (google.protobuf.Timestamp.$Properties|null);
+        checksum: string;
+        static getTypeUrl(prefix?: string): string;
     }
 
-    class CollectionType implements ICollectionType {
-        constructor(properties?: proto.ICollectionType);
-        public id: number;
-        public name: string;
-        public description: string;
-        public updated_at?: (number|null);
-        public created_at?: (number|null);
-        public checksum: string;
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    namespace CollectionMembershipType {
+        interface $Properties {
+            id?: (number|null);
+            name?: (string|null);
+            description?: (string|null);
+            allowed_collection_type?: (proto.CollectionType.$Properties|null);
+            updated_at?: (google.protobuf.Timestamp.$Properties|null);
+            created_at?: (google.protobuf.Timestamp.$Properties|null);
+            checksum?: (string|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.CollectionMembershipType.$Properties;
     }
 
-    interface ICompanyResult {
-        companies?: (proto.ICompany[]|null);
+    interface ICollectionRelationResult extends proto.CollectionRelationResult.$Properties {
     }
 
-    class CompanyResult implements ICompanyResult {
-        constructor(properties?: proto.ICompanyResult);
-        public companies: proto.ICompany[];
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    class CollectionRelationResult {
+        constructor(properties?: proto.CollectionRelationResult.$Properties);
+        $unknowns?: Uint8Array[];
+        collectionrelations: proto.CollectionRelation.$Properties[];
+        static getTypeUrl(prefix?: string): string;
     }
 
-    interface ICompany {
-        id?: (number|null);
-        change_date?: (number|null);
-        change_date_category?: (proto.DateFormatChangeDateCategoryEnum|null);
-        changed_company_id?: (proto.ICompany|null);
-        country?: (number|null);
-        created_at?: (number|null);
-        description?: (string|null);
-        developed?: (proto.IGame[]|null);
-        logo?: (proto.ICompanyLogo|null);
-        name?: (string|null);
-        parent?: (proto.ICompany|null);
-        published?: (proto.IGame[]|null);
-        slug?: (string|null);
-        start_date?: (number|null);
-        start_date_category?: (proto.DateFormatChangeDateCategoryEnum|null);
-        updated_at?: (number|null);
-        url?: (string|null);
-        websites?: (proto.ICompanyWebsite[]|null);
-        checksum?: (string|null);
-        status?: (proto.ICompanyStatus|null);
-        start_date_format?: (proto.IDateFormat|null);
-        change_date_format?: (proto.IDateFormat|null);
+    namespace CollectionRelationResult {
+        interface $Properties {
+            collectionrelations?: (proto.CollectionRelation.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.CollectionRelationResult.$Properties;
     }
 
-    class Company implements ICompany {
-        constructor(properties?: proto.ICompany);
-        public id: number;
-        public change_date?: (number|null);
-        public change_date_category: proto.DateFormatChangeDateCategoryEnum;
-        public changed_company_id?: (proto.ICompany|null);
-        public country: number;
-        public created_at?: (number|null);
-        public description: string;
-        public developed: proto.IGame[];
-        public logo?: (proto.ICompanyLogo|null);
-        public name: string;
-        public parent?: (proto.ICompany|null);
-        public published: proto.IGame[];
-        public slug: string;
-        public start_date?: (number|null);
-        public start_date_category: proto.DateFormatChangeDateCategoryEnum;
-        public updated_at?: (number|null);
-        public url: string;
-        public websites: proto.ICompanyWebsite[];
-        public checksum: string;
-        public status?: (proto.ICompanyStatus|null);
-        public start_date_format?: (proto.IDateFormat|null);
-        public change_date_format?: (proto.IDateFormat|null);
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    interface ICollectionRelation extends proto.CollectionRelation.$Properties {
+    }
+
+    class CollectionRelation {
+        constructor(properties?: proto.CollectionRelation.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        child_collection?: (proto.Collection.$Properties|null);
+        parent_collection?: (proto.Collection.$Properties|null);
+        type?: (proto.CollectionRelationType.$Properties|null);
+        updated_at?: (google.protobuf.Timestamp.$Properties|null);
+        created_at?: (google.protobuf.Timestamp.$Properties|null);
+        checksum: string;
+        static getTypeUrl(prefix?: string): string;
+    }
+
+    namespace CollectionRelation {
+        interface $Properties {
+            id?: (number|null);
+            child_collection?: (proto.Collection.$Properties|null);
+            parent_collection?: (proto.Collection.$Properties|null);
+            type?: (proto.CollectionRelationType.$Properties|null);
+            updated_at?: (google.protobuf.Timestamp.$Properties|null);
+            created_at?: (google.protobuf.Timestamp.$Properties|null);
+            checksum?: (string|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.CollectionRelation.$Properties;
+    }
+
+    interface ICollectionRelationTypeResult extends proto.CollectionRelationTypeResult.$Properties {
+    }
+
+    class CollectionRelationTypeResult {
+        constructor(properties?: proto.CollectionRelationTypeResult.$Properties);
+        $unknowns?: Uint8Array[];
+        collectionrelationtypes: proto.CollectionRelationType.$Properties[];
+        static getTypeUrl(prefix?: string): string;
+    }
+
+    namespace CollectionRelationTypeResult {
+        interface $Properties {
+            collectionrelationtypes?: (proto.CollectionRelationType.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.CollectionRelationTypeResult.$Properties;
+    }
+
+    interface ICollectionRelationType extends proto.CollectionRelationType.$Properties {
+    }
+
+    class CollectionRelationType {
+        constructor(properties?: proto.CollectionRelationType.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        name: string;
+        description: string;
+        allowed_child_type?: (proto.CollectionType.$Properties|null);
+        allowed_parent_type?: (proto.CollectionType.$Properties|null);
+        updated_at?: (google.protobuf.Timestamp.$Properties|null);
+        created_at?: (google.protobuf.Timestamp.$Properties|null);
+        checksum: string;
+        static getTypeUrl(prefix?: string): string;
+    }
+
+    namespace CollectionRelationType {
+        interface $Properties {
+            id?: (number|null);
+            name?: (string|null);
+            description?: (string|null);
+            allowed_child_type?: (proto.CollectionType.$Properties|null);
+            allowed_parent_type?: (proto.CollectionType.$Properties|null);
+            updated_at?: (google.protobuf.Timestamp.$Properties|null);
+            created_at?: (google.protobuf.Timestamp.$Properties|null);
+            checksum?: (string|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.CollectionRelationType.$Properties;
+    }
+
+    interface ICollectionTypeResult extends proto.CollectionTypeResult.$Properties {
+    }
+
+    class CollectionTypeResult {
+        constructor(properties?: proto.CollectionTypeResult.$Properties);
+        $unknowns?: Uint8Array[];
+        collectiontypes: proto.CollectionType.$Properties[];
+        static getTypeUrl(prefix?: string): string;
+    }
+
+    namespace CollectionTypeResult {
+        interface $Properties {
+            collectiontypes?: (proto.CollectionType.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.CollectionTypeResult.$Properties;
+    }
+
+    interface ICollectionType extends proto.CollectionType.$Properties {
+    }
+
+    class CollectionType {
+        constructor(properties?: proto.CollectionType.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        name: string;
+        description: string;
+        updated_at?: (google.protobuf.Timestamp.$Properties|null);
+        created_at?: (google.protobuf.Timestamp.$Properties|null);
+        checksum: string;
+        static getTypeUrl(prefix?: string): string;
+    }
+
+    namespace CollectionType {
+        interface $Properties {
+            id?: (number|null);
+            name?: (string|null);
+            description?: (string|null);
+            updated_at?: (google.protobuf.Timestamp.$Properties|null);
+            created_at?: (google.protobuf.Timestamp.$Properties|null);
+            checksum?: (string|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.CollectionType.$Properties;
+    }
+
+    interface ICompanyResult extends proto.CompanyResult.$Properties {
+    }
+
+    class CompanyResult {
+        constructor(properties?: proto.CompanyResult.$Properties);
+        $unknowns?: Uint8Array[];
+        companies: proto.Company.$Properties[];
+        static getTypeUrl(prefix?: string): string;
+    }
+
+    namespace CompanyResult {
+        interface $Properties {
+            companies?: (proto.Company.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.CompanyResult.$Properties;
+    }
+
+    interface ICompany extends proto.Company.$Properties {
+    }
+
+    class Company {
+        constructor(properties?: proto.Company.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        change_date?: (google.protobuf.Timestamp.$Properties|null);
+        change_date_category: proto.DateFormatChangeDateCategoryEnum;
+        changed_company_id?: (proto.Company.$Properties|null);
+        country: number;
+        created_at?: (google.protobuf.Timestamp.$Properties|null);
+        description: string;
+        developed: proto.Game.$Properties[];
+        logo?: (proto.CompanyLogo.$Properties|null);
+        name: string;
+        parent?: (proto.Company.$Properties|null);
+        published: proto.Game.$Properties[];
+        slug: string;
+        start_date?: (google.protobuf.Timestamp.$Properties|null);
+        start_date_category: proto.DateFormatChangeDateCategoryEnum;
+        updated_at?: (google.protobuf.Timestamp.$Properties|null);
+        url: string;
+        websites: proto.CompanyWebsite.$Properties[];
+        checksum: string;
+        status?: (proto.CompanyStatus.$Properties|null);
+        start_date_format?: (proto.DateFormat.$Properties|null);
+        change_date_format?: (proto.DateFormat.$Properties|null);
+        company_size?: (proto.CompanySize.$Properties|null);
+        company_type_histories: proto.CompanyTypeHistory.$Properties[];
+        static getTypeUrl(prefix?: string): string;
+    }
+
+    namespace Company {
+        interface $Properties {
+            id?: (number|null);
+            change_date?: (google.protobuf.Timestamp.$Properties|null);
+            change_date_category?: (proto.DateFormatChangeDateCategoryEnum|null);
+            changed_company_id?: (proto.Company.$Properties|null);
+            country?: (number|null);
+            created_at?: (google.protobuf.Timestamp.$Properties|null);
+            description?: (string|null);
+            developed?: (proto.Game.$Properties[]|null);
+            logo?: (proto.CompanyLogo.$Properties|null);
+            name?: (string|null);
+            parent?: (proto.Company.$Properties|null);
+            published?: (proto.Game.$Properties[]|null);
+            slug?: (string|null);
+            start_date?: (google.protobuf.Timestamp.$Properties|null);
+            start_date_category?: (proto.DateFormatChangeDateCategoryEnum|null);
+            updated_at?: (google.protobuf.Timestamp.$Properties|null);
+            url?: (string|null);
+            websites?: (proto.CompanyWebsite.$Properties[]|null);
+            checksum?: (string|null);
+            status?: (proto.CompanyStatus.$Properties|null);
+            start_date_format?: (proto.DateFormat.$Properties|null);
+            change_date_format?: (proto.DateFormat.$Properties|null);
+            company_size?: (proto.CompanySize.$Properties|null);
+            company_type_histories?: (proto.CompanyTypeHistory.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.Company.$Properties;
     }
 
     enum DateFormatChangeDateCategoryEnum {
@@ -887,96 +1235,280 @@ export namespace proto {
         TBD = 7
     }
 
-    interface ICompanyLogoResult {
-        companylogos?: (proto.ICompanyLogo[]|null);
+    interface ICompanyLogoResult extends proto.CompanyLogoResult.$Properties {
     }
 
-    class CompanyLogoResult implements ICompanyLogoResult {
-        constructor(properties?: proto.ICompanyLogoResult);
-        public companylogos: proto.ICompanyLogo[];
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    class CompanyLogoResult {
+        constructor(properties?: proto.CompanyLogoResult.$Properties);
+        $unknowns?: Uint8Array[];
+        companylogos: proto.CompanyLogo.$Properties[];
+        static getTypeUrl(prefix?: string): string;
     }
 
-    interface ICompanyLogo {
-        id?: (number|null);
-        alpha_channel?: (boolean|null);
-        animated?: (boolean|null);
-        height?: (number|null);
-        image_id?: (string|null);
-        url?: (string|null);
-        width?: (number|null);
-        checksum?: (string|null);
+    namespace CompanyLogoResult {
+        interface $Properties {
+            companylogos?: (proto.CompanyLogo.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.CompanyLogoResult.$Properties;
     }
 
-    class CompanyLogo implements ICompanyLogo {
-        constructor(properties?: proto.ICompanyLogo);
-        public id: number;
-        public alpha_channel: boolean;
-        public animated: boolean;
-        public height: number;
-        public image_id: string;
-        public url: string;
-        public width: number;
-        public checksum: string;
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    interface ICompanyLogo extends proto.CompanyLogo.$Properties {
     }
 
-    interface ICompanyStatusResult {
-        companystatuses?: (proto.ICompanyStatus[]|null);
+    class CompanyLogo {
+        constructor(properties?: proto.CompanyLogo.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        alpha_channel: boolean;
+        animated: boolean;
+        height: number;
+        image_id: string;
+        url: string;
+        width: number;
+        checksum: string;
+        static getTypeUrl(prefix?: string): string;
     }
 
-    class CompanyStatusResult implements ICompanyStatusResult {
-        constructor(properties?: proto.ICompanyStatusResult);
-        public companystatuses: proto.ICompanyStatus[];
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    namespace CompanyLogo {
+        interface $Properties {
+            id?: (number|null);
+            alpha_channel?: (boolean|null);
+            animated?: (boolean|null);
+            height?: (number|null);
+            image_id?: (string|null);
+            url?: (string|null);
+            width?: (number|null);
+            checksum?: (string|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.CompanyLogo.$Properties;
     }
 
-    interface ICompanyStatus {
-        id?: (number|null);
-        name?: (string|null);
-        created_at?: (number|null);
-        updated_at?: (number|null);
-        checksum?: (string|null);
+    interface ICompanySizeResult extends proto.CompanySizeResult.$Properties {
     }
 
-    class CompanyStatus implements ICompanyStatus {
-        constructor(properties?: proto.ICompanyStatus);
-        public id: number;
-        public name: string;
-        public created_at?: (number|null);
-        public updated_at?: (number|null);
-        public checksum: string;
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    class CompanySizeResult {
+        constructor(properties?: proto.CompanySizeResult.$Properties);
+        $unknowns?: Uint8Array[];
+        companysizes: proto.CompanySize.$Properties[];
+        static getTypeUrl(prefix?: string): string;
     }
 
-    interface ICompanyWebsiteResult {
-        companywebsites?: (proto.ICompanyWebsite[]|null);
+    namespace CompanySizeResult {
+        interface $Properties {
+            companysizes?: (proto.CompanySize.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.CompanySizeResult.$Properties;
     }
 
-    class CompanyWebsiteResult implements ICompanyWebsiteResult {
-        constructor(properties?: proto.ICompanyWebsiteResult);
-        public companywebsites: proto.ICompanyWebsite[];
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    interface ICompanySize extends proto.CompanySize.$Properties {
     }
 
-    interface ICompanyWebsite {
-        id?: (number|null);
-        category?: (proto.WebsiteCategoryEnum|null);
-        trusted?: (boolean|null);
-        url?: (string|null);
-        checksum?: (string|null);
-        type?: (proto.IWebsiteType|null);
+    class CompanySize {
+        constructor(properties?: proto.CompanySize.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        name: string;
+        created_at?: (google.protobuf.Timestamp.$Properties|null);
+        updated_at?: (google.protobuf.Timestamp.$Properties|null);
+        checksum: string;
+        static getTypeUrl(prefix?: string): string;
     }
 
-    class CompanyWebsite implements ICompanyWebsite {
-        constructor(properties?: proto.ICompanyWebsite);
-        public id: number;
-        public category: proto.WebsiteCategoryEnum;
-        public trusted: boolean;
-        public url: string;
-        public checksum: string;
-        public type?: (proto.IWebsiteType|null);
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    namespace CompanySize {
+        interface $Properties {
+            id?: (number|null);
+            name?: (string|null);
+            created_at?: (google.protobuf.Timestamp.$Properties|null);
+            updated_at?: (google.protobuf.Timestamp.$Properties|null);
+            checksum?: (string|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.CompanySize.$Properties;
+    }
+
+    interface ICompanyStatusResult extends proto.CompanyStatusResult.$Properties {
+    }
+
+    class CompanyStatusResult {
+        constructor(properties?: proto.CompanyStatusResult.$Properties);
+        $unknowns?: Uint8Array[];
+        companystatuses: proto.CompanyStatus.$Properties[];
+        static getTypeUrl(prefix?: string): string;
+    }
+
+    namespace CompanyStatusResult {
+        interface $Properties {
+            companystatuses?: (proto.CompanyStatus.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.CompanyStatusResult.$Properties;
+    }
+
+    interface ICompanyStatus extends proto.CompanyStatus.$Properties {
+    }
+
+    class CompanyStatus {
+        constructor(properties?: proto.CompanyStatus.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        name: string;
+        created_at?: (google.protobuf.Timestamp.$Properties|null);
+        updated_at?: (google.protobuf.Timestamp.$Properties|null);
+        checksum: string;
+        static getTypeUrl(prefix?: string): string;
+    }
+
+    namespace CompanyStatus {
+        interface $Properties {
+            id?: (number|null);
+            name?: (string|null);
+            created_at?: (google.protobuf.Timestamp.$Properties|null);
+            updated_at?: (google.protobuf.Timestamp.$Properties|null);
+            checksum?: (string|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.CompanyStatus.$Properties;
+    }
+
+    interface ICompanyTypeResult extends proto.CompanyTypeResult.$Properties {
+    }
+
+    class CompanyTypeResult {
+        constructor(properties?: proto.CompanyTypeResult.$Properties);
+        $unknowns?: Uint8Array[];
+        companytypes: proto.CompanyType.$Properties[];
+        static getTypeUrl(prefix?: string): string;
+    }
+
+    namespace CompanyTypeResult {
+        interface $Properties {
+            companytypes?: (proto.CompanyType.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.CompanyTypeResult.$Properties;
+    }
+
+    interface ICompanyType extends proto.CompanyType.$Properties {
+    }
+
+    class CompanyType {
+        constructor(properties?: proto.CompanyType.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        name: string;
+        created_at?: (google.protobuf.Timestamp.$Properties|null);
+        updated_at?: (google.protobuf.Timestamp.$Properties|null);
+        checksum: string;
+        static getTypeUrl(prefix?: string): string;
+    }
+
+    namespace CompanyType {
+        interface $Properties {
+            id?: (number|null);
+            name?: (string|null);
+            created_at?: (google.protobuf.Timestamp.$Properties|null);
+            updated_at?: (google.protobuf.Timestamp.$Properties|null);
+            checksum?: (string|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.CompanyType.$Properties;
+    }
+
+    interface ICompanyTypeHistoryResult extends proto.CompanyTypeHistoryResult.$Properties {
+    }
+
+    class CompanyTypeHistoryResult {
+        constructor(properties?: proto.CompanyTypeHistoryResult.$Properties);
+        $unknowns?: Uint8Array[];
+        companytypehistories: proto.CompanyTypeHistory.$Properties[];
+        static getTypeUrl(prefix?: string): string;
+    }
+
+    namespace CompanyTypeHistoryResult {
+        interface $Properties {
+            companytypehistories?: (proto.CompanyTypeHistory.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.CompanyTypeHistoryResult.$Properties;
+    }
+
+    interface ICompanyTypeHistory extends proto.CompanyTypeHistory.$Properties {
+    }
+
+    class CompanyTypeHistory {
+        constructor(properties?: proto.CompanyTypeHistory.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        company?: (proto.Company.$Properties|null);
+        company_type?: (proto.CompanyType.$Properties|null);
+        parent_company?: (proto.Company.$Properties|null);
+        created_at?: (google.protobuf.Timestamp.$Properties|null);
+        updated_at?: (google.protobuf.Timestamp.$Properties|null);
+        checksum: string;
+        static getTypeUrl(prefix?: string): string;
+    }
+
+    namespace CompanyTypeHistory {
+        interface $Properties {
+            id?: (number|null);
+            company?: (proto.Company.$Properties|null);
+            company_type?: (proto.CompanyType.$Properties|null);
+            parent_company?: (proto.Company.$Properties|null);
+            created_at?: (google.protobuf.Timestamp.$Properties|null);
+            updated_at?: (google.protobuf.Timestamp.$Properties|null);
+            checksum?: (string|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.CompanyTypeHistory.$Properties;
+    }
+
+    interface ICompanyWebsiteResult extends proto.CompanyWebsiteResult.$Properties {
+    }
+
+    class CompanyWebsiteResult {
+        constructor(properties?: proto.CompanyWebsiteResult.$Properties);
+        $unknowns?: Uint8Array[];
+        companywebsites: proto.CompanyWebsite.$Properties[];
+        static getTypeUrl(prefix?: string): string;
+    }
+
+    namespace CompanyWebsiteResult {
+        interface $Properties {
+            companywebsites?: (proto.CompanyWebsite.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.CompanyWebsiteResult.$Properties;
+    }
+
+    interface ICompanyWebsite extends proto.CompanyWebsite.$Properties {
+    }
+
+    class CompanyWebsite {
+        constructor(properties?: proto.CompanyWebsite.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        category: proto.WebsiteCategoryEnum;
+        trusted: boolean;
+        url: string;
+        checksum: string;
+        type?: (proto.WebsiteType.$Properties|null);
+        static getTypeUrl(prefix?: string): string;
+    }
+
+    namespace CompanyWebsite {
+        interface $Properties {
+            id?: (number|null);
+            category?: (proto.WebsiteCategoryEnum|null);
+            trusted?: (boolean|null);
+            url?: (string|null);
+            checksum?: (string|null);
+            type?: (proto.WebsiteType.$Properties|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.CompanyWebsite.$Properties;
     }
 
     enum WebsiteCategoryEnum {
@@ -1001,298 +1533,472 @@ export namespace proto {
         WEBSITE_BLUESKY = 19
     }
 
-    interface IContentSafetyRatingResult {
-        contentsafetyratings?: (proto.IContentSafetyRating[]|null);
+    interface IContentSafetyRatingResult extends proto.ContentSafetyRatingResult.$Properties {
     }
 
-    class ContentSafetyRatingResult implements IContentSafetyRatingResult {
-        constructor(properties?: proto.IContentSafetyRatingResult);
-        public contentsafetyratings: proto.IContentSafetyRating[];
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    class ContentSafetyRatingResult {
+        constructor(properties?: proto.ContentSafetyRatingResult.$Properties);
+        $unknowns?: Uint8Array[];
+        contentsafetyratings: proto.ContentSafetyRating.$Properties[];
+        static getTypeUrl(prefix?: string): string;
     }
 
-    interface IContentSafetyRating {
-        id?: (number|null);
-        name?: (string|null);
-        created_at?: (number|null);
-        updated_at?: (number|null);
-        checksum?: (string|null);
+    namespace ContentSafetyRatingResult {
+        interface $Properties {
+            contentsafetyratings?: (proto.ContentSafetyRating.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.ContentSafetyRatingResult.$Properties;
     }
 
-    class ContentSafetyRating implements IContentSafetyRating {
-        constructor(properties?: proto.IContentSafetyRating);
-        public id: number;
-        public name: string;
-        public created_at?: (number|null);
-        public updated_at?: (number|null);
-        public checksum: string;
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    interface IContentSafetyRating extends proto.ContentSafetyRating.$Properties {
     }
 
-    interface IContentSafetyRatingDimensionResult {
-        contentsafetyratingdimensions?: (proto.IContentSafetyRatingDimension[]|null);
+    class ContentSafetyRating {
+        constructor(properties?: proto.ContentSafetyRating.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        name: string;
+        created_at?: (google.protobuf.Timestamp.$Properties|null);
+        updated_at?: (google.protobuf.Timestamp.$Properties|null);
+        checksum: string;
+        static getTypeUrl(prefix?: string): string;
     }
 
-    class ContentSafetyRatingDimensionResult implements IContentSafetyRatingDimensionResult {
-        constructor(properties?: proto.IContentSafetyRatingDimensionResult);
-        public contentsafetyratingdimensions: proto.IContentSafetyRatingDimension[];
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    namespace ContentSafetyRating {
+        interface $Properties {
+            id?: (number|null);
+            name?: (string|null);
+            created_at?: (google.protobuf.Timestamp.$Properties|null);
+            updated_at?: (google.protobuf.Timestamp.$Properties|null);
+            checksum?: (string|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.ContentSafetyRating.$Properties;
     }
 
-    interface IContentSafetyRatingDimension {
-        id?: (number|null);
-        content_safety_rating?: (proto.IContentSafetyRating|null);
-        value?: (number|null);
-        description?: (string|null);
-        created_at?: (number|null);
-        updated_at?: (number|null);
-        checksum?: (string|null);
+    interface IContentSafetyRatingDimensionResult extends proto.ContentSafetyRatingDimensionResult.$Properties {
     }
 
-    class ContentSafetyRatingDimension implements IContentSafetyRatingDimension {
-        constructor(properties?: proto.IContentSafetyRatingDimension);
-        public id: number;
-        public content_safety_rating?: (proto.IContentSafetyRating|null);
-        public value: number;
-        public description: string;
-        public created_at?: (number|null);
-        public updated_at?: (number|null);
-        public checksum: string;
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    class ContentSafetyRatingDimensionResult {
+        constructor(properties?: proto.ContentSafetyRatingDimensionResult.$Properties);
+        $unknowns?: Uint8Array[];
+        contentsafetyratingdimensions: proto.ContentSafetyRatingDimension.$Properties[];
+        static getTypeUrl(prefix?: string): string;
     }
 
-    interface ICoverResult {
-        covers?: (proto.ICover[]|null);
+    namespace ContentSafetyRatingDimensionResult {
+        interface $Properties {
+            contentsafetyratingdimensions?: (proto.ContentSafetyRatingDimension.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.ContentSafetyRatingDimensionResult.$Properties;
     }
 
-    class CoverResult implements ICoverResult {
-        constructor(properties?: proto.ICoverResult);
-        public covers: proto.ICover[];
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    interface IContentSafetyRatingDimension extends proto.ContentSafetyRatingDimension.$Properties {
     }
 
-    interface ICover {
-        id?: (number|null);
-        alpha_channel?: (boolean|null);
-        animated?: (boolean|null);
-        game?: (proto.IGame|null);
-        height?: (number|null);
-        image_id?: (string|null);
-        url?: (string|null);
-        width?: (number|null);
-        checksum?: (string|null);
-        game_localization?: (proto.IGameLocalization|null);
+    class ContentSafetyRatingDimension {
+        constructor(properties?: proto.ContentSafetyRatingDimension.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        content_safety_rating?: (proto.ContentSafetyRating.$Properties|null);
+        value: number;
+        description: string;
+        created_at?: (google.protobuf.Timestamp.$Properties|null);
+        updated_at?: (google.protobuf.Timestamp.$Properties|null);
+        checksum: string;
+        static getTypeUrl(prefix?: string): string;
     }
 
-    class Cover implements ICover {
-        constructor(properties?: proto.ICover);
-        public id: number;
-        public alpha_channel: boolean;
-        public animated: boolean;
-        public game?: (proto.IGame|null);
-        public height: number;
-        public image_id: string;
-        public url: string;
-        public width: number;
-        public checksum: string;
-        public game_localization?: (proto.IGameLocalization|null);
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    namespace ContentSafetyRatingDimension {
+        interface $Properties {
+            id?: (number|null);
+            content_safety_rating?: (proto.ContentSafetyRating.$Properties|null);
+            value?: (number|null);
+            description?: (string|null);
+            created_at?: (google.protobuf.Timestamp.$Properties|null);
+            updated_at?: (google.protobuf.Timestamp.$Properties|null);
+            checksum?: (string|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.ContentSafetyRatingDimension.$Properties;
     }
 
-    interface IDateFormatResult {
-        dateformats?: (proto.IDateFormat[]|null);
+    interface ICoverResult extends proto.CoverResult.$Properties {
     }
 
-    class DateFormatResult implements IDateFormatResult {
-        constructor(properties?: proto.IDateFormatResult);
-        public dateformats: proto.IDateFormat[];
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    class CoverResult {
+        constructor(properties?: proto.CoverResult.$Properties);
+        $unknowns?: Uint8Array[];
+        covers: proto.Cover.$Properties[];
+        static getTypeUrl(prefix?: string): string;
     }
 
-    interface IDateFormat {
-        id?: (number|null);
-        format?: (string|null);
-        created_at?: (number|null);
-        updated_at?: (number|null);
-        checksum?: (string|null);
+    namespace CoverResult {
+        interface $Properties {
+            covers?: (proto.Cover.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.CoverResult.$Properties;
     }
 
-    class DateFormat implements IDateFormat {
-        constructor(properties?: proto.IDateFormat);
-        public id: number;
-        public format: string;
-        public created_at?: (number|null);
-        public updated_at?: (number|null);
-        public checksum: string;
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    interface ICover extends proto.Cover.$Properties {
     }
 
-    interface IEventResult {
-        events?: (proto.IEvent[]|null);
+    class Cover {
+        constructor(properties?: proto.Cover.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        alpha_channel: boolean;
+        animated: boolean;
+        game?: (proto.Game.$Properties|null);
+        height: number;
+        image_id: string;
+        url: string;
+        width: number;
+        checksum: string;
+        game_localization?: (proto.GameLocalization.$Properties|null);
+        static getTypeUrl(prefix?: string): string;
     }
 
-    class EventResult implements IEventResult {
-        constructor(properties?: proto.IEventResult);
-        public events: proto.IEvent[];
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    namespace Cover {
+        interface $Properties {
+            id?: (number|null);
+            alpha_channel?: (boolean|null);
+            animated?: (boolean|null);
+            game?: (proto.Game.$Properties|null);
+            height?: (number|null);
+            image_id?: (string|null);
+            url?: (string|null);
+            width?: (number|null);
+            checksum?: (string|null);
+            game_localization?: (proto.GameLocalization.$Properties|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.Cover.$Properties;
     }
 
-    interface IEvent {
-        id?: (number|null);
-        name?: (string|null);
-        description?: (string|null);
-        slug?: (string|null);
-        event_logo?: (proto.IEventLogo|null);
-        start_time?: (number|null);
-        time_zone?: (string|null);
-        end_time?: (number|null);
-        live_stream_url?: (string|null);
-        games?: (proto.IGame[]|null);
-        videos?: (proto.IGameVideo[]|null);
-        event_networks?: (proto.IEventNetwork[]|null);
-        created_at?: (number|null);
-        updated_at?: (number|null);
-        checksum?: (string|null);
+    interface IDateFormatResult extends proto.DateFormatResult.$Properties {
     }
 
-    class Event implements IEvent {
-        constructor(properties?: proto.IEvent);
-        public id: number;
-        public name: string;
-        public description: string;
-        public slug: string;
-        public event_logo?: (proto.IEventLogo|null);
-        public start_time?: (number|null);
-        public time_zone: string;
-        public end_time?: (number|null);
-        public live_stream_url: string;
-        public games: proto.IGame[];
-        public videos: proto.IGameVideo[];
-        public event_networks: proto.IEventNetwork[];
-        public created_at?: (number|null);
-        public updated_at?: (number|null);
-        public checksum: string;
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    class DateFormatResult {
+        constructor(properties?: proto.DateFormatResult.$Properties);
+        $unknowns?: Uint8Array[];
+        dateformats: proto.DateFormat.$Properties[];
+        static getTypeUrl(prefix?: string): string;
     }
 
-    interface IEventLogoResult {
-        eventlogos?: (proto.IEventLogo[]|null);
+    namespace DateFormatResult {
+        interface $Properties {
+            dateformats?: (proto.DateFormat.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.DateFormatResult.$Properties;
     }
 
-    class EventLogoResult implements IEventLogoResult {
-        constructor(properties?: proto.IEventLogoResult);
-        public eventlogos: proto.IEventLogo[];
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    interface IDateFormat extends proto.DateFormat.$Properties {
     }
 
-    interface IEventLogo {
-        id?: (number|null);
-        event?: (proto.IEvent|null);
-        alpha_channel?: (boolean|null);
-        animated?: (boolean|null);
-        height?: (number|null);
-        image_id?: (string|null);
-        url?: (string|null);
-        width?: (number|null);
-        created_at?: (number|null);
-        updated_at?: (number|null);
-        checksum?: (string|null);
+    class DateFormat {
+        constructor(properties?: proto.DateFormat.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        format: string;
+        created_at?: (google.protobuf.Timestamp.$Properties|null);
+        updated_at?: (google.protobuf.Timestamp.$Properties|null);
+        checksum: string;
+        static getTypeUrl(prefix?: string): string;
     }
 
-    class EventLogo implements IEventLogo {
-        constructor(properties?: proto.IEventLogo);
-        public id: number;
-        public event?: (proto.IEvent|null);
-        public alpha_channel: boolean;
-        public animated: boolean;
-        public height: number;
-        public image_id: string;
-        public url: string;
-        public width: number;
-        public created_at?: (number|null);
-        public updated_at?: (number|null);
-        public checksum: string;
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    namespace DateFormat {
+        interface $Properties {
+            id?: (number|null);
+            format?: (string|null);
+            created_at?: (google.protobuf.Timestamp.$Properties|null);
+            updated_at?: (google.protobuf.Timestamp.$Properties|null);
+            checksum?: (string|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.DateFormat.$Properties;
     }
 
-    interface IEventNetworkResult {
-        eventnetworks?: (proto.IEventNetwork[]|null);
+    interface IEntityTypeResult extends proto.EntityTypeResult.$Properties {
     }
 
-    class EventNetworkResult implements IEventNetworkResult {
-        constructor(properties?: proto.IEventNetworkResult);
-        public eventnetworks: proto.IEventNetwork[];
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    class EntityTypeResult {
+        constructor(properties?: proto.EntityTypeResult.$Properties);
+        $unknowns?: Uint8Array[];
+        entitytypes: proto.EntityType.$Properties[];
+        static getTypeUrl(prefix?: string): string;
     }
 
-    interface IEventNetwork {
-        id?: (number|null);
-        event?: (proto.IEvent|null);
-        url?: (string|null);
-        network_type?: (proto.INetworkType|null);
-        created_at?: (number|null);
-        updated_at?: (number|null);
-        checksum?: (string|null);
+    namespace EntityTypeResult {
+        interface $Properties {
+            entitytypes?: (proto.EntityType.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.EntityTypeResult.$Properties;
     }
 
-    class EventNetwork implements IEventNetwork {
-        constructor(properties?: proto.IEventNetwork);
-        public id: number;
-        public event?: (proto.IEvent|null);
-        public url: string;
-        public network_type?: (proto.INetworkType|null);
-        public created_at?: (number|null);
-        public updated_at?: (number|null);
-        public checksum: string;
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    interface IEntityType extends proto.EntityType.$Properties {
     }
 
-    interface IExternalGameResult {
-        externalgames?: (proto.IExternalGame[]|null);
+    class EntityType {
+        constructor(properties?: proto.EntityType.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        name: string;
+        description: string;
+        created_at?: (google.protobuf.Timestamp.$Properties|null);
+        updated_at?: (google.protobuf.Timestamp.$Properties|null);
+        checksum: string;
+        static getTypeUrl(prefix?: string): string;
     }
 
-    class ExternalGameResult implements IExternalGameResult {
-        constructor(properties?: proto.IExternalGameResult);
-        public externalgames: proto.IExternalGame[];
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    namespace EntityType {
+        interface $Properties {
+            id?: (number|null);
+            name?: (string|null);
+            description?: (string|null);
+            created_at?: (google.protobuf.Timestamp.$Properties|null);
+            updated_at?: (google.protobuf.Timestamp.$Properties|null);
+            checksum?: (string|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.EntityType.$Properties;
     }
 
-    interface IExternalGame {
-        id?: (number|null);
-        category?: (proto.ExternalGameCategoryEnum|null);
-        created_at?: (number|null);
-        game?: (proto.IGame|null);
-        name?: (string|null);
-        uid?: (string|null);
-        updated_at?: (number|null);
-        url?: (string|null);
-        year?: (number|null);
-        media?: (proto.ExternalGameMediaEnum|null);
-        platform?: (proto.IPlatform|null);
-        countries?: (number[]|null);
-        checksum?: (string|null);
-        external_game_source?: (proto.IExternalGameSource|null);
-        game_release_format?: (proto.IGameReleaseFormat|null);
+    interface IEventResult extends proto.EventResult.$Properties {
     }
 
-    class ExternalGame implements IExternalGame {
-        constructor(properties?: proto.IExternalGame);
-        public id: number;
-        public category: proto.ExternalGameCategoryEnum;
-        public created_at?: (number|null);
-        public game?: (proto.IGame|null);
-        public name: string;
-        public uid: string;
-        public updated_at?: (number|null);
-        public url: string;
-        public year: number;
-        public media: proto.ExternalGameMediaEnum;
-        public platform?: (proto.IPlatform|null);
-        public countries: number[];
-        public checksum: string;
-        public external_game_source?: (proto.IExternalGameSource|null);
-        public game_release_format?: (proto.IGameReleaseFormat|null);
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    class EventResult {
+        constructor(properties?: proto.EventResult.$Properties);
+        $unknowns?: Uint8Array[];
+        events: proto.Event.$Properties[];
+        static getTypeUrl(prefix?: string): string;
+    }
+
+    namespace EventResult {
+        interface $Properties {
+            events?: (proto.Event.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.EventResult.$Properties;
+    }
+
+    interface IEvent extends proto.Event.$Properties {
+    }
+
+    class Event {
+        constructor(properties?: proto.Event.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        name: string;
+        description: string;
+        slug: string;
+        event_logo?: (proto.EventLogo.$Properties|null);
+        start_time?: (google.protobuf.Timestamp.$Properties|null);
+        time_zone: string;
+        end_time?: (google.protobuf.Timestamp.$Properties|null);
+        live_stream_url: string;
+        games: proto.Game.$Properties[];
+        videos: proto.GameVideo.$Properties[];
+        event_networks: proto.EventNetwork.$Properties[];
+        created_at?: (google.protobuf.Timestamp.$Properties|null);
+        updated_at?: (google.protobuf.Timestamp.$Properties|null);
+        checksum: string;
+        static getTypeUrl(prefix?: string): string;
+    }
+
+    namespace Event {
+        interface $Properties {
+            id?: (number|null);
+            name?: (string|null);
+            description?: (string|null);
+            slug?: (string|null);
+            event_logo?: (proto.EventLogo.$Properties|null);
+            start_time?: (google.protobuf.Timestamp.$Properties|null);
+            time_zone?: (string|null);
+            end_time?: (google.protobuf.Timestamp.$Properties|null);
+            live_stream_url?: (string|null);
+            games?: (proto.Game.$Properties[]|null);
+            videos?: (proto.GameVideo.$Properties[]|null);
+            event_networks?: (proto.EventNetwork.$Properties[]|null);
+            created_at?: (google.protobuf.Timestamp.$Properties|null);
+            updated_at?: (google.protobuf.Timestamp.$Properties|null);
+            checksum?: (string|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.Event.$Properties;
+    }
+
+    interface IEventLogoResult extends proto.EventLogoResult.$Properties {
+    }
+
+    class EventLogoResult {
+        constructor(properties?: proto.EventLogoResult.$Properties);
+        $unknowns?: Uint8Array[];
+        eventlogos: proto.EventLogo.$Properties[];
+        static getTypeUrl(prefix?: string): string;
+    }
+
+    namespace EventLogoResult {
+        interface $Properties {
+            eventlogos?: (proto.EventLogo.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.EventLogoResult.$Properties;
+    }
+
+    interface IEventLogo extends proto.EventLogo.$Properties {
+    }
+
+    class EventLogo {
+        constructor(properties?: proto.EventLogo.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        event?: (proto.Event.$Properties|null);
+        alpha_channel: boolean;
+        animated: boolean;
+        height: number;
+        image_id: string;
+        url: string;
+        width: number;
+        created_at?: (google.protobuf.Timestamp.$Properties|null);
+        updated_at?: (google.protobuf.Timestamp.$Properties|null);
+        checksum: string;
+        static getTypeUrl(prefix?: string): string;
+    }
+
+    namespace EventLogo {
+        interface $Properties {
+            id?: (number|null);
+            event?: (proto.Event.$Properties|null);
+            alpha_channel?: (boolean|null);
+            animated?: (boolean|null);
+            height?: (number|null);
+            image_id?: (string|null);
+            url?: (string|null);
+            width?: (number|null);
+            created_at?: (google.protobuf.Timestamp.$Properties|null);
+            updated_at?: (google.protobuf.Timestamp.$Properties|null);
+            checksum?: (string|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.EventLogo.$Properties;
+    }
+
+    interface IEventNetworkResult extends proto.EventNetworkResult.$Properties {
+    }
+
+    class EventNetworkResult {
+        constructor(properties?: proto.EventNetworkResult.$Properties);
+        $unknowns?: Uint8Array[];
+        eventnetworks: proto.EventNetwork.$Properties[];
+        static getTypeUrl(prefix?: string): string;
+    }
+
+    namespace EventNetworkResult {
+        interface $Properties {
+            eventnetworks?: (proto.EventNetwork.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.EventNetworkResult.$Properties;
+    }
+
+    interface IEventNetwork extends proto.EventNetwork.$Properties {
+    }
+
+    class EventNetwork {
+        constructor(properties?: proto.EventNetwork.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        event?: (proto.Event.$Properties|null);
+        url: string;
+        network_type?: (proto.NetworkType.$Properties|null);
+        created_at?: (google.protobuf.Timestamp.$Properties|null);
+        updated_at?: (google.protobuf.Timestamp.$Properties|null);
+        checksum: string;
+        static getTypeUrl(prefix?: string): string;
+    }
+
+    namespace EventNetwork {
+        interface $Properties {
+            id?: (number|null);
+            event?: (proto.Event.$Properties|null);
+            url?: (string|null);
+            network_type?: (proto.NetworkType.$Properties|null);
+            created_at?: (google.protobuf.Timestamp.$Properties|null);
+            updated_at?: (google.protobuf.Timestamp.$Properties|null);
+            checksum?: (string|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.EventNetwork.$Properties;
+    }
+
+    interface IExternalGameResult extends proto.ExternalGameResult.$Properties {
+    }
+
+    class ExternalGameResult {
+        constructor(properties?: proto.ExternalGameResult.$Properties);
+        $unknowns?: Uint8Array[];
+        externalgames: proto.ExternalGame.$Properties[];
+        static getTypeUrl(prefix?: string): string;
+    }
+
+    namespace ExternalGameResult {
+        interface $Properties {
+            externalgames?: (proto.ExternalGame.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.ExternalGameResult.$Properties;
+    }
+
+    interface IExternalGame extends proto.ExternalGame.$Properties {
+    }
+
+    class ExternalGame {
+        constructor(properties?: proto.ExternalGame.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        category: proto.ExternalGameCategoryEnum;
+        created_at?: (google.protobuf.Timestamp.$Properties|null);
+        game?: (proto.Game.$Properties|null);
+        name: string;
+        uid: string;
+        updated_at?: (google.protobuf.Timestamp.$Properties|null);
+        url: string;
+        year: number;
+        media: proto.ExternalGameMediaEnum;
+        platform?: (proto.Platform.$Properties|null);
+        countries: number[];
+        checksum: string;
+        external_game_source?: (proto.ExternalGameSource.$Properties|null);
+        game_release_format?: (proto.GameReleaseFormat.$Properties|null);
+        static getTypeUrl(prefix?: string): string;
+    }
+
+    namespace ExternalGame {
+        interface $Properties {
+            id?: (number|null);
+            category?: (proto.ExternalGameCategoryEnum|null);
+            created_at?: (google.protobuf.Timestamp.$Properties|null);
+            game?: (proto.Game.$Properties|null);
+            name?: (string|null);
+            uid?: (string|null);
+            updated_at?: (google.protobuf.Timestamp.$Properties|null);
+            url?: (string|null);
+            year?: (number|null);
+            media?: (proto.ExternalGameMediaEnum|null);
+            platform?: (proto.Platform.$Properties|null);
+            countries?: (number[]|null);
+            checksum?: (string|null);
+            external_game_source?: (proto.ExternalGameSource.$Properties|null);
+            game_release_format?: (proto.GameReleaseFormat.$Properties|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.ExternalGame.$Properties;
     }
 
     enum ExternalGameCategoryEnum {
@@ -1325,204 +2031,252 @@ export namespace proto {
         EXTERNALGAME_PHYSICAL = 2
     }
 
-    interface IExternalGameSourceResult {
-        externalgamesources?: (proto.IExternalGameSource[]|null);
+    interface IExternalGameSourceResult extends proto.ExternalGameSourceResult.$Properties {
     }
 
-    class ExternalGameSourceResult implements IExternalGameSourceResult {
-        constructor(properties?: proto.IExternalGameSourceResult);
-        public externalgamesources: proto.IExternalGameSource[];
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    class ExternalGameSourceResult {
+        constructor(properties?: proto.ExternalGameSourceResult.$Properties);
+        $unknowns?: Uint8Array[];
+        externalgamesources: proto.ExternalGameSource.$Properties[];
+        static getTypeUrl(prefix?: string): string;
     }
 
-    interface IExternalGameSource {
-        id?: (number|null);
-        name?: (string|null);
-        created_at?: (number|null);
-        updated_at?: (number|null);
-        checksum?: (string|null);
+    namespace ExternalGameSourceResult {
+        interface $Properties {
+            externalgamesources?: (proto.ExternalGameSource.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.ExternalGameSourceResult.$Properties;
     }
 
-    class ExternalGameSource implements IExternalGameSource {
-        constructor(properties?: proto.IExternalGameSource);
-        public id: number;
-        public name: string;
-        public created_at?: (number|null);
-        public updated_at?: (number|null);
-        public checksum: string;
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    interface IExternalGameSource extends proto.ExternalGameSource.$Properties {
     }
 
-    interface IFranchiseResult {
-        franchises?: (proto.IFranchise[]|null);
+    class ExternalGameSource {
+        constructor(properties?: proto.ExternalGameSource.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        name: string;
+        created_at?: (google.protobuf.Timestamp.$Properties|null);
+        updated_at?: (google.protobuf.Timestamp.$Properties|null);
+        checksum: string;
+        static getTypeUrl(prefix?: string): string;
     }
 
-    class FranchiseResult implements IFranchiseResult {
-        constructor(properties?: proto.IFranchiseResult);
-        public franchises: proto.IFranchise[];
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    namespace ExternalGameSource {
+        interface $Properties {
+            id?: (number|null);
+            name?: (string|null);
+            created_at?: (google.protobuf.Timestamp.$Properties|null);
+            updated_at?: (google.protobuf.Timestamp.$Properties|null);
+            checksum?: (string|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.ExternalGameSource.$Properties;
     }
 
-    interface IFranchise {
-        id?: (number|null);
-        created_at?: (number|null);
-        games?: (proto.IGame[]|null);
-        name?: (string|null);
-        slug?: (string|null);
-        updated_at?: (number|null);
-        url?: (string|null);
-        checksum?: (string|null);
+    interface IFranchiseResult extends proto.FranchiseResult.$Properties {
     }
 
-    class Franchise implements IFranchise {
-        constructor(properties?: proto.IFranchise);
-        public id: number;
-        public created_at?: (number|null);
-        public games: proto.IGame[];
-        public name: string;
-        public slug: string;
-        public updated_at?: (number|null);
-        public url: string;
-        public checksum: string;
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    class FranchiseResult {
+        constructor(properties?: proto.FranchiseResult.$Properties);
+        $unknowns?: Uint8Array[];
+        franchises: proto.Franchise.$Properties[];
+        static getTypeUrl(prefix?: string): string;
     }
 
-    interface IGameResult {
-        games?: (proto.IGame[]|null);
+    namespace FranchiseResult {
+        interface $Properties {
+            franchises?: (proto.Franchise.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.FranchiseResult.$Properties;
     }
 
-    class GameResult implements IGameResult {
-        constructor(properties?: proto.IGameResult);
-        public games: proto.IGame[];
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    interface IFranchise extends proto.Franchise.$Properties {
     }
 
-    interface IGame {
-        id?: (number|null);
-        age_ratings?: (proto.IAgeRating[]|null);
-        aggregated_rating?: (number|null);
-        aggregated_rating_count?: (number|null);
-        alternative_names?: (proto.IAlternativeName[]|null);
-        artworks?: (proto.IArtwork[]|null);
-        bundles?: (proto.IGame[]|null);
-        category?: (proto.GameCategoryEnum|null);
-        collection?: (proto.ICollection|null);
-        cover?: (proto.ICover|null);
-        created_at?: (number|null);
-        dlcs?: (proto.IGame[]|null);
-        expansions?: (proto.IGame[]|null);
-        external_games?: (proto.IExternalGame[]|null);
-        first_release_date?: (number|null);
-        follows?: (number|null);
-        franchise?: (proto.IFranchise|null);
-        franchises?: (proto.IFranchise[]|null);
-        game_engines?: (proto.IGameEngine[]|null);
-        game_modes?: (proto.IGameMode[]|null);
-        genres?: (proto.IGenre[]|null);
-        hypes?: (number|null);
-        involved_companies?: (proto.IInvolvedCompany[]|null);
-        keywords?: (proto.IKeyword[]|null);
-        multiplayer_modes?: (proto.IMultiplayerMode[]|null);
-        name?: (string|null);
-        parent_game?: (proto.IGame|null);
-        platforms?: (proto.IPlatform[]|null);
-        player_perspectives?: (proto.IPlayerPerspective[]|null);
-        rating?: (number|null);
-        rating_count?: (number|null);
-        release_dates?: (proto.IReleaseDate[]|null);
-        screenshots?: (proto.IScreenshot[]|null);
-        similar_games?: (proto.IGame[]|null);
-        slug?: (string|null);
-        standalone_expansions?: (proto.IGame[]|null);
-        status?: (proto.GameStatusEnum|null);
-        storyline?: (string|null);
-        summary?: (string|null);
-        tags?: (number[]|null);
-        themes?: (proto.ITheme[]|null);
-        total_rating?: (number|null);
-        total_rating_count?: (number|null);
-        updated_at?: (number|null);
-        url?: (string|null);
-        version_parent?: (proto.IGame|null);
-        version_title?: (string|null);
-        videos?: (proto.IGameVideo[]|null);
-        websites?: (proto.IWebsite[]|null);
-        checksum?: (string|null);
-        remakes?: (proto.IGame[]|null);
-        remasters?: (proto.IGame[]|null);
-        expanded_games?: (proto.IGame[]|null);
-        ports?: (proto.IGame[]|null);
-        forks?: (proto.IGame[]|null);
-        language_supports?: (proto.ILanguageSupport[]|null);
-        game_localizations?: (proto.IGameLocalization[]|null);
-        collections?: (proto.ICollection[]|null);
-        game_status?: (proto.IGameStatus|null);
-        game_type?: (proto.IGameType|null);
+    class Franchise {
+        constructor(properties?: proto.Franchise.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        created_at?: (google.protobuf.Timestamp.$Properties|null);
+        games: proto.Game.$Properties[];
+        name: string;
+        slug: string;
+        updated_at?: (google.protobuf.Timestamp.$Properties|null);
+        url: string;
+        checksum: string;
+        static getTypeUrl(prefix?: string): string;
     }
 
-    class Game implements IGame {
-        constructor(properties?: proto.IGame);
-        public id: number;
-        public age_ratings: proto.IAgeRating[];
-        public aggregated_rating: number;
-        public aggregated_rating_count: number;
-        public alternative_names: proto.IAlternativeName[];
-        public artworks: proto.IArtwork[];
-        public bundles: proto.IGame[];
-        public category: proto.GameCategoryEnum;
-        public collection?: (proto.ICollection|null);
-        public cover?: (proto.ICover|null);
-        public created_at?: (number|null);
-        public dlcs: proto.IGame[];
-        public expansions: proto.IGame[];
-        public external_games: proto.IExternalGame[];
-        public first_release_date?: (number|null);
-        public follows: number;
-        public franchise?: (proto.IFranchise|null);
-        public franchises: proto.IFranchise[];
-        public game_engines: proto.IGameEngine[];
-        public game_modes: proto.IGameMode[];
-        public genres: proto.IGenre[];
-        public hypes: number;
-        public involved_companies: proto.IInvolvedCompany[];
-        public keywords: proto.IKeyword[];
-        public multiplayer_modes: proto.IMultiplayerMode[];
-        public name: string;
-        public parent_game?: (proto.IGame|null);
-        public platforms: proto.IPlatform[];
-        public player_perspectives: proto.IPlayerPerspective[];
-        public rating: number;
-        public rating_count: number;
-        public release_dates: proto.IReleaseDate[];
-        public screenshots: proto.IScreenshot[];
-        public similar_games: proto.IGame[];
-        public slug: string;
-        public standalone_expansions: proto.IGame[];
-        public status: proto.GameStatusEnum;
-        public storyline: string;
-        public summary: string;
-        public tags: number[];
-        public themes: proto.ITheme[];
-        public total_rating: number;
-        public total_rating_count: number;
-        public updated_at?: (number|null);
-        public url: string;
-        public version_parent?: (proto.IGame|null);
-        public version_title: string;
-        public videos: proto.IGameVideo[];
-        public websites: proto.IWebsite[];
-        public checksum: string;
-        public remakes: proto.IGame[];
-        public remasters: proto.IGame[];
-        public expanded_games: proto.IGame[];
-        public ports: proto.IGame[];
-        public forks: proto.IGame[];
-        public language_supports: proto.ILanguageSupport[];
-        public game_localizations: proto.IGameLocalization[];
-        public collections: proto.ICollection[];
-        public game_status?: (proto.IGameStatus|null);
-        public game_type?: (proto.IGameType|null);
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    namespace Franchise {
+        interface $Properties {
+            id?: (number|null);
+            created_at?: (google.protobuf.Timestamp.$Properties|null);
+            games?: (proto.Game.$Properties[]|null);
+            name?: (string|null);
+            slug?: (string|null);
+            updated_at?: (google.protobuf.Timestamp.$Properties|null);
+            url?: (string|null);
+            checksum?: (string|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.Franchise.$Properties;
+    }
+
+    interface IGameResult extends proto.GameResult.$Properties {
+    }
+
+    class GameResult {
+        constructor(properties?: proto.GameResult.$Properties);
+        $unknowns?: Uint8Array[];
+        games: proto.Game.$Properties[];
+        static getTypeUrl(prefix?: string): string;
+    }
+
+    namespace GameResult {
+        interface $Properties {
+            games?: (proto.Game.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.GameResult.$Properties;
+    }
+
+    interface IGame extends proto.Game.$Properties {
+    }
+
+    class Game {
+        constructor(properties?: proto.Game.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        age_ratings: proto.AgeRating.$Properties[];
+        aggregated_rating: number;
+        aggregated_rating_count: number;
+        alternative_names: proto.AlternativeName.$Properties[];
+        artworks: proto.Artwork.$Properties[];
+        bundles: proto.Game.$Properties[];
+        category: proto.GameCategoryEnum;
+        collection?: (proto.Collection.$Properties|null);
+        cover?: (proto.Cover.$Properties|null);
+        created_at?: (google.protobuf.Timestamp.$Properties|null);
+        dlcs: proto.Game.$Properties[];
+        expansions: proto.Game.$Properties[];
+        external_games: proto.ExternalGame.$Properties[];
+        first_release_date?: (google.protobuf.Timestamp.$Properties|null);
+        follows: number;
+        franchise?: (proto.Franchise.$Properties|null);
+        franchises: proto.Franchise.$Properties[];
+        game_engines: proto.GameEngine.$Properties[];
+        game_modes: proto.GameMode.$Properties[];
+        genres: proto.Genre.$Properties[];
+        hypes: number;
+        involved_companies: proto.InvolvedCompany.$Properties[];
+        keywords: proto.Keyword.$Properties[];
+        multiplayer_modes: proto.MultiplayerMode.$Properties[];
+        name: string;
+        parent_game?: (proto.Game.$Properties|null);
+        platforms: proto.Platform.$Properties[];
+        player_perspectives: proto.PlayerPerspective.$Properties[];
+        rating: number;
+        rating_count: number;
+        release_dates: proto.ReleaseDate.$Properties[];
+        screenshots: proto.Screenshot.$Properties[];
+        similar_games: proto.Game.$Properties[];
+        slug: string;
+        standalone_expansions: proto.Game.$Properties[];
+        status: proto.GameStatusEnum;
+        storyline: string;
+        summary: string;
+        tags: number[];
+        themes: proto.Theme.$Properties[];
+        total_rating: number;
+        total_rating_count: number;
+        updated_at?: (google.protobuf.Timestamp.$Properties|null);
+        url: string;
+        version_parent?: (proto.Game.$Properties|null);
+        version_title: string;
+        videos: proto.GameVideo.$Properties[];
+        websites: proto.Website.$Properties[];
+        checksum: string;
+        remakes: proto.Game.$Properties[];
+        remasters: proto.Game.$Properties[];
+        expanded_games: proto.Game.$Properties[];
+        ports: proto.Game.$Properties[];
+        forks: proto.Game.$Properties[];
+        language_supports: proto.LanguageSupport.$Properties[];
+        game_localizations: proto.GameLocalization.$Properties[];
+        collections: proto.Collection.$Properties[];
+        game_status?: (proto.GameStatus.$Properties|null);
+        game_type?: (proto.GameType.$Properties|null);
+        static getTypeUrl(prefix?: string): string;
+    }
+
+    namespace Game {
+        interface $Properties {
+            id?: (number|null);
+            age_ratings?: (proto.AgeRating.$Properties[]|null);
+            aggregated_rating?: (number|null);
+            aggregated_rating_count?: (number|null);
+            alternative_names?: (proto.AlternativeName.$Properties[]|null);
+            artworks?: (proto.Artwork.$Properties[]|null);
+            bundles?: (proto.Game.$Properties[]|null);
+            category?: (proto.GameCategoryEnum|null);
+            collection?: (proto.Collection.$Properties|null);
+            cover?: (proto.Cover.$Properties|null);
+            created_at?: (google.protobuf.Timestamp.$Properties|null);
+            dlcs?: (proto.Game.$Properties[]|null);
+            expansions?: (proto.Game.$Properties[]|null);
+            external_games?: (proto.ExternalGame.$Properties[]|null);
+            first_release_date?: (google.protobuf.Timestamp.$Properties|null);
+            follows?: (number|null);
+            franchise?: (proto.Franchise.$Properties|null);
+            franchises?: (proto.Franchise.$Properties[]|null);
+            game_engines?: (proto.GameEngine.$Properties[]|null);
+            game_modes?: (proto.GameMode.$Properties[]|null);
+            genres?: (proto.Genre.$Properties[]|null);
+            hypes?: (number|null);
+            involved_companies?: (proto.InvolvedCompany.$Properties[]|null);
+            keywords?: (proto.Keyword.$Properties[]|null);
+            multiplayer_modes?: (proto.MultiplayerMode.$Properties[]|null);
+            name?: (string|null);
+            parent_game?: (proto.Game.$Properties|null);
+            platforms?: (proto.Platform.$Properties[]|null);
+            player_perspectives?: (proto.PlayerPerspective.$Properties[]|null);
+            rating?: (number|null);
+            rating_count?: (number|null);
+            release_dates?: (proto.ReleaseDate.$Properties[]|null);
+            screenshots?: (proto.Screenshot.$Properties[]|null);
+            similar_games?: (proto.Game.$Properties[]|null);
+            slug?: (string|null);
+            standalone_expansions?: (proto.Game.$Properties[]|null);
+            status?: (proto.GameStatusEnum|null);
+            storyline?: (string|null);
+            summary?: (string|null);
+            tags?: (number[]|null);
+            themes?: (proto.Theme.$Properties[]|null);
+            total_rating?: (number|null);
+            total_rating_count?: (number|null);
+            updated_at?: (google.protobuf.Timestamp.$Properties|null);
+            url?: (string|null);
+            version_parent?: (proto.Game.$Properties|null);
+            version_title?: (string|null);
+            videos?: (proto.GameVideo.$Properties[]|null);
+            websites?: (proto.Website.$Properties[]|null);
+            checksum?: (string|null);
+            remakes?: (proto.Game.$Properties[]|null);
+            remasters?: (proto.Game.$Properties[]|null);
+            expanded_games?: (proto.Game.$Properties[]|null);
+            ports?: (proto.Game.$Properties[]|null);
+            forks?: (proto.Game.$Properties[]|null);
+            language_supports?: (proto.LanguageSupport.$Properties[]|null);
+            game_localizations?: (proto.GameLocalization.$Properties[]|null);
+            collections?: (proto.Collection.$Properties[]|null);
+            game_status?: (proto.GameStatus.$Properties|null);
+            game_type?: (proto.GameType.$Properties|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.Game.$Properties;
     }
 
     enum GameCategoryEnum {
@@ -1554,362 +2308,538 @@ export namespace proto {
         DELISTED = 8
     }
 
-    interface IGameContentSafetyRatingResult {
-        gamecontentsafetyratings?: (proto.IGameContentSafetyRating[]|null);
+    interface IGameContentSafetyRatingResult extends proto.GameContentSafetyRatingResult.$Properties {
     }
 
-    class GameContentSafetyRatingResult implements IGameContentSafetyRatingResult {
-        constructor(properties?: proto.IGameContentSafetyRatingResult);
-        public gamecontentsafetyratings: proto.IGameContentSafetyRating[];
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    class GameContentSafetyRatingResult {
+        constructor(properties?: proto.GameContentSafetyRatingResult.$Properties);
+        $unknowns?: Uint8Array[];
+        gamecontentsafetyratings: proto.GameContentSafetyRating.$Properties[];
+        static getTypeUrl(prefix?: string): string;
     }
 
-    interface IGameContentSafetyRating {
-        id?: (number|null);
-        game?: (proto.IGame|null);
-        content_safety_rating_dimension?: (proto.IContentSafetyRatingDimension|null);
-        content_safety_rating?: (proto.IContentSafetyRating|null);
-        created_at?: (number|null);
-        updated_at?: (number|null);
-        checksum?: (string|null);
+    namespace GameContentSafetyRatingResult {
+        interface $Properties {
+            gamecontentsafetyratings?: (proto.GameContentSafetyRating.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.GameContentSafetyRatingResult.$Properties;
     }
 
-    class GameContentSafetyRating implements IGameContentSafetyRating {
-        constructor(properties?: proto.IGameContentSafetyRating);
-        public id: number;
-        public game?: (proto.IGame|null);
-        public content_safety_rating_dimension?: (proto.IContentSafetyRatingDimension|null);
-        public content_safety_rating?: (proto.IContentSafetyRating|null);
-        public created_at?: (number|null);
-        public updated_at?: (number|null);
-        public checksum: string;
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    interface IGameContentSafetyRating extends proto.GameContentSafetyRating.$Properties {
     }
 
-    interface IGameEngineResult {
-        gameengines?: (proto.IGameEngine[]|null);
+    class GameContentSafetyRating {
+        constructor(properties?: proto.GameContentSafetyRating.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        game?: (proto.Game.$Properties|null);
+        content_safety_rating_dimension?: (proto.ContentSafetyRatingDimension.$Properties|null);
+        content_safety_rating?: (proto.ContentSafetyRating.$Properties|null);
+        created_at?: (google.protobuf.Timestamp.$Properties|null);
+        updated_at?: (google.protobuf.Timestamp.$Properties|null);
+        checksum: string;
+        static getTypeUrl(prefix?: string): string;
     }
 
-    class GameEngineResult implements IGameEngineResult {
-        constructor(properties?: proto.IGameEngineResult);
-        public gameengines: proto.IGameEngine[];
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    namespace GameContentSafetyRating {
+        interface $Properties {
+            id?: (number|null);
+            game?: (proto.Game.$Properties|null);
+            content_safety_rating_dimension?: (proto.ContentSafetyRatingDimension.$Properties|null);
+            content_safety_rating?: (proto.ContentSafetyRating.$Properties|null);
+            created_at?: (google.protobuf.Timestamp.$Properties|null);
+            updated_at?: (google.protobuf.Timestamp.$Properties|null);
+            checksum?: (string|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.GameContentSafetyRating.$Properties;
     }
 
-    interface IGameEngine {
-        id?: (number|null);
-        companies?: (proto.ICompany[]|null);
-        created_at?: (number|null);
-        description?: (string|null);
-        logo?: (proto.IGameEngineLogo|null);
-        name?: (string|null);
-        platforms?: (proto.IPlatform[]|null);
-        slug?: (string|null);
-        updated_at?: (number|null);
-        url?: (string|null);
-        checksum?: (string|null);
+    interface IGameEngineResult extends proto.GameEngineResult.$Properties {
     }
 
-    class GameEngine implements IGameEngine {
-        constructor(properties?: proto.IGameEngine);
-        public id: number;
-        public companies: proto.ICompany[];
-        public created_at?: (number|null);
-        public description: string;
-        public logo?: (proto.IGameEngineLogo|null);
-        public name: string;
-        public platforms: proto.IPlatform[];
-        public slug: string;
-        public updated_at?: (number|null);
-        public url: string;
-        public checksum: string;
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    class GameEngineResult {
+        constructor(properties?: proto.GameEngineResult.$Properties);
+        $unknowns?: Uint8Array[];
+        gameengines: proto.GameEngine.$Properties[];
+        static getTypeUrl(prefix?: string): string;
     }
 
-    interface IGameEngineLogoResult {
-        gameenginelogos?: (proto.IGameEngineLogo[]|null);
+    namespace GameEngineResult {
+        interface $Properties {
+            gameengines?: (proto.GameEngine.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.GameEngineResult.$Properties;
     }
 
-    class GameEngineLogoResult implements IGameEngineLogoResult {
-        constructor(properties?: proto.IGameEngineLogoResult);
-        public gameenginelogos: proto.IGameEngineLogo[];
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    interface IGameEngine extends proto.GameEngine.$Properties {
     }
 
-    interface IGameEngineLogo {
-        id?: (number|null);
-        alpha_channel?: (boolean|null);
-        animated?: (boolean|null);
-        height?: (number|null);
-        image_id?: (string|null);
-        url?: (string|null);
-        width?: (number|null);
-        checksum?: (string|null);
+    class GameEngine {
+        constructor(properties?: proto.GameEngine.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        companies: proto.Company.$Properties[];
+        created_at?: (google.protobuf.Timestamp.$Properties|null);
+        description: string;
+        logo?: (proto.GameEngineLogo.$Properties|null);
+        name: string;
+        platforms: proto.Platform.$Properties[];
+        slug: string;
+        updated_at?: (google.protobuf.Timestamp.$Properties|null);
+        url: string;
+        checksum: string;
+        static getTypeUrl(prefix?: string): string;
     }
 
-    class GameEngineLogo implements IGameEngineLogo {
-        constructor(properties?: proto.IGameEngineLogo);
-        public id: number;
-        public alpha_channel: boolean;
-        public animated: boolean;
-        public height: number;
-        public image_id: string;
-        public url: string;
-        public width: number;
-        public checksum: string;
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    namespace GameEngine {
+        interface $Properties {
+            id?: (number|null);
+            companies?: (proto.Company.$Properties[]|null);
+            created_at?: (google.protobuf.Timestamp.$Properties|null);
+            description?: (string|null);
+            logo?: (proto.GameEngineLogo.$Properties|null);
+            name?: (string|null);
+            platforms?: (proto.Platform.$Properties[]|null);
+            slug?: (string|null);
+            updated_at?: (google.protobuf.Timestamp.$Properties|null);
+            url?: (string|null);
+            checksum?: (string|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.GameEngine.$Properties;
     }
 
-    interface IGameLocalizationResult {
-        gamelocalizations?: (proto.IGameLocalization[]|null);
+    interface IGameEngineLogoResult extends proto.GameEngineLogoResult.$Properties {
     }
 
-    class GameLocalizationResult implements IGameLocalizationResult {
-        constructor(properties?: proto.IGameLocalizationResult);
-        public gamelocalizations: proto.IGameLocalization[];
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    class GameEngineLogoResult {
+        constructor(properties?: proto.GameEngineLogoResult.$Properties);
+        $unknowns?: Uint8Array[];
+        gameenginelogos: proto.GameEngineLogo.$Properties[];
+        static getTypeUrl(prefix?: string): string;
     }
 
-    interface IGameLocalization {
-        id?: (number|null);
-        name?: (string|null);
-        cover?: (proto.ICover|null);
-        game?: (proto.IGame|null);
-        region?: (proto.IRegion|null);
-        created_at?: (number|null);
-        updated_at?: (number|null);
-        checksum?: (string|null);
+    namespace GameEngineLogoResult {
+        interface $Properties {
+            gameenginelogos?: (proto.GameEngineLogo.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.GameEngineLogoResult.$Properties;
     }
 
-    class GameLocalization implements IGameLocalization {
-        constructor(properties?: proto.IGameLocalization);
-        public id: number;
-        public name: string;
-        public cover?: (proto.ICover|null);
-        public game?: (proto.IGame|null);
-        public region?: (proto.IRegion|null);
-        public created_at?: (number|null);
-        public updated_at?: (number|null);
-        public checksum: string;
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    interface IGameEngineLogo extends proto.GameEngineLogo.$Properties {
     }
 
-    interface IGameModeResult {
-        gamemodes?: (proto.IGameMode[]|null);
+    class GameEngineLogo {
+        constructor(properties?: proto.GameEngineLogo.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        alpha_channel: boolean;
+        animated: boolean;
+        height: number;
+        image_id: string;
+        url: string;
+        width: number;
+        checksum: string;
+        static getTypeUrl(prefix?: string): string;
     }
 
-    class GameModeResult implements IGameModeResult {
-        constructor(properties?: proto.IGameModeResult);
-        public gamemodes: proto.IGameMode[];
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    namespace GameEngineLogo {
+        interface $Properties {
+            id?: (number|null);
+            alpha_channel?: (boolean|null);
+            animated?: (boolean|null);
+            height?: (number|null);
+            image_id?: (string|null);
+            url?: (string|null);
+            width?: (number|null);
+            checksum?: (string|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.GameEngineLogo.$Properties;
     }
 
-    interface IGameMode {
-        id?: (number|null);
-        created_at?: (number|null);
-        name?: (string|null);
-        slug?: (string|null);
-        updated_at?: (number|null);
-        url?: (string|null);
-        checksum?: (string|null);
+    interface IGameLocalizationResult extends proto.GameLocalizationResult.$Properties {
     }
 
-    class GameMode implements IGameMode {
-        constructor(properties?: proto.IGameMode);
-        public id: number;
-        public created_at?: (number|null);
-        public name: string;
-        public slug: string;
-        public updated_at?: (number|null);
-        public url: string;
-        public checksum: string;
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    class GameLocalizationResult {
+        constructor(properties?: proto.GameLocalizationResult.$Properties);
+        $unknowns?: Uint8Array[];
+        gamelocalizations: proto.GameLocalization.$Properties[];
+        static getTypeUrl(prefix?: string): string;
     }
 
-    interface IGameReleaseFormatResult {
-        gamereleaseformats?: (proto.IGameReleaseFormat[]|null);
+    namespace GameLocalizationResult {
+        interface $Properties {
+            gamelocalizations?: (proto.GameLocalization.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.GameLocalizationResult.$Properties;
     }
 
-    class GameReleaseFormatResult implements IGameReleaseFormatResult {
-        constructor(properties?: proto.IGameReleaseFormatResult);
-        public gamereleaseformats: proto.IGameReleaseFormat[];
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    interface IGameLocalization extends proto.GameLocalization.$Properties {
     }
 
-    interface IGameReleaseFormat {
-        id?: (number|null);
-        format?: (string|null);
-        created_at?: (number|null);
-        updated_at?: (number|null);
-        checksum?: (string|null);
+    class GameLocalization {
+        constructor(properties?: proto.GameLocalization.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        name: string;
+        cover?: (proto.Cover.$Properties|null);
+        game?: (proto.Game.$Properties|null);
+        region?: (proto.Region.$Properties|null);
+        created_at?: (google.protobuf.Timestamp.$Properties|null);
+        updated_at?: (google.protobuf.Timestamp.$Properties|null);
+        checksum: string;
+        static getTypeUrl(prefix?: string): string;
     }
 
-    class GameReleaseFormat implements IGameReleaseFormat {
-        constructor(properties?: proto.IGameReleaseFormat);
-        public id: number;
-        public format: string;
-        public created_at?: (number|null);
-        public updated_at?: (number|null);
-        public checksum: string;
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    namespace GameLocalization {
+        interface $Properties {
+            id?: (number|null);
+            name?: (string|null);
+            cover?: (proto.Cover.$Properties|null);
+            game?: (proto.Game.$Properties|null);
+            region?: (proto.Region.$Properties|null);
+            created_at?: (google.protobuf.Timestamp.$Properties|null);
+            updated_at?: (google.protobuf.Timestamp.$Properties|null);
+            checksum?: (string|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.GameLocalization.$Properties;
     }
 
-    interface IGameStatusResult {
-        gamestatuses?: (proto.IGameStatus[]|null);
+    interface IGameModeResult extends proto.GameModeResult.$Properties {
     }
 
-    class GameStatusResult implements IGameStatusResult {
-        constructor(properties?: proto.IGameStatusResult);
-        public gamestatuses: proto.IGameStatus[];
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    class GameModeResult {
+        constructor(properties?: proto.GameModeResult.$Properties);
+        $unknowns?: Uint8Array[];
+        gamemodes: proto.GameMode.$Properties[];
+        static getTypeUrl(prefix?: string): string;
     }
 
-    interface IGameStatus {
-        id?: (number|null);
-        status?: (string|null);
-        created_at?: (number|null);
-        updated_at?: (number|null);
-        checksum?: (string|null);
+    namespace GameModeResult {
+        interface $Properties {
+            gamemodes?: (proto.GameMode.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.GameModeResult.$Properties;
     }
 
-    class GameStatus implements IGameStatus {
-        constructor(properties?: proto.IGameStatus);
-        public id: number;
-        public status: string;
-        public created_at?: (number|null);
-        public updated_at?: (number|null);
-        public checksum: string;
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    interface IGameMode extends proto.GameMode.$Properties {
     }
 
-    interface IGameTimeToBeatResult {
-        gametimetobeats?: (proto.IGameTimeToBeat[]|null);
+    class GameMode {
+        constructor(properties?: proto.GameMode.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        created_at?: (google.protobuf.Timestamp.$Properties|null);
+        name: string;
+        slug: string;
+        updated_at?: (google.protobuf.Timestamp.$Properties|null);
+        url: string;
+        checksum: string;
+        static getTypeUrl(prefix?: string): string;
     }
 
-    class GameTimeToBeatResult implements IGameTimeToBeatResult {
-        constructor(properties?: proto.IGameTimeToBeatResult);
-        public gametimetobeats: proto.IGameTimeToBeat[];
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    namespace GameMode {
+        interface $Properties {
+            id?: (number|null);
+            created_at?: (google.protobuf.Timestamp.$Properties|null);
+            name?: (string|null);
+            slug?: (string|null);
+            updated_at?: (google.protobuf.Timestamp.$Properties|null);
+            url?: (string|null);
+            checksum?: (string|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.GameMode.$Properties;
     }
 
-    interface IGameTimeToBeat {
-        id?: (number|null);
-        game_id?: (number|null);
-        hastily?: (number|null);
-        normally?: (number|null);
-        completely?: (number|null);
-        count?: (number|null);
-        created_at?: (number|null);
-        updated_at?: (number|null);
-        checksum?: (string|null);
+    interface IGameReleaseFormatResult extends proto.GameReleaseFormatResult.$Properties {
     }
 
-    class GameTimeToBeat implements IGameTimeToBeat {
-        constructor(properties?: proto.IGameTimeToBeat);
-        public id: number;
-        public game_id: number;
-        public hastily: number;
-        public normally: number;
-        public completely: number;
-        public count: number;
-        public created_at?: (number|null);
-        public updated_at?: (number|null);
-        public checksum: string;
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    class GameReleaseFormatResult {
+        constructor(properties?: proto.GameReleaseFormatResult.$Properties);
+        $unknowns?: Uint8Array[];
+        gamereleaseformats: proto.GameReleaseFormat.$Properties[];
+        static getTypeUrl(prefix?: string): string;
     }
 
-    interface IGameTypeResult {
-        gametypes?: (proto.IGameType[]|null);
+    namespace GameReleaseFormatResult {
+        interface $Properties {
+            gamereleaseformats?: (proto.GameReleaseFormat.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.GameReleaseFormatResult.$Properties;
     }
 
-    class GameTypeResult implements IGameTypeResult {
-        constructor(properties?: proto.IGameTypeResult);
-        public gametypes: proto.IGameType[];
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    interface IGameReleaseFormat extends proto.GameReleaseFormat.$Properties {
     }
 
-    interface IGameType {
-        id?: (number|null);
-        type?: (string|null);
-        created_at?: (number|null);
-        updated_at?: (number|null);
-        checksum?: (string|null);
+    class GameReleaseFormat {
+        constructor(properties?: proto.GameReleaseFormat.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        format: string;
+        created_at?: (google.protobuf.Timestamp.$Properties|null);
+        updated_at?: (google.protobuf.Timestamp.$Properties|null);
+        checksum: string;
+        static getTypeUrl(prefix?: string): string;
     }
 
-    class GameType implements IGameType {
-        constructor(properties?: proto.IGameType);
-        public id: number;
-        public type: string;
-        public created_at?: (number|null);
-        public updated_at?: (number|null);
-        public checksum: string;
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    namespace GameReleaseFormat {
+        interface $Properties {
+            id?: (number|null);
+            format?: (string|null);
+            created_at?: (google.protobuf.Timestamp.$Properties|null);
+            updated_at?: (google.protobuf.Timestamp.$Properties|null);
+            checksum?: (string|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.GameReleaseFormat.$Properties;
     }
 
-    interface IGameVersionResult {
-        gameversions?: (proto.IGameVersion[]|null);
+    interface IGameStatusResult extends proto.GameStatusResult.$Properties {
     }
 
-    class GameVersionResult implements IGameVersionResult {
-        constructor(properties?: proto.IGameVersionResult);
-        public gameversions: proto.IGameVersion[];
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    class GameStatusResult {
+        constructor(properties?: proto.GameStatusResult.$Properties);
+        $unknowns?: Uint8Array[];
+        gamestatuses: proto.GameStatus.$Properties[];
+        static getTypeUrl(prefix?: string): string;
     }
 
-    interface IGameVersion {
-        id?: (number|null);
-        created_at?: (number|null);
-        features?: (proto.IGameVersionFeature[]|null);
-        game?: (proto.IGame|null);
-        games?: (proto.IGame[]|null);
-        updated_at?: (number|null);
-        url?: (string|null);
-        checksum?: (string|null);
+    namespace GameStatusResult {
+        interface $Properties {
+            gamestatuses?: (proto.GameStatus.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.GameStatusResult.$Properties;
     }
 
-    class GameVersion implements IGameVersion {
-        constructor(properties?: proto.IGameVersion);
-        public id: number;
-        public created_at?: (number|null);
-        public features: proto.IGameVersionFeature[];
-        public game?: (proto.IGame|null);
-        public games: proto.IGame[];
-        public updated_at?: (number|null);
-        public url: string;
-        public checksum: string;
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    interface IGameStatus extends proto.GameStatus.$Properties {
     }
 
-    interface IGameVersionFeatureResult {
-        gameversionfeatures?: (proto.IGameVersionFeature[]|null);
+    class GameStatus {
+        constructor(properties?: proto.GameStatus.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        status: string;
+        created_at?: (google.protobuf.Timestamp.$Properties|null);
+        updated_at?: (google.protobuf.Timestamp.$Properties|null);
+        checksum: string;
+        static getTypeUrl(prefix?: string): string;
     }
 
-    class GameVersionFeatureResult implements IGameVersionFeatureResult {
-        constructor(properties?: proto.IGameVersionFeatureResult);
-        public gameversionfeatures: proto.IGameVersionFeature[];
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    namespace GameStatus {
+        interface $Properties {
+            id?: (number|null);
+            status?: (string|null);
+            created_at?: (google.protobuf.Timestamp.$Properties|null);
+            updated_at?: (google.protobuf.Timestamp.$Properties|null);
+            checksum?: (string|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.GameStatus.$Properties;
     }
 
-    interface IGameVersionFeature {
-        id?: (number|null);
-        category?: (proto.GameVersionFeatureCategoryEnum|null);
-        description?: (string|null);
-        position?: (number|null);
-        title?: (string|null);
-        values?: (proto.IGameVersionFeatureValue[]|null);
-        checksum?: (string|null);
+    interface IGameTimeToBeatResult extends proto.GameTimeToBeatResult.$Properties {
     }
 
-    class GameVersionFeature implements IGameVersionFeature {
-        constructor(properties?: proto.IGameVersionFeature);
-        public id: number;
-        public category: proto.GameVersionFeatureCategoryEnum;
-        public description: string;
-        public position: number;
-        public title: string;
-        public values: proto.IGameVersionFeatureValue[];
-        public checksum: string;
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    class GameTimeToBeatResult {
+        constructor(properties?: proto.GameTimeToBeatResult.$Properties);
+        $unknowns?: Uint8Array[];
+        gametimetobeats: proto.GameTimeToBeat.$Properties[];
+        static getTypeUrl(prefix?: string): string;
+    }
+
+    namespace GameTimeToBeatResult {
+        interface $Properties {
+            gametimetobeats?: (proto.GameTimeToBeat.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.GameTimeToBeatResult.$Properties;
+    }
+
+    interface IGameTimeToBeat extends proto.GameTimeToBeat.$Properties {
+    }
+
+    class GameTimeToBeat {
+        constructor(properties?: proto.GameTimeToBeat.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        game_id: number;
+        hastily: number;
+        normally: number;
+        completely: number;
+        count: number;
+        created_at?: (google.protobuf.Timestamp.$Properties|null);
+        updated_at?: (google.protobuf.Timestamp.$Properties|null);
+        checksum: string;
+        static getTypeUrl(prefix?: string): string;
+    }
+
+    namespace GameTimeToBeat {
+        interface $Properties {
+            id?: (number|null);
+            game_id?: (number|null);
+            hastily?: (number|null);
+            normally?: (number|null);
+            completely?: (number|null);
+            count?: (number|null);
+            created_at?: (google.protobuf.Timestamp.$Properties|null);
+            updated_at?: (google.protobuf.Timestamp.$Properties|null);
+            checksum?: (string|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.GameTimeToBeat.$Properties;
+    }
+
+    interface IGameTypeResult extends proto.GameTypeResult.$Properties {
+    }
+
+    class GameTypeResult {
+        constructor(properties?: proto.GameTypeResult.$Properties);
+        $unknowns?: Uint8Array[];
+        gametypes: proto.GameType.$Properties[];
+        static getTypeUrl(prefix?: string): string;
+    }
+
+    namespace GameTypeResult {
+        interface $Properties {
+            gametypes?: (proto.GameType.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.GameTypeResult.$Properties;
+    }
+
+    interface IGameType extends proto.GameType.$Properties {
+    }
+
+    class GameType {
+        constructor(properties?: proto.GameType.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        type: string;
+        created_at?: (google.protobuf.Timestamp.$Properties|null);
+        updated_at?: (google.protobuf.Timestamp.$Properties|null);
+        checksum: string;
+        static getTypeUrl(prefix?: string): string;
+    }
+
+    namespace GameType {
+        interface $Properties {
+            id?: (number|null);
+            type?: (string|null);
+            created_at?: (google.protobuf.Timestamp.$Properties|null);
+            updated_at?: (google.protobuf.Timestamp.$Properties|null);
+            checksum?: (string|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.GameType.$Properties;
+    }
+
+    interface IGameVersionResult extends proto.GameVersionResult.$Properties {
+    }
+
+    class GameVersionResult {
+        constructor(properties?: proto.GameVersionResult.$Properties);
+        $unknowns?: Uint8Array[];
+        gameversions: proto.GameVersion.$Properties[];
+        static getTypeUrl(prefix?: string): string;
+    }
+
+    namespace GameVersionResult {
+        interface $Properties {
+            gameversions?: (proto.GameVersion.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.GameVersionResult.$Properties;
+    }
+
+    interface IGameVersion extends proto.GameVersion.$Properties {
+    }
+
+    class GameVersion {
+        constructor(properties?: proto.GameVersion.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        created_at?: (google.protobuf.Timestamp.$Properties|null);
+        features: proto.GameVersionFeature.$Properties[];
+        game?: (proto.Game.$Properties|null);
+        games: proto.Game.$Properties[];
+        updated_at?: (google.protobuf.Timestamp.$Properties|null);
+        url: string;
+        checksum: string;
+        static getTypeUrl(prefix?: string): string;
+    }
+
+    namespace GameVersion {
+        interface $Properties {
+            id?: (number|null);
+            created_at?: (google.protobuf.Timestamp.$Properties|null);
+            features?: (proto.GameVersionFeature.$Properties[]|null);
+            game?: (proto.Game.$Properties|null);
+            games?: (proto.Game.$Properties[]|null);
+            updated_at?: (google.protobuf.Timestamp.$Properties|null);
+            url?: (string|null);
+            checksum?: (string|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.GameVersion.$Properties;
+    }
+
+    interface IGameVersionFeatureResult extends proto.GameVersionFeatureResult.$Properties {
+    }
+
+    class GameVersionFeatureResult {
+        constructor(properties?: proto.GameVersionFeatureResult.$Properties);
+        $unknowns?: Uint8Array[];
+        gameversionfeatures: proto.GameVersionFeature.$Properties[];
+        static getTypeUrl(prefix?: string): string;
+    }
+
+    namespace GameVersionFeatureResult {
+        interface $Properties {
+            gameversionfeatures?: (proto.GameVersionFeature.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.GameVersionFeatureResult.$Properties;
+    }
+
+    interface IGameVersionFeature extends proto.GameVersionFeature.$Properties {
+    }
+
+    class GameVersionFeature {
+        constructor(properties?: proto.GameVersionFeature.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        category: proto.GameVersionFeatureCategoryEnum;
+        description: string;
+        position: number;
+        title: string;
+        values: proto.GameVersionFeatureValue.$Properties[];
+        checksum: string;
+        static getTypeUrl(prefix?: string): string;
+    }
+
+    namespace GameVersionFeature {
+        interface $Properties {
+            id?: (number|null);
+            category?: (proto.GameVersionFeatureCategoryEnum|null);
+            description?: (string|null);
+            position?: (number|null);
+            title?: (string|null);
+            values?: (proto.GameVersionFeatureValue.$Properties[]|null);
+            checksum?: (string|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.GameVersionFeature.$Properties;
     }
 
     enum GameVersionFeatureCategoryEnum {
@@ -1917,34 +2847,50 @@ export namespace proto {
         DESCRIPTION = 1
     }
 
-    interface IGameVersionFeatureValueResult {
-        gameversionfeaturevalues?: (proto.IGameVersionFeatureValue[]|null);
+    interface IGameVersionFeatureValueResult extends proto.GameVersionFeatureValueResult.$Properties {
     }
 
-    class GameVersionFeatureValueResult implements IGameVersionFeatureValueResult {
-        constructor(properties?: proto.IGameVersionFeatureValueResult);
-        public gameversionfeaturevalues: proto.IGameVersionFeatureValue[];
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    class GameVersionFeatureValueResult {
+        constructor(properties?: proto.GameVersionFeatureValueResult.$Properties);
+        $unknowns?: Uint8Array[];
+        gameversionfeaturevalues: proto.GameVersionFeatureValue.$Properties[];
+        static getTypeUrl(prefix?: string): string;
     }
 
-    interface IGameVersionFeatureValue {
-        id?: (number|null);
-        game?: (proto.IGame|null);
-        game_feature?: (proto.IGameVersionFeature|null);
-        included_feature?: (proto.GameVersionFeatureValueIncludedFeatureEnum|null);
-        note?: (string|null);
-        checksum?: (string|null);
+    namespace GameVersionFeatureValueResult {
+        interface $Properties {
+            gameversionfeaturevalues?: (proto.GameVersionFeatureValue.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.GameVersionFeatureValueResult.$Properties;
     }
 
-    class GameVersionFeatureValue implements IGameVersionFeatureValue {
-        constructor(properties?: proto.IGameVersionFeatureValue);
-        public id: number;
-        public game?: (proto.IGame|null);
-        public game_feature?: (proto.IGameVersionFeature|null);
-        public included_feature: proto.GameVersionFeatureValueIncludedFeatureEnum;
-        public note: string;
-        public checksum: string;
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    interface IGameVersionFeatureValue extends proto.GameVersionFeatureValue.$Properties {
+    }
+
+    class GameVersionFeatureValue {
+        constructor(properties?: proto.GameVersionFeatureValue.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        game?: (proto.Game.$Properties|null);
+        game_feature?: (proto.GameVersionFeature.$Properties|null);
+        included_feature: proto.GameVersionFeatureValueIncludedFeatureEnum;
+        note: string;
+        checksum: string;
+        static getTypeUrl(prefix?: string): string;
+    }
+
+    namespace GameVersionFeatureValue {
+        interface $Properties {
+            id?: (number|null);
+            game?: (proto.Game.$Properties|null);
+            game_feature?: (proto.GameVersionFeature.$Properties|null);
+            included_feature?: (proto.GameVersionFeatureValueIncludedFeatureEnum|null);
+            note?: (string|null);
+            checksum?: (string|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.GameVersionFeatureValue.$Properties;
     }
 
     enum GameVersionFeatureValueIncludedFeatureEnum {
@@ -1953,356 +2899,516 @@ export namespace proto {
         PRE_ORDER_ONLY = 2
     }
 
-    interface IGameVideoResult {
-        gamevideos?: (proto.IGameVideo[]|null);
+    interface IGameVideoResult extends proto.GameVideoResult.$Properties {
     }
 
-    class GameVideoResult implements IGameVideoResult {
-        constructor(properties?: proto.IGameVideoResult);
-        public gamevideos: proto.IGameVideo[];
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    class GameVideoResult {
+        constructor(properties?: proto.GameVideoResult.$Properties);
+        $unknowns?: Uint8Array[];
+        gamevideos: proto.GameVideo.$Properties[];
+        static getTypeUrl(prefix?: string): string;
     }
 
-    interface IGameVideo {
-        id?: (number|null);
-        game?: (proto.IGame|null);
-        name?: (string|null);
-        video_id?: (string|null);
-        checksum?: (string|null);
+    namespace GameVideoResult {
+        interface $Properties {
+            gamevideos?: (proto.GameVideo.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.GameVideoResult.$Properties;
     }
 
-    class GameVideo implements IGameVideo {
-        constructor(properties?: proto.IGameVideo);
-        public id: number;
-        public game?: (proto.IGame|null);
-        public name: string;
-        public video_id: string;
-        public checksum: string;
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    interface IGameVideo extends proto.GameVideo.$Properties {
     }
 
-    interface IGenreResult {
-        genres?: (proto.IGenre[]|null);
+    class GameVideo {
+        constructor(properties?: proto.GameVideo.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        game?: (proto.Game.$Properties|null);
+        name: string;
+        video_id: string;
+        checksum: string;
+        static getTypeUrl(prefix?: string): string;
     }
 
-    class GenreResult implements IGenreResult {
-        constructor(properties?: proto.IGenreResult);
-        public genres: proto.IGenre[];
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    namespace GameVideo {
+        interface $Properties {
+            id?: (number|null);
+            game?: (proto.Game.$Properties|null);
+            name?: (string|null);
+            video_id?: (string|null);
+            checksum?: (string|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.GameVideo.$Properties;
     }
 
-    interface IGenre {
-        id?: (number|null);
-        created_at?: (number|null);
-        name?: (string|null);
-        slug?: (string|null);
-        updated_at?: (number|null);
-        url?: (string|null);
-        checksum?: (string|null);
+    interface IGenreResult extends proto.GenreResult.$Properties {
     }
 
-    class Genre implements IGenre {
-        constructor(properties?: proto.IGenre);
-        public id: number;
-        public created_at?: (number|null);
-        public name: string;
-        public slug: string;
-        public updated_at?: (number|null);
-        public url: string;
-        public checksum: string;
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    class GenreResult {
+        constructor(properties?: proto.GenreResult.$Properties);
+        $unknowns?: Uint8Array[];
+        genres: proto.Genre.$Properties[];
+        static getTypeUrl(prefix?: string): string;
     }
 
-    interface IInvolvedCompanyResult {
-        involvedcompanies?: (proto.IInvolvedCompany[]|null);
+    namespace GenreResult {
+        interface $Properties {
+            genres?: (proto.Genre.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.GenreResult.$Properties;
     }
 
-    class InvolvedCompanyResult implements IInvolvedCompanyResult {
-        constructor(properties?: proto.IInvolvedCompanyResult);
-        public involvedcompanies: proto.IInvolvedCompany[];
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    interface IGenre extends proto.Genre.$Properties {
     }
 
-    interface IInvolvedCompany {
-        id?: (number|null);
-        company?: (proto.ICompany|null);
-        created_at?: (number|null);
-        developer?: (boolean|null);
-        game?: (proto.IGame|null);
-        porting?: (boolean|null);
-        publisher?: (boolean|null);
-        supporting?: (boolean|null);
-        updated_at?: (number|null);
-        checksum?: (string|null);
+    class Genre {
+        constructor(properties?: proto.Genre.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        created_at?: (google.protobuf.Timestamp.$Properties|null);
+        name: string;
+        slug: string;
+        updated_at?: (google.protobuf.Timestamp.$Properties|null);
+        url: string;
+        checksum: string;
+        static getTypeUrl(prefix?: string): string;
     }
 
-    class InvolvedCompany implements IInvolvedCompany {
-        constructor(properties?: proto.IInvolvedCompany);
-        public id: number;
-        public company?: (proto.ICompany|null);
-        public created_at?: (number|null);
-        public developer: boolean;
-        public game?: (proto.IGame|null);
-        public porting: boolean;
-        public publisher: boolean;
-        public supporting: boolean;
-        public updated_at?: (number|null);
-        public checksum: string;
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    namespace Genre {
+        interface $Properties {
+            id?: (number|null);
+            created_at?: (google.protobuf.Timestamp.$Properties|null);
+            name?: (string|null);
+            slug?: (string|null);
+            updated_at?: (google.protobuf.Timestamp.$Properties|null);
+            url?: (string|null);
+            checksum?: (string|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.Genre.$Properties;
     }
 
-    interface IKeywordResult {
-        keywords?: (proto.IKeyword[]|null);
+    interface IInvolvedCompanyResult extends proto.InvolvedCompanyResult.$Properties {
     }
 
-    class KeywordResult implements IKeywordResult {
-        constructor(properties?: proto.IKeywordResult);
-        public keywords: proto.IKeyword[];
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    class InvolvedCompanyResult {
+        constructor(properties?: proto.InvolvedCompanyResult.$Properties);
+        $unknowns?: Uint8Array[];
+        involvedcompanies: proto.InvolvedCompany.$Properties[];
+        static getTypeUrl(prefix?: string): string;
     }
 
-    interface IKeyword {
-        id?: (number|null);
-        created_at?: (number|null);
-        name?: (string|null);
-        slug?: (string|null);
-        updated_at?: (number|null);
-        url?: (string|null);
-        checksum?: (string|null);
+    namespace InvolvedCompanyResult {
+        interface $Properties {
+            involvedcompanies?: (proto.InvolvedCompany.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.InvolvedCompanyResult.$Properties;
     }
 
-    class Keyword implements IKeyword {
-        constructor(properties?: proto.IKeyword);
-        public id: number;
-        public created_at?: (number|null);
-        public name: string;
-        public slug: string;
-        public updated_at?: (number|null);
-        public url: string;
-        public checksum: string;
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    interface IInvolvedCompany extends proto.InvolvedCompany.$Properties {
     }
 
-    interface ILanguageResult {
-        languages?: (proto.ILanguage[]|null);
+    class InvolvedCompany {
+        constructor(properties?: proto.InvolvedCompany.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        company?: (proto.Company.$Properties|null);
+        created_at?: (google.protobuf.Timestamp.$Properties|null);
+        developer: boolean;
+        game?: (proto.Game.$Properties|null);
+        porting: boolean;
+        publisher: boolean;
+        supporting: boolean;
+        updated_at?: (google.protobuf.Timestamp.$Properties|null);
+        checksum: string;
+        static getTypeUrl(prefix?: string): string;
     }
 
-    class LanguageResult implements ILanguageResult {
-        constructor(properties?: proto.ILanguageResult);
-        public languages: proto.ILanguage[];
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    namespace InvolvedCompany {
+        interface $Properties {
+            id?: (number|null);
+            company?: (proto.Company.$Properties|null);
+            created_at?: (google.protobuf.Timestamp.$Properties|null);
+            developer?: (boolean|null);
+            game?: (proto.Game.$Properties|null);
+            porting?: (boolean|null);
+            publisher?: (boolean|null);
+            supporting?: (boolean|null);
+            updated_at?: (google.protobuf.Timestamp.$Properties|null);
+            checksum?: (string|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.InvolvedCompany.$Properties;
     }
 
-    interface ILanguage {
-        id?: (number|null);
-        name?: (string|null);
-        native_name?: (string|null);
-        locale?: (string|null);
-        created_at?: (number|null);
-        updated_at?: (number|null);
-        checksum?: (string|null);
+    interface IKeywordResult extends proto.KeywordResult.$Properties {
     }
 
-    class Language implements ILanguage {
-        constructor(properties?: proto.ILanguage);
-        public id: number;
-        public name: string;
-        public native_name: string;
-        public locale: string;
-        public created_at?: (number|null);
-        public updated_at?: (number|null);
-        public checksum: string;
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    class KeywordResult {
+        constructor(properties?: proto.KeywordResult.$Properties);
+        $unknowns?: Uint8Array[];
+        keywords: proto.Keyword.$Properties[];
+        static getTypeUrl(prefix?: string): string;
     }
 
-    interface ILanguageSupportResult {
-        languagesupports?: (proto.ILanguageSupport[]|null);
+    namespace KeywordResult {
+        interface $Properties {
+            keywords?: (proto.Keyword.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.KeywordResult.$Properties;
     }
 
-    class LanguageSupportResult implements ILanguageSupportResult {
-        constructor(properties?: proto.ILanguageSupportResult);
-        public languagesupports: proto.ILanguageSupport[];
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    interface IKeyword extends proto.Keyword.$Properties {
     }
 
-    interface ILanguageSupport {
-        id?: (number|null);
-        game?: (proto.IGame|null);
-        language?: (proto.ILanguage|null);
-        language_support_type?: (proto.ILanguageSupportType|null);
-        created_at?: (number|null);
-        updated_at?: (number|null);
-        checksum?: (string|null);
+    class Keyword {
+        constructor(properties?: proto.Keyword.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        created_at?: (google.protobuf.Timestamp.$Properties|null);
+        name: string;
+        slug: string;
+        updated_at?: (google.protobuf.Timestamp.$Properties|null);
+        url: string;
+        checksum: string;
+        static getTypeUrl(prefix?: string): string;
     }
 
-    class LanguageSupport implements ILanguageSupport {
-        constructor(properties?: proto.ILanguageSupport);
-        public id: number;
-        public game?: (proto.IGame|null);
-        public language?: (proto.ILanguage|null);
-        public language_support_type?: (proto.ILanguageSupportType|null);
-        public created_at?: (number|null);
-        public updated_at?: (number|null);
-        public checksum: string;
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    namespace Keyword {
+        interface $Properties {
+            id?: (number|null);
+            created_at?: (google.protobuf.Timestamp.$Properties|null);
+            name?: (string|null);
+            slug?: (string|null);
+            updated_at?: (google.protobuf.Timestamp.$Properties|null);
+            url?: (string|null);
+            checksum?: (string|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.Keyword.$Properties;
     }
 
-    interface ILanguageSupportTypeResult {
-        languagesupporttypes?: (proto.ILanguageSupportType[]|null);
+    interface ILanguageResult extends proto.LanguageResult.$Properties {
     }
 
-    class LanguageSupportTypeResult implements ILanguageSupportTypeResult {
-        constructor(properties?: proto.ILanguageSupportTypeResult);
-        public languagesupporttypes: proto.ILanguageSupportType[];
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    class LanguageResult {
+        constructor(properties?: proto.LanguageResult.$Properties);
+        $unknowns?: Uint8Array[];
+        languages: proto.Language.$Properties[];
+        static getTypeUrl(prefix?: string): string;
     }
 
-    interface ILanguageSupportType {
-        id?: (number|null);
-        name?: (string|null);
-        created_at?: (number|null);
-        updated_at?: (number|null);
-        checksum?: (string|null);
+    namespace LanguageResult {
+        interface $Properties {
+            languages?: (proto.Language.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.LanguageResult.$Properties;
     }
 
-    class LanguageSupportType implements ILanguageSupportType {
-        constructor(properties?: proto.ILanguageSupportType);
-        public id: number;
-        public name: string;
-        public created_at?: (number|null);
-        public updated_at?: (number|null);
-        public checksum: string;
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    interface ILanguage extends proto.Language.$Properties {
     }
 
-    interface IMultiplayerModeResult {
-        multiplayermodes?: (proto.IMultiplayerMode[]|null);
+    class Language {
+        constructor(properties?: proto.Language.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        name: string;
+        native_name: string;
+        locale: string;
+        created_at?: (google.protobuf.Timestamp.$Properties|null);
+        updated_at?: (google.protobuf.Timestamp.$Properties|null);
+        checksum: string;
+        static getTypeUrl(prefix?: string): string;
     }
 
-    class MultiplayerModeResult implements IMultiplayerModeResult {
-        constructor(properties?: proto.IMultiplayerModeResult);
-        public multiplayermodes: proto.IMultiplayerMode[];
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    namespace Language {
+        interface $Properties {
+            id?: (number|null);
+            name?: (string|null);
+            native_name?: (string|null);
+            locale?: (string|null);
+            created_at?: (google.protobuf.Timestamp.$Properties|null);
+            updated_at?: (google.protobuf.Timestamp.$Properties|null);
+            checksum?: (string|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.Language.$Properties;
     }
 
-    interface IMultiplayerMode {
-        id?: (number|null);
-        campaigncoop?: (boolean|null);
-        dropin?: (boolean|null);
-        game?: (proto.IGame|null);
-        lancoop?: (boolean|null);
-        offlinecoop?: (boolean|null);
-        offlinecoopmax?: (number|null);
-        offlinemax?: (number|null);
-        onlinecoop?: (boolean|null);
-        onlinecoopmax?: (number|null);
-        onlinemax?: (number|null);
-        platform?: (proto.IPlatform|null);
-        splitscreen?: (boolean|null);
-        splitscreenonline?: (boolean|null);
-        checksum?: (string|null);
+    interface ILanguageSupportResult extends proto.LanguageSupportResult.$Properties {
     }
 
-    class MultiplayerMode implements IMultiplayerMode {
-        constructor(properties?: proto.IMultiplayerMode);
-        public id: number;
-        public campaigncoop: boolean;
-        public dropin: boolean;
-        public game?: (proto.IGame|null);
-        public lancoop: boolean;
-        public offlinecoop: boolean;
-        public offlinecoopmax: number;
-        public offlinemax: number;
-        public onlinecoop: boolean;
-        public onlinecoopmax: number;
-        public onlinemax: number;
-        public platform?: (proto.IPlatform|null);
-        public splitscreen: boolean;
-        public splitscreenonline: boolean;
-        public checksum: string;
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    class LanguageSupportResult {
+        constructor(properties?: proto.LanguageSupportResult.$Properties);
+        $unknowns?: Uint8Array[];
+        languagesupports: proto.LanguageSupport.$Properties[];
+        static getTypeUrl(prefix?: string): string;
     }
 
-    interface INetworkTypeResult {
-        networktypes?: (proto.INetworkType[]|null);
+    namespace LanguageSupportResult {
+        interface $Properties {
+            languagesupports?: (proto.LanguageSupport.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.LanguageSupportResult.$Properties;
     }
 
-    class NetworkTypeResult implements INetworkTypeResult {
-        constructor(properties?: proto.INetworkTypeResult);
-        public networktypes: proto.INetworkType[];
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    interface ILanguageSupport extends proto.LanguageSupport.$Properties {
     }
 
-    interface INetworkType {
-        id?: (number|null);
-        name?: (string|null);
-        event_networks?: (proto.IEventNetwork[]|null);
-        created_at?: (number|null);
-        updated_at?: (number|null);
-        checksum?: (string|null);
+    class LanguageSupport {
+        constructor(properties?: proto.LanguageSupport.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        game?: (proto.Game.$Properties|null);
+        language?: (proto.Language.$Properties|null);
+        language_support_type?: (proto.LanguageSupportType.$Properties|null);
+        created_at?: (google.protobuf.Timestamp.$Properties|null);
+        updated_at?: (google.protobuf.Timestamp.$Properties|null);
+        checksum: string;
+        static getTypeUrl(prefix?: string): string;
     }
 
-    class NetworkType implements INetworkType {
-        constructor(properties?: proto.INetworkType);
-        public id: number;
-        public name: string;
-        public event_networks: proto.IEventNetwork[];
-        public created_at?: (number|null);
-        public updated_at?: (number|null);
-        public checksum: string;
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    namespace LanguageSupport {
+        interface $Properties {
+            id?: (number|null);
+            game?: (proto.Game.$Properties|null);
+            language?: (proto.Language.$Properties|null);
+            language_support_type?: (proto.LanguageSupportType.$Properties|null);
+            created_at?: (google.protobuf.Timestamp.$Properties|null);
+            updated_at?: (google.protobuf.Timestamp.$Properties|null);
+            checksum?: (string|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.LanguageSupport.$Properties;
     }
 
-    interface IPlatformResult {
-        platforms?: (proto.IPlatform[]|null);
+    interface ILanguageSupportTypeResult extends proto.LanguageSupportTypeResult.$Properties {
     }
 
-    class PlatformResult implements IPlatformResult {
-        constructor(properties?: proto.IPlatformResult);
-        public platforms: proto.IPlatform[];
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    class LanguageSupportTypeResult {
+        constructor(properties?: proto.LanguageSupportTypeResult.$Properties);
+        $unknowns?: Uint8Array[];
+        languagesupporttypes: proto.LanguageSupportType.$Properties[];
+        static getTypeUrl(prefix?: string): string;
     }
 
-    interface IPlatform {
-        id?: (number|null);
-        abbreviation?: (string|null);
-        alternative_name?: (string|null);
-        category?: (proto.PlatformCategoryEnum|null);
-        created_at?: (number|null);
-        generation?: (number|null);
-        name?: (string|null);
-        platform_logo?: (proto.IPlatformLogo|null);
-        platform_family?: (proto.IPlatformFamily|null);
-        slug?: (string|null);
-        summary?: (string|null);
-        updated_at?: (number|null);
-        url?: (string|null);
-        versions?: (proto.IPlatformVersion[]|null);
-        websites?: (proto.IPlatformWebsite[]|null);
-        checksum?: (string|null);
-        platform_type?: (proto.IPlatformType|null);
+    namespace LanguageSupportTypeResult {
+        interface $Properties {
+            languagesupporttypes?: (proto.LanguageSupportType.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.LanguageSupportTypeResult.$Properties;
     }
 
-    class Platform implements IPlatform {
-        constructor(properties?: proto.IPlatform);
-        public id: number;
-        public abbreviation: string;
-        public alternative_name: string;
-        public category: proto.PlatformCategoryEnum;
-        public created_at?: (number|null);
-        public generation: number;
-        public name: string;
-        public platform_logo?: (proto.IPlatformLogo|null);
-        public platform_family?: (proto.IPlatformFamily|null);
-        public slug: string;
-        public summary: string;
-        public updated_at?: (number|null);
-        public url: string;
-        public versions: proto.IPlatformVersion[];
-        public websites: proto.IPlatformWebsite[];
-        public checksum: string;
-        public platform_type?: (proto.IPlatformType|null);
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    interface ILanguageSupportType extends proto.LanguageSupportType.$Properties {
+    }
+
+    class LanguageSupportType {
+        constructor(properties?: proto.LanguageSupportType.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        name: string;
+        created_at?: (google.protobuf.Timestamp.$Properties|null);
+        updated_at?: (google.protobuf.Timestamp.$Properties|null);
+        checksum: string;
+        static getTypeUrl(prefix?: string): string;
+    }
+
+    namespace LanguageSupportType {
+        interface $Properties {
+            id?: (number|null);
+            name?: (string|null);
+            created_at?: (google.protobuf.Timestamp.$Properties|null);
+            updated_at?: (google.protobuf.Timestamp.$Properties|null);
+            checksum?: (string|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.LanguageSupportType.$Properties;
+    }
+
+    interface IMultiplayerModeResult extends proto.MultiplayerModeResult.$Properties {
+    }
+
+    class MultiplayerModeResult {
+        constructor(properties?: proto.MultiplayerModeResult.$Properties);
+        $unknowns?: Uint8Array[];
+        multiplayermodes: proto.MultiplayerMode.$Properties[];
+        static getTypeUrl(prefix?: string): string;
+    }
+
+    namespace MultiplayerModeResult {
+        interface $Properties {
+            multiplayermodes?: (proto.MultiplayerMode.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.MultiplayerModeResult.$Properties;
+    }
+
+    interface IMultiplayerMode extends proto.MultiplayerMode.$Properties {
+    }
+
+    class MultiplayerMode {
+        constructor(properties?: proto.MultiplayerMode.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        campaigncoop: boolean;
+        dropin: boolean;
+        game?: (proto.Game.$Properties|null);
+        lancoop: boolean;
+        offlinecoop: boolean;
+        offlinecoopmax: number;
+        offlinemax: number;
+        onlinecoop: boolean;
+        onlinecoopmax: number;
+        onlinemax: number;
+        platform?: (proto.Platform.$Properties|null);
+        splitscreen: boolean;
+        splitscreenonline: boolean;
+        checksum: string;
+        static getTypeUrl(prefix?: string): string;
+    }
+
+    namespace MultiplayerMode {
+        interface $Properties {
+            id?: (number|null);
+            campaigncoop?: (boolean|null);
+            dropin?: (boolean|null);
+            game?: (proto.Game.$Properties|null);
+            lancoop?: (boolean|null);
+            offlinecoop?: (boolean|null);
+            offlinecoopmax?: (number|null);
+            offlinemax?: (number|null);
+            onlinecoop?: (boolean|null);
+            onlinecoopmax?: (number|null);
+            onlinemax?: (number|null);
+            platform?: (proto.Platform.$Properties|null);
+            splitscreen?: (boolean|null);
+            splitscreenonline?: (boolean|null);
+            checksum?: (string|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.MultiplayerMode.$Properties;
+    }
+
+    interface INetworkTypeResult extends proto.NetworkTypeResult.$Properties {
+    }
+
+    class NetworkTypeResult {
+        constructor(properties?: proto.NetworkTypeResult.$Properties);
+        $unknowns?: Uint8Array[];
+        networktypes: proto.NetworkType.$Properties[];
+        static getTypeUrl(prefix?: string): string;
+    }
+
+    namespace NetworkTypeResult {
+        interface $Properties {
+            networktypes?: (proto.NetworkType.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.NetworkTypeResult.$Properties;
+    }
+
+    interface INetworkType extends proto.NetworkType.$Properties {
+    }
+
+    class NetworkType {
+        constructor(properties?: proto.NetworkType.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        name: string;
+        event_networks: proto.EventNetwork.$Properties[];
+        created_at?: (google.protobuf.Timestamp.$Properties|null);
+        updated_at?: (google.protobuf.Timestamp.$Properties|null);
+        checksum: string;
+        static getTypeUrl(prefix?: string): string;
+    }
+
+    namespace NetworkType {
+        interface $Properties {
+            id?: (number|null);
+            name?: (string|null);
+            event_networks?: (proto.EventNetwork.$Properties[]|null);
+            created_at?: (google.protobuf.Timestamp.$Properties|null);
+            updated_at?: (google.protobuf.Timestamp.$Properties|null);
+            checksum?: (string|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.NetworkType.$Properties;
+    }
+
+    interface IPlatformResult extends proto.PlatformResult.$Properties {
+    }
+
+    class PlatformResult {
+        constructor(properties?: proto.PlatformResult.$Properties);
+        $unknowns?: Uint8Array[];
+        platforms: proto.Platform.$Properties[];
+        static getTypeUrl(prefix?: string): string;
+    }
+
+    namespace PlatformResult {
+        interface $Properties {
+            platforms?: (proto.Platform.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.PlatformResult.$Properties;
+    }
+
+    interface IPlatform extends proto.Platform.$Properties {
+    }
+
+    class Platform {
+        constructor(properties?: proto.Platform.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        abbreviation: string;
+        alternative_name: string;
+        category: proto.PlatformCategoryEnum;
+        created_at?: (google.protobuf.Timestamp.$Properties|null);
+        generation: number;
+        name: string;
+        platform_logo?: (proto.PlatformLogo.$Properties|null);
+        platform_family?: (proto.PlatformFamily.$Properties|null);
+        slug: string;
+        summary: string;
+        updated_at?: (google.protobuf.Timestamp.$Properties|null);
+        url: string;
+        versions: proto.PlatformVersion.$Properties[];
+        websites: proto.PlatformWebsite.$Properties[];
+        checksum: string;
+        platform_type?: (proto.PlatformType.$Properties|null);
+        static getTypeUrl(prefix?: string): string;
+    }
+
+    namespace Platform {
+        interface $Properties {
+            id?: (number|null);
+            abbreviation?: (string|null);
+            alternative_name?: (string|null);
+            category?: (proto.PlatformCategoryEnum|null);
+            created_at?: (google.protobuf.Timestamp.$Properties|null);
+            generation?: (number|null);
+            name?: (string|null);
+            platform_logo?: (proto.PlatformLogo.$Properties|null);
+            platform_family?: (proto.PlatformFamily.$Properties|null);
+            slug?: (string|null);
+            summary?: (string|null);
+            updated_at?: (google.protobuf.Timestamp.$Properties|null);
+            url?: (string|null);
+            versions?: (proto.PlatformVersion.$Properties[]|null);
+            websites?: (proto.PlatformWebsite.$Properties[]|null);
+            checksum?: (string|null);
+            platform_type?: (proto.PlatformType.$Properties|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.Platform.$Properties;
     }
 
     enum PlatformCategoryEnum {
@@ -2315,224 +3421,320 @@ export namespace proto {
         COMPUTER = 6
     }
 
-    interface IPlatformFamilyResult {
-        platformfamilies?: (proto.IPlatformFamily[]|null);
+    interface IPlatformFamilyResult extends proto.PlatformFamilyResult.$Properties {
     }
 
-    class PlatformFamilyResult implements IPlatformFamilyResult {
-        constructor(properties?: proto.IPlatformFamilyResult);
-        public platformfamilies: proto.IPlatformFamily[];
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    class PlatformFamilyResult {
+        constructor(properties?: proto.PlatformFamilyResult.$Properties);
+        $unknowns?: Uint8Array[];
+        platformfamilies: proto.PlatformFamily.$Properties[];
+        static getTypeUrl(prefix?: string): string;
     }
 
-    interface IPlatformFamily {
-        id?: (number|null);
-        name?: (string|null);
-        slug?: (string|null);
-        checksum?: (string|null);
+    namespace PlatformFamilyResult {
+        interface $Properties {
+            platformfamilies?: (proto.PlatformFamily.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.PlatformFamilyResult.$Properties;
     }
 
-    class PlatformFamily implements IPlatformFamily {
-        constructor(properties?: proto.IPlatformFamily);
-        public id: number;
-        public name: string;
-        public slug: string;
-        public checksum: string;
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    interface IPlatformFamily extends proto.PlatformFamily.$Properties {
     }
 
-    interface IPlatformLogoResult {
-        platformlogos?: (proto.IPlatformLogo[]|null);
+    class PlatformFamily {
+        constructor(properties?: proto.PlatformFamily.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        name: string;
+        slug: string;
+        checksum: string;
+        static getTypeUrl(prefix?: string): string;
     }
 
-    class PlatformLogoResult implements IPlatformLogoResult {
-        constructor(properties?: proto.IPlatformLogoResult);
-        public platformlogos: proto.IPlatformLogo[];
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    namespace PlatformFamily {
+        interface $Properties {
+            id?: (number|null);
+            name?: (string|null);
+            slug?: (string|null);
+            checksum?: (string|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.PlatformFamily.$Properties;
     }
 
-    interface IPlatformLogo {
-        id?: (number|null);
-        alpha_channel?: (boolean|null);
-        animated?: (boolean|null);
-        height?: (number|null);
-        image_id?: (string|null);
-        url?: (string|null);
-        width?: (number|null);
-        checksum?: (string|null);
+    interface IPlatformLogoResult extends proto.PlatformLogoResult.$Properties {
     }
 
-    class PlatformLogo implements IPlatformLogo {
-        constructor(properties?: proto.IPlatformLogo);
-        public id: number;
-        public alpha_channel: boolean;
-        public animated: boolean;
-        public height: number;
-        public image_id: string;
-        public url: string;
-        public width: number;
-        public checksum: string;
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    class PlatformLogoResult {
+        constructor(properties?: proto.PlatformLogoResult.$Properties);
+        $unknowns?: Uint8Array[];
+        platformlogos: proto.PlatformLogo.$Properties[];
+        static getTypeUrl(prefix?: string): string;
     }
 
-    interface IPlatformTypeResult {
-        platformtypes?: (proto.IPlatformType[]|null);
+    namespace PlatformLogoResult {
+        interface $Properties {
+            platformlogos?: (proto.PlatformLogo.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.PlatformLogoResult.$Properties;
     }
 
-    class PlatformTypeResult implements IPlatformTypeResult {
-        constructor(properties?: proto.IPlatformTypeResult);
-        public platformtypes: proto.IPlatformType[];
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    interface IPlatformLogo extends proto.PlatformLogo.$Properties {
     }
 
-    interface IPlatformType {
-        id?: (number|null);
-        name?: (string|null);
-        created_at?: (number|null);
-        updated_at?: (number|null);
-        checksum?: (string|null);
+    class PlatformLogo {
+        constructor(properties?: proto.PlatformLogo.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        alpha_channel: boolean;
+        animated: boolean;
+        height: number;
+        image_id: string;
+        url: string;
+        width: number;
+        checksum: string;
+        static getTypeUrl(prefix?: string): string;
     }
 
-    class PlatformType implements IPlatformType {
-        constructor(properties?: proto.IPlatformType);
-        public id: number;
-        public name: string;
-        public created_at?: (number|null);
-        public updated_at?: (number|null);
-        public checksum: string;
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    namespace PlatformLogo {
+        interface $Properties {
+            id?: (number|null);
+            alpha_channel?: (boolean|null);
+            animated?: (boolean|null);
+            height?: (number|null);
+            image_id?: (string|null);
+            url?: (string|null);
+            width?: (number|null);
+            checksum?: (string|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.PlatformLogo.$Properties;
     }
 
-    interface IPlatformVersionResult {
-        platformversions?: (proto.IPlatformVersion[]|null);
+    interface IPlatformTypeResult extends proto.PlatformTypeResult.$Properties {
     }
 
-    class PlatformVersionResult implements IPlatformVersionResult {
-        constructor(properties?: proto.IPlatformVersionResult);
-        public platformversions: proto.IPlatformVersion[];
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    class PlatformTypeResult {
+        constructor(properties?: proto.PlatformTypeResult.$Properties);
+        $unknowns?: Uint8Array[];
+        platformtypes: proto.PlatformType.$Properties[];
+        static getTypeUrl(prefix?: string): string;
     }
 
-    interface IPlatformVersion {
-        id?: (number|null);
-        companies?: (proto.IPlatformVersionCompany[]|null);
-        connectivity?: (string|null);
-        cpu?: (string|null);
-        graphics?: (string|null);
-        main_manufacturer?: (proto.IPlatformVersionCompany|null);
-        media?: (string|null);
-        memory?: (string|null);
-        name?: (string|null);
-        os?: (string|null);
-        output?: (string|null);
-        platform_logo?: (proto.IPlatformLogo|null);
-        platform_version_release_dates?: (proto.IPlatformVersionReleaseDate[]|null);
-        resolutions?: (string|null);
-        slug?: (string|null);
-        sound?: (string|null);
-        storage?: (string|null);
-        summary?: (string|null);
-        url?: (string|null);
-        checksum?: (string|null);
+    namespace PlatformTypeResult {
+        interface $Properties {
+            platformtypes?: (proto.PlatformType.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.PlatformTypeResult.$Properties;
     }
 
-    class PlatformVersion implements IPlatformVersion {
-        constructor(properties?: proto.IPlatformVersion);
-        public id: number;
-        public companies: proto.IPlatformVersionCompany[];
-        public connectivity: string;
-        public cpu: string;
-        public graphics: string;
-        public main_manufacturer?: (proto.IPlatformVersionCompany|null);
-        public media: string;
-        public memory: string;
-        public name: string;
-        public os: string;
-        public output: string;
-        public platform_logo?: (proto.IPlatformLogo|null);
-        public platform_version_release_dates: proto.IPlatformVersionReleaseDate[];
-        public resolutions: string;
-        public slug: string;
-        public sound: string;
-        public storage: string;
-        public summary: string;
-        public url: string;
-        public checksum: string;
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    interface IPlatformType extends proto.PlatformType.$Properties {
     }
 
-    interface IPlatformVersionCompanyResult {
-        platformversioncompanies?: (proto.IPlatformVersionCompany[]|null);
+    class PlatformType {
+        constructor(properties?: proto.PlatformType.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        name: string;
+        created_at?: (google.protobuf.Timestamp.$Properties|null);
+        updated_at?: (google.protobuf.Timestamp.$Properties|null);
+        checksum: string;
+        static getTypeUrl(prefix?: string): string;
     }
 
-    class PlatformVersionCompanyResult implements IPlatformVersionCompanyResult {
-        constructor(properties?: proto.IPlatformVersionCompanyResult);
-        public platformversioncompanies: proto.IPlatformVersionCompany[];
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    namespace PlatformType {
+        interface $Properties {
+            id?: (number|null);
+            name?: (string|null);
+            created_at?: (google.protobuf.Timestamp.$Properties|null);
+            updated_at?: (google.protobuf.Timestamp.$Properties|null);
+            checksum?: (string|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.PlatformType.$Properties;
     }
 
-    interface IPlatformVersionCompany {
-        id?: (number|null);
-        comment?: (string|null);
-        company?: (proto.ICompany|null);
-        developer?: (boolean|null);
-        manufacturer?: (boolean|null);
-        checksum?: (string|null);
+    interface IPlatformVersionResult extends proto.PlatformVersionResult.$Properties {
     }
 
-    class PlatformVersionCompany implements IPlatformVersionCompany {
-        constructor(properties?: proto.IPlatformVersionCompany);
-        public id: number;
-        public comment: string;
-        public company?: (proto.ICompany|null);
-        public developer: boolean;
-        public manufacturer: boolean;
-        public checksum: string;
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    class PlatformVersionResult {
+        constructor(properties?: proto.PlatformVersionResult.$Properties);
+        $unknowns?: Uint8Array[];
+        platformversions: proto.PlatformVersion.$Properties[];
+        static getTypeUrl(prefix?: string): string;
     }
 
-    interface IPlatformVersionReleaseDateResult {
-        platformversionreleasedates?: (proto.IPlatformVersionReleaseDate[]|null);
+    namespace PlatformVersionResult {
+        interface $Properties {
+            platformversions?: (proto.PlatformVersion.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.PlatformVersionResult.$Properties;
     }
 
-    class PlatformVersionReleaseDateResult implements IPlatformVersionReleaseDateResult {
-        constructor(properties?: proto.IPlatformVersionReleaseDateResult);
-        public platformversionreleasedates: proto.IPlatformVersionReleaseDate[];
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    interface IPlatformVersion extends proto.PlatformVersion.$Properties {
     }
 
-    interface IPlatformVersionReleaseDate {
-        id?: (number|null);
-        category?: (proto.DateFormatChangeDateCategoryEnum|null);
-        created_at?: (number|null);
-        date?: (number|null);
-        human?: (string|null);
-        m?: (number|null);
-        platform_version?: (proto.IPlatformVersion|null);
-        region?: (proto.RegionRegionEnum|null);
-        updated_at?: (number|null);
-        y?: (number|null);
-        checksum?: (string|null);
-        date_format?: (proto.IDateFormat|null);
-        release_region?: (proto.IReleaseDateRegion|null);
+    class PlatformVersion {
+        constructor(properties?: proto.PlatformVersion.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        companies: proto.PlatformVersionCompany.$Properties[];
+        connectivity: string;
+        cpu: string;
+        graphics: string;
+        main_manufacturer?: (proto.PlatformVersionCompany.$Properties|null);
+        media: string;
+        memory: string;
+        name: string;
+        os: string;
+        output: string;
+        platform_logo?: (proto.PlatformLogo.$Properties|null);
+        platform_version_release_dates: proto.PlatformVersionReleaseDate.$Properties[];
+        resolutions: string;
+        slug: string;
+        sound: string;
+        storage: string;
+        summary: string;
+        url: string;
+        checksum: string;
+        static getTypeUrl(prefix?: string): string;
     }
 
-    class PlatformVersionReleaseDate implements IPlatformVersionReleaseDate {
-        constructor(properties?: proto.IPlatformVersionReleaseDate);
-        public id: number;
-        public category: proto.DateFormatChangeDateCategoryEnum;
-        public created_at?: (number|null);
-        public date?: (number|null);
-        public human: string;
-        public m: number;
-        public platform_version?: (proto.IPlatformVersion|null);
-        public region: proto.RegionRegionEnum;
-        public updated_at?: (number|null);
-        public y: number;
-        public checksum: string;
-        public date_format?: (proto.IDateFormat|null);
-        public release_region?: (proto.IReleaseDateRegion|null);
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    namespace PlatformVersion {
+        interface $Properties {
+            id?: (number|null);
+            companies?: (proto.PlatformVersionCompany.$Properties[]|null);
+            connectivity?: (string|null);
+            cpu?: (string|null);
+            graphics?: (string|null);
+            main_manufacturer?: (proto.PlatformVersionCompany.$Properties|null);
+            media?: (string|null);
+            memory?: (string|null);
+            name?: (string|null);
+            os?: (string|null);
+            output?: (string|null);
+            platform_logo?: (proto.PlatformLogo.$Properties|null);
+            platform_version_release_dates?: (proto.PlatformVersionReleaseDate.$Properties[]|null);
+            resolutions?: (string|null);
+            slug?: (string|null);
+            sound?: (string|null);
+            storage?: (string|null);
+            summary?: (string|null);
+            url?: (string|null);
+            checksum?: (string|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.PlatformVersion.$Properties;
+    }
+
+    interface IPlatformVersionCompanyResult extends proto.PlatformVersionCompanyResult.$Properties {
+    }
+
+    class PlatformVersionCompanyResult {
+        constructor(properties?: proto.PlatformVersionCompanyResult.$Properties);
+        $unknowns?: Uint8Array[];
+        platformversioncompanies: proto.PlatformVersionCompany.$Properties[];
+        static getTypeUrl(prefix?: string): string;
+    }
+
+    namespace PlatformVersionCompanyResult {
+        interface $Properties {
+            platformversioncompanies?: (proto.PlatformVersionCompany.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.PlatformVersionCompanyResult.$Properties;
+    }
+
+    interface IPlatformVersionCompany extends proto.PlatformVersionCompany.$Properties {
+    }
+
+    class PlatformVersionCompany {
+        constructor(properties?: proto.PlatformVersionCompany.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        comment: string;
+        company?: (proto.Company.$Properties|null);
+        developer: boolean;
+        manufacturer: boolean;
+        checksum: string;
+        static getTypeUrl(prefix?: string): string;
+    }
+
+    namespace PlatformVersionCompany {
+        interface $Properties {
+            id?: (number|null);
+            comment?: (string|null);
+            company?: (proto.Company.$Properties|null);
+            developer?: (boolean|null);
+            manufacturer?: (boolean|null);
+            checksum?: (string|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.PlatformVersionCompany.$Properties;
+    }
+
+    interface IPlatformVersionReleaseDateResult extends proto.PlatformVersionReleaseDateResult.$Properties {
+    }
+
+    class PlatformVersionReleaseDateResult {
+        constructor(properties?: proto.PlatformVersionReleaseDateResult.$Properties);
+        $unknowns?: Uint8Array[];
+        platformversionreleasedates: proto.PlatformVersionReleaseDate.$Properties[];
+        static getTypeUrl(prefix?: string): string;
+    }
+
+    namespace PlatformVersionReleaseDateResult {
+        interface $Properties {
+            platformversionreleasedates?: (proto.PlatformVersionReleaseDate.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.PlatformVersionReleaseDateResult.$Properties;
+    }
+
+    interface IPlatformVersionReleaseDate extends proto.PlatformVersionReleaseDate.$Properties {
+    }
+
+    class PlatformVersionReleaseDate {
+        constructor(properties?: proto.PlatformVersionReleaseDate.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        category: proto.DateFormatChangeDateCategoryEnum;
+        created_at?: (google.protobuf.Timestamp.$Properties|null);
+        date?: (google.protobuf.Timestamp.$Properties|null);
+        human: string;
+        m: number;
+        platform_version?: (proto.PlatformVersion.$Properties|null);
+        region: proto.RegionRegionEnum;
+        updated_at?: (google.protobuf.Timestamp.$Properties|null);
+        y: number;
+        checksum: string;
+        date_format?: (proto.DateFormat.$Properties|null);
+        release_region?: (proto.ReleaseDateRegion.$Properties|null);
+        static getTypeUrl(prefix?: string): string;
+    }
+
+    namespace PlatformVersionReleaseDate {
+        interface $Properties {
+            id?: (number|null);
+            category?: (proto.DateFormatChangeDateCategoryEnum|null);
+            created_at?: (google.protobuf.Timestamp.$Properties|null);
+            date?: (google.protobuf.Timestamp.$Properties|null);
+            human?: (string|null);
+            m?: (number|null);
+            platform_version?: (proto.PlatformVersion.$Properties|null);
+            region?: (proto.RegionRegionEnum|null);
+            updated_at?: (google.protobuf.Timestamp.$Properties|null);
+            y?: (number|null);
+            checksum?: (string|null);
+            date_format?: (proto.DateFormat.$Properties|null);
+            release_region?: (proto.ReleaseDateRegion.$Properties|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.PlatformVersionReleaseDate.$Properties;
     }
 
     enum RegionRegionEnum {
@@ -2549,104 +3751,152 @@ export namespace proto {
         BRAZIL = 10
     }
 
-    interface IPlatformWebsiteResult {
-        platformwebsites?: (proto.IPlatformWebsite[]|null);
+    interface IPlatformWebsiteResult extends proto.PlatformWebsiteResult.$Properties {
     }
 
-    class PlatformWebsiteResult implements IPlatformWebsiteResult {
-        constructor(properties?: proto.IPlatformWebsiteResult);
-        public platformwebsites: proto.IPlatformWebsite[];
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    class PlatformWebsiteResult {
+        constructor(properties?: proto.PlatformWebsiteResult.$Properties);
+        $unknowns?: Uint8Array[];
+        platformwebsites: proto.PlatformWebsite.$Properties[];
+        static getTypeUrl(prefix?: string): string;
     }
 
-    interface IPlatformWebsite {
-        id?: (number|null);
-        category?: (proto.WebsiteCategoryEnum|null);
-        trusted?: (boolean|null);
-        url?: (string|null);
-        checksum?: (string|null);
-        type?: (proto.IWebsiteType|null);
+    namespace PlatformWebsiteResult {
+        interface $Properties {
+            platformwebsites?: (proto.PlatformWebsite.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.PlatformWebsiteResult.$Properties;
     }
 
-    class PlatformWebsite implements IPlatformWebsite {
-        constructor(properties?: proto.IPlatformWebsite);
-        public id: number;
-        public category: proto.WebsiteCategoryEnum;
-        public trusted: boolean;
-        public url: string;
-        public checksum: string;
-        public type?: (proto.IWebsiteType|null);
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    interface IPlatformWebsite extends proto.PlatformWebsite.$Properties {
     }
 
-    interface IPlayerPerspectiveResult {
-        playerperspectives?: (proto.IPlayerPerspective[]|null);
+    class PlatformWebsite {
+        constructor(properties?: proto.PlatformWebsite.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        category: proto.WebsiteCategoryEnum;
+        trusted: boolean;
+        url: string;
+        checksum: string;
+        type?: (proto.WebsiteType.$Properties|null);
+        static getTypeUrl(prefix?: string): string;
     }
 
-    class PlayerPerspectiveResult implements IPlayerPerspectiveResult {
-        constructor(properties?: proto.IPlayerPerspectiveResult);
-        public playerperspectives: proto.IPlayerPerspective[];
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    namespace PlatformWebsite {
+        interface $Properties {
+            id?: (number|null);
+            category?: (proto.WebsiteCategoryEnum|null);
+            trusted?: (boolean|null);
+            url?: (string|null);
+            checksum?: (string|null);
+            type?: (proto.WebsiteType.$Properties|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.PlatformWebsite.$Properties;
     }
 
-    interface IPlayerPerspective {
-        id?: (number|null);
-        created_at?: (number|null);
-        name?: (string|null);
-        slug?: (string|null);
-        updated_at?: (number|null);
-        url?: (string|null);
-        checksum?: (string|null);
+    interface IPlayerPerspectiveResult extends proto.PlayerPerspectiveResult.$Properties {
     }
 
-    class PlayerPerspective implements IPlayerPerspective {
-        constructor(properties?: proto.IPlayerPerspective);
-        public id: number;
-        public created_at?: (number|null);
-        public name: string;
-        public slug: string;
-        public updated_at?: (number|null);
-        public url: string;
-        public checksum: string;
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    class PlayerPerspectiveResult {
+        constructor(properties?: proto.PlayerPerspectiveResult.$Properties);
+        $unknowns?: Uint8Array[];
+        playerperspectives: proto.PlayerPerspective.$Properties[];
+        static getTypeUrl(prefix?: string): string;
     }
 
-    interface IPopularityPrimitiveResult {
-        popularityprimitives?: (proto.IPopularityPrimitive[]|null);
+    namespace PlayerPerspectiveResult {
+        interface $Properties {
+            playerperspectives?: (proto.PlayerPerspective.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.PlayerPerspectiveResult.$Properties;
     }
 
-    class PopularityPrimitiveResult implements IPopularityPrimitiveResult {
-        constructor(properties?: proto.IPopularityPrimitiveResult);
-        public popularityprimitives: proto.IPopularityPrimitive[];
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    interface IPlayerPerspective extends proto.PlayerPerspective.$Properties {
     }
 
-    interface IPopularityPrimitive {
-        id?: (number|null);
-        game_id?: (number|null);
-        popularity_type?: (proto.IPopularityType|null);
-        popularity_source?: (proto.PopularitySourcePopularitySourceEnum|null);
-        value?: (number|null);
-        calculated_at?: (number|null);
-        created_at?: (number|null);
-        updated_at?: (number|null);
-        checksum?: (string|null);
-        external_popularity_source?: (proto.IExternalGameSource|null);
+    class PlayerPerspective {
+        constructor(properties?: proto.PlayerPerspective.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        created_at?: (google.protobuf.Timestamp.$Properties|null);
+        name: string;
+        slug: string;
+        updated_at?: (google.protobuf.Timestamp.$Properties|null);
+        url: string;
+        checksum: string;
+        static getTypeUrl(prefix?: string): string;
     }
 
-    class PopularityPrimitive implements IPopularityPrimitive {
-        constructor(properties?: proto.IPopularityPrimitive);
-        public id: number;
-        public game_id: number;
-        public popularity_type?: (proto.IPopularityType|null);
-        public popularity_source: proto.PopularitySourcePopularitySourceEnum;
-        public value: number;
-        public calculated_at?: (number|null);
-        public created_at?: (number|null);
-        public updated_at?: (number|null);
-        public checksum: string;
-        public external_popularity_source?: (proto.IExternalGameSource|null);
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    namespace PlayerPerspective {
+        interface $Properties {
+            id?: (number|null);
+            created_at?: (google.protobuf.Timestamp.$Properties|null);
+            name?: (string|null);
+            slug?: (string|null);
+            updated_at?: (google.protobuf.Timestamp.$Properties|null);
+            url?: (string|null);
+            checksum?: (string|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.PlayerPerspective.$Properties;
+    }
+
+    interface IPopularityPrimitiveResult extends proto.PopularityPrimitiveResult.$Properties {
+    }
+
+    class PopularityPrimitiveResult {
+        constructor(properties?: proto.PopularityPrimitiveResult.$Properties);
+        $unknowns?: Uint8Array[];
+        popularityprimitives: proto.PopularityPrimitive.$Properties[];
+        static getTypeUrl(prefix?: string): string;
+    }
+
+    namespace PopularityPrimitiveResult {
+        interface $Properties {
+            popularityprimitives?: (proto.PopularityPrimitive.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.PopularityPrimitiveResult.$Properties;
+    }
+
+    interface IPopularityPrimitive extends proto.PopularityPrimitive.$Properties {
+    }
+
+    class PopularityPrimitive {
+        constructor(properties?: proto.PopularityPrimitive.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        game_id: number;
+        popularity_type?: (proto.PopularityType.$Properties|null);
+        popularity_source: proto.PopularitySourcePopularitySourceEnum;
+        value: number;
+        calculated_at?: (google.protobuf.Timestamp.$Properties|null);
+        created_at?: (google.protobuf.Timestamp.$Properties|null);
+        updated_at?: (google.protobuf.Timestamp.$Properties|null);
+        checksum: string;
+        external_popularity_source?: (proto.ExternalGameSource.$Properties|null);
+        static getTypeUrl(prefix?: string): string;
+    }
+
+    namespace PopularityPrimitive {
+        interface $Properties {
+            id?: (number|null);
+            game_id?: (number|null);
+            popularity_type?: (proto.PopularityType.$Properties|null);
+            popularity_source?: (proto.PopularitySourcePopularitySourceEnum|null);
+            value?: (number|null);
+            calculated_at?: (google.protobuf.Timestamp.$Properties|null);
+            created_at?: (google.protobuf.Timestamp.$Properties|null);
+            updated_at?: (google.protobuf.Timestamp.$Properties|null);
+            checksum?: (string|null);
+            external_popularity_source?: (proto.ExternalGameSource.$Properties|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.PopularityPrimitive.$Properties;
     }
 
     enum PopularitySourcePopularitySourceEnum {
@@ -2654,310 +3904,532 @@ export namespace proto {
         IGDB = 121
     }
 
-    interface IPopularityTypeResult {
-        popularitytypes?: (proto.IPopularityType[]|null);
+    interface IPopularityTypeResult extends proto.PopularityTypeResult.$Properties {
     }
 
-    class PopularityTypeResult implements IPopularityTypeResult {
-        constructor(properties?: proto.IPopularityTypeResult);
-        public popularitytypes: proto.IPopularityType[];
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    class PopularityTypeResult {
+        constructor(properties?: proto.PopularityTypeResult.$Properties);
+        $unknowns?: Uint8Array[];
+        popularitytypes: proto.PopularityType.$Properties[];
+        static getTypeUrl(prefix?: string): string;
     }
 
-    interface IPopularityType {
-        id?: (number|null);
-        popularity_source?: (proto.PopularitySourcePopularitySourceEnum|null);
-        name?: (string|null);
-        created_at?: (number|null);
-        updated_at?: (number|null);
-        checksum?: (string|null);
-        external_popularity_source?: (proto.IExternalGameSource|null);
+    namespace PopularityTypeResult {
+        interface $Properties {
+            popularitytypes?: (proto.PopularityType.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.PopularityTypeResult.$Properties;
     }
 
-    class PopularityType implements IPopularityType {
-        constructor(properties?: proto.IPopularityType);
-        public id: number;
-        public popularity_source: proto.PopularitySourcePopularitySourceEnum;
-        public name: string;
-        public created_at?: (number|null);
-        public updated_at?: (number|null);
-        public checksum: string;
-        public external_popularity_source?: (proto.IExternalGameSource|null);
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    interface IPopularityType extends proto.PopularityType.$Properties {
     }
 
-    interface IRegionResult {
-        regions?: (proto.IRegion[]|null);
+    class PopularityType {
+        constructor(properties?: proto.PopularityType.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        popularity_source: proto.PopularitySourcePopularitySourceEnum;
+        name: string;
+        created_at?: (google.protobuf.Timestamp.$Properties|null);
+        updated_at?: (google.protobuf.Timestamp.$Properties|null);
+        checksum: string;
+        external_popularity_source?: (proto.ExternalGameSource.$Properties|null);
+        static getTypeUrl(prefix?: string): string;
     }
 
-    class RegionResult implements IRegionResult {
-        constructor(properties?: proto.IRegionResult);
-        public regions: proto.IRegion[];
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    namespace PopularityType {
+        interface $Properties {
+            id?: (number|null);
+            popularity_source?: (proto.PopularitySourcePopularitySourceEnum|null);
+            name?: (string|null);
+            created_at?: (google.protobuf.Timestamp.$Properties|null);
+            updated_at?: (google.protobuf.Timestamp.$Properties|null);
+            checksum?: (string|null);
+            external_popularity_source?: (proto.ExternalGameSource.$Properties|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.PopularityType.$Properties;
     }
 
-    interface IRegion {
-        id?: (number|null);
-        name?: (string|null);
-        category?: (string|null);
-        identifier?: (string|null);
-        created_at?: (number|null);
-        updated_at?: (number|null);
-        checksum?: (string|null);
+    interface IRegionResult extends proto.RegionResult.$Properties {
     }
 
-    class Region implements IRegion {
-        constructor(properties?: proto.IRegion);
-        public id: number;
-        public name: string;
-        public category: string;
-        public identifier: string;
-        public created_at?: (number|null);
-        public updated_at?: (number|null);
-        public checksum: string;
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    class RegionResult {
+        constructor(properties?: proto.RegionResult.$Properties);
+        $unknowns?: Uint8Array[];
+        regions: proto.Region.$Properties[];
+        static getTypeUrl(prefix?: string): string;
     }
 
-    interface IReleaseDateResult {
-        releasedates?: (proto.IReleaseDate[]|null);
+    namespace RegionResult {
+        interface $Properties {
+            regions?: (proto.Region.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.RegionResult.$Properties;
     }
 
-    class ReleaseDateResult implements IReleaseDateResult {
-        constructor(properties?: proto.IReleaseDateResult);
-        public releasedates: proto.IReleaseDate[];
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    interface IRegion extends proto.Region.$Properties {
     }
 
-    interface IReleaseDate {
-        id?: (number|null);
-        category?: (proto.DateFormatChangeDateCategoryEnum|null);
-        created_at?: (number|null);
-        date?: (number|null);
-        game?: (proto.IGame|null);
-        human?: (string|null);
-        m?: (number|null);
-        platform?: (proto.IPlatform|null);
-        region?: (proto.RegionRegionEnum|null);
-        updated_at?: (number|null);
-        y?: (number|null);
-        checksum?: (string|null);
-        status?: (proto.IReleaseDateStatus|null);
-        date_format?: (proto.IDateFormat|null);
-        release_region?: (proto.IReleaseDateRegion|null);
-        d?: (number|null);
+    class Region {
+        constructor(properties?: proto.Region.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        name: string;
+        category: string;
+        identifier: string;
+        created_at?: (google.protobuf.Timestamp.$Properties|null);
+        updated_at?: (google.protobuf.Timestamp.$Properties|null);
+        checksum: string;
+        static getTypeUrl(prefix?: string): string;
     }
 
-    class ReleaseDate implements IReleaseDate {
-        constructor(properties?: proto.IReleaseDate);
-        public id: number;
-        public category: proto.DateFormatChangeDateCategoryEnum;
-        public created_at?: (number|null);
-        public date?: (number|null);
-        public game?: (proto.IGame|null);
-        public human: string;
-        public m: number;
-        public platform?: (proto.IPlatform|null);
-        public region: proto.RegionRegionEnum;
-        public updated_at?: (number|null);
-        public y: number;
-        public checksum: string;
-        public status?: (proto.IReleaseDateStatus|null);
-        public date_format?: (proto.IDateFormat|null);
-        public release_region?: (proto.IReleaseDateRegion|null);
-        public d: number;
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    namespace Region {
+        interface $Properties {
+            id?: (number|null);
+            name?: (string|null);
+            category?: (string|null);
+            identifier?: (string|null);
+            created_at?: (google.protobuf.Timestamp.$Properties|null);
+            updated_at?: (google.protobuf.Timestamp.$Properties|null);
+            checksum?: (string|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.Region.$Properties;
     }
 
-    interface IReleaseDateRegionResult {
-        releasedateregions?: (proto.IReleaseDateRegion[]|null);
+    interface IReleaseDateResult extends proto.ReleaseDateResult.$Properties {
     }
 
-    class ReleaseDateRegionResult implements IReleaseDateRegionResult {
-        constructor(properties?: proto.IReleaseDateRegionResult);
-        public releasedateregions: proto.IReleaseDateRegion[];
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    class ReleaseDateResult {
+        constructor(properties?: proto.ReleaseDateResult.$Properties);
+        $unknowns?: Uint8Array[];
+        releasedates: proto.ReleaseDate.$Properties[];
+        static getTypeUrl(prefix?: string): string;
     }
 
-    interface IReleaseDateRegion {
-        id?: (number|null);
-        region?: (string|null);
-        created_at?: (number|null);
-        updated_at?: (number|null);
-        checksum?: (string|null);
+    namespace ReleaseDateResult {
+        interface $Properties {
+            releasedates?: (proto.ReleaseDate.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.ReleaseDateResult.$Properties;
     }
 
-    class ReleaseDateRegion implements IReleaseDateRegion {
-        constructor(properties?: proto.IReleaseDateRegion);
-        public id: number;
-        public region: string;
-        public created_at?: (number|null);
-        public updated_at?: (number|null);
-        public checksum: string;
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    interface IReleaseDate extends proto.ReleaseDate.$Properties {
     }
 
-    interface IReleaseDateStatusResult {
-        releasedatestatuses?: (proto.IReleaseDateStatus[]|null);
+    class ReleaseDate {
+        constructor(properties?: proto.ReleaseDate.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        category: proto.DateFormatChangeDateCategoryEnum;
+        created_at?: (google.protobuf.Timestamp.$Properties|null);
+        date?: (google.protobuf.Timestamp.$Properties|null);
+        game?: (proto.Game.$Properties|null);
+        human: string;
+        m: number;
+        platform?: (proto.Platform.$Properties|null);
+        region: proto.RegionRegionEnum;
+        updated_at?: (google.protobuf.Timestamp.$Properties|null);
+        y: number;
+        checksum: string;
+        status?: (proto.ReleaseDateStatus.$Properties|null);
+        date_format?: (proto.DateFormat.$Properties|null);
+        release_region?: (proto.ReleaseDateRegion.$Properties|null);
+        d: number;
+        static getTypeUrl(prefix?: string): string;
     }
 
-    class ReleaseDateStatusResult implements IReleaseDateStatusResult {
-        constructor(properties?: proto.IReleaseDateStatusResult);
-        public releasedatestatuses: proto.IReleaseDateStatus[];
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    namespace ReleaseDate {
+        interface $Properties {
+            id?: (number|null);
+            category?: (proto.DateFormatChangeDateCategoryEnum|null);
+            created_at?: (google.protobuf.Timestamp.$Properties|null);
+            date?: (google.protobuf.Timestamp.$Properties|null);
+            game?: (proto.Game.$Properties|null);
+            human?: (string|null);
+            m?: (number|null);
+            platform?: (proto.Platform.$Properties|null);
+            region?: (proto.RegionRegionEnum|null);
+            updated_at?: (google.protobuf.Timestamp.$Properties|null);
+            y?: (number|null);
+            checksum?: (string|null);
+            status?: (proto.ReleaseDateStatus.$Properties|null);
+            date_format?: (proto.DateFormat.$Properties|null);
+            release_region?: (proto.ReleaseDateRegion.$Properties|null);
+            d?: (number|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.ReleaseDate.$Properties;
     }
 
-    interface IReleaseDateStatus {
-        id?: (number|null);
-        name?: (string|null);
-        description?: (string|null);
-        created_at?: (number|null);
-        updated_at?: (number|null);
-        checksum?: (string|null);
+    interface IReleaseDateRegionResult extends proto.ReleaseDateRegionResult.$Properties {
     }
 
-    class ReleaseDateStatus implements IReleaseDateStatus {
-        constructor(properties?: proto.IReleaseDateStatus);
-        public id: number;
-        public name: string;
-        public description: string;
-        public created_at?: (number|null);
-        public updated_at?: (number|null);
-        public checksum: string;
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    class ReleaseDateRegionResult {
+        constructor(properties?: proto.ReleaseDateRegionResult.$Properties);
+        $unknowns?: Uint8Array[];
+        releasedateregions: proto.ReleaseDateRegion.$Properties[];
+        static getTypeUrl(prefix?: string): string;
     }
 
-    interface IScreenshotResult {
-        screenshots?: (proto.IScreenshot[]|null);
+    namespace ReleaseDateRegionResult {
+        interface $Properties {
+            releasedateregions?: (proto.ReleaseDateRegion.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.ReleaseDateRegionResult.$Properties;
     }
 
-    class ScreenshotResult implements IScreenshotResult {
-        constructor(properties?: proto.IScreenshotResult);
-        public screenshots: proto.IScreenshot[];
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    interface IReleaseDateRegion extends proto.ReleaseDateRegion.$Properties {
     }
 
-    interface IScreenshot {
-        id?: (number|null);
-        alpha_channel?: (boolean|null);
-        animated?: (boolean|null);
-        game?: (proto.IGame|null);
-        height?: (number|null);
-        image_id?: (string|null);
-        url?: (string|null);
-        width?: (number|null);
-        checksum?: (string|null);
+    class ReleaseDateRegion {
+        constructor(properties?: proto.ReleaseDateRegion.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        region: string;
+        created_at?: (google.protobuf.Timestamp.$Properties|null);
+        updated_at?: (google.protobuf.Timestamp.$Properties|null);
+        checksum: string;
+        static getTypeUrl(prefix?: string): string;
     }
 
-    class Screenshot implements IScreenshot {
-        constructor(properties?: proto.IScreenshot);
-        public id: number;
-        public alpha_channel: boolean;
-        public animated: boolean;
-        public game?: (proto.IGame|null);
-        public height: number;
-        public image_id: string;
-        public url: string;
-        public width: number;
-        public checksum: string;
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    namespace ReleaseDateRegion {
+        interface $Properties {
+            id?: (number|null);
+            region?: (string|null);
+            created_at?: (google.protobuf.Timestamp.$Properties|null);
+            updated_at?: (google.protobuf.Timestamp.$Properties|null);
+            checksum?: (string|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.ReleaseDateRegion.$Properties;
     }
 
-    interface ISearchResult {
-        searches?: (proto.ISearch[]|null);
+    interface IReleaseDateStatusResult extends proto.ReleaseDateStatusResult.$Properties {
     }
 
-    class SearchResult implements ISearchResult {
-        constructor(properties?: proto.ISearchResult);
-        public searches: proto.ISearch[];
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    class ReleaseDateStatusResult {
+        constructor(properties?: proto.ReleaseDateStatusResult.$Properties);
+        $unknowns?: Uint8Array[];
+        releasedatestatuses: proto.ReleaseDateStatus.$Properties[];
+        static getTypeUrl(prefix?: string): string;
     }
 
-    interface ISearch {
-        id?: (number|null);
-        alternative_name?: (string|null);
-        character?: (proto.ICharacter|null);
-        collection?: (proto.ICollection|null);
-        company?: (proto.ICompany|null);
-        description?: (string|null);
-        game?: (proto.IGame|null);
-        name?: (string|null);
-        platform?: (proto.IPlatform|null);
-        published_at?: (number|null);
-        test_dummy?: (proto.ITestDummy|null);
-        theme?: (proto.ITheme|null);
-        checksum?: (string|null);
+    namespace ReleaseDateStatusResult {
+        interface $Properties {
+            releasedatestatuses?: (proto.ReleaseDateStatus.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.ReleaseDateStatusResult.$Properties;
     }
 
-    class Search implements ISearch {
-        constructor(properties?: proto.ISearch);
-        public id: number;
-        public alternative_name: string;
-        public character?: (proto.ICharacter|null);
-        public collection?: (proto.ICollection|null);
-        public company?: (proto.ICompany|null);
-        public description: string;
-        public game?: (proto.IGame|null);
-        public name: string;
-        public platform?: (proto.IPlatform|null);
-        public published_at?: (number|null);
-        public test_dummy?: (proto.ITestDummy|null);
-        public theme?: (proto.ITheme|null);
-        public checksum: string;
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    interface IReleaseDateStatus extends proto.ReleaseDateStatus.$Properties {
     }
 
-    interface ITestDummyResult {
-        testdummies?: (proto.ITestDummy[]|null);
+    class ReleaseDateStatus {
+        constructor(properties?: proto.ReleaseDateStatus.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        name: string;
+        description: string;
+        created_at?: (google.protobuf.Timestamp.$Properties|null);
+        updated_at?: (google.protobuf.Timestamp.$Properties|null);
+        checksum: string;
+        static getTypeUrl(prefix?: string): string;
     }
 
-    class TestDummyResult implements ITestDummyResult {
-        constructor(properties?: proto.ITestDummyResult);
-        public testdummies: proto.ITestDummy[];
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    namespace ReleaseDateStatus {
+        interface $Properties {
+            id?: (number|null);
+            name?: (string|null);
+            description?: (string|null);
+            created_at?: (google.protobuf.Timestamp.$Properties|null);
+            updated_at?: (google.protobuf.Timestamp.$Properties|null);
+            checksum?: (string|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.ReleaseDateStatus.$Properties;
     }
 
-    interface ITestDummy {
-        id?: (number|null);
-        bool_value?: (boolean|null);
-        created_at?: (number|null);
-        enum_test?: (proto.TestDummyEnumTestEnum|null);
-        float_value?: (number|null);
-        game?: (proto.IGame|null);
-        integer_array?: (number[]|null);
-        integer_value?: (number|null);
-        name?: (string|null);
-        new_integer_value?: (number|null);
-        "private"?: (boolean|null);
-        slug?: (string|null);
-        string_array?: (string[]|null);
-        test_dummies?: (proto.ITestDummy[]|null);
-        test_dummy?: (proto.ITestDummy|null);
-        updated_at?: (number|null);
-        url?: (string|null);
-        checksum?: (string|null);
+    interface IReportResult extends proto.ReportResult.$Properties {
     }
 
-    class TestDummy implements ITestDummy {
-        constructor(properties?: proto.ITestDummy);
-        public id: number;
-        public bool_value: boolean;
-        public created_at?: (number|null);
-        public enum_test: proto.TestDummyEnumTestEnum;
-        public float_value: number;
-        public game?: (proto.IGame|null);
-        public integer_array: number[];
-        public integer_value: number;
-        public name: string;
-        public new_integer_value: number;
-        public private: boolean;
-        public slug: string;
-        public string_array: string[];
-        public test_dummies: proto.ITestDummy[];
-        public test_dummy?: (proto.ITestDummy|null);
-        public updated_at?: (number|null);
-        public url: string;
-        public checksum: string;
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    class ReportResult {
+        constructor(properties?: proto.ReportResult.$Properties);
+        $unknowns?: Uint8Array[];
+        reports: proto.Report.$Properties[];
+        static getTypeUrl(prefix?: string): string;
+    }
+
+    namespace ReportResult {
+        interface $Properties {
+            reports?: (proto.Report.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.ReportResult.$Properties;
+    }
+
+    interface IReport extends proto.Report.$Properties {
+    }
+
+    class Report {
+        constructor(properties?: proto.Report.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        source_item_id: number;
+        target_item_id: number;
+        report_type?: (proto.ReportType.$Properties|null);
+        entity_type?: (proto.EntityType.$Properties|null);
+        created_at?: (google.protobuf.Timestamp.$Properties|null);
+        updated_at?: (google.protobuf.Timestamp.$Properties|null);
+        checksum: string;
+        static getTypeUrl(prefix?: string): string;
+    }
+
+    namespace Report {
+        interface $Properties {
+            id?: (number|null);
+            source_item_id?: (number|null);
+            target_item_id?: (number|null);
+            report_type?: (proto.ReportType.$Properties|null);
+            entity_type?: (proto.EntityType.$Properties|null);
+            created_at?: (google.protobuf.Timestamp.$Properties|null);
+            updated_at?: (google.protobuf.Timestamp.$Properties|null);
+            checksum?: (string|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.Report.$Properties;
+    }
+
+    interface IReportTypeResult extends proto.ReportTypeResult.$Properties {
+    }
+
+    class ReportTypeResult {
+        constructor(properties?: proto.ReportTypeResult.$Properties);
+        $unknowns?: Uint8Array[];
+        reporttypes: proto.ReportType.$Properties[];
+        static getTypeUrl(prefix?: string): string;
+    }
+
+    namespace ReportTypeResult {
+        interface $Properties {
+            reporttypes?: (proto.ReportType.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.ReportTypeResult.$Properties;
+    }
+
+    interface IReportType extends proto.ReportType.$Properties {
+    }
+
+    class ReportType {
+        constructor(properties?: proto.ReportType.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        name: string;
+        created_at?: (google.protobuf.Timestamp.$Properties|null);
+        updated_at?: (google.protobuf.Timestamp.$Properties|null);
+        checksum: string;
+        static getTypeUrl(prefix?: string): string;
+    }
+
+    namespace ReportType {
+        interface $Properties {
+            id?: (number|null);
+            name?: (string|null);
+            created_at?: (google.protobuf.Timestamp.$Properties|null);
+            updated_at?: (google.protobuf.Timestamp.$Properties|null);
+            checksum?: (string|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.ReportType.$Properties;
+    }
+
+    interface IScreenshotResult extends proto.ScreenshotResult.$Properties {
+    }
+
+    class ScreenshotResult {
+        constructor(properties?: proto.ScreenshotResult.$Properties);
+        $unknowns?: Uint8Array[];
+        screenshots: proto.Screenshot.$Properties[];
+        static getTypeUrl(prefix?: string): string;
+    }
+
+    namespace ScreenshotResult {
+        interface $Properties {
+            screenshots?: (proto.Screenshot.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.ScreenshotResult.$Properties;
+    }
+
+    interface IScreenshot extends proto.Screenshot.$Properties {
+    }
+
+    class Screenshot {
+        constructor(properties?: proto.Screenshot.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        alpha_channel: boolean;
+        animated: boolean;
+        game?: (proto.Game.$Properties|null);
+        height: number;
+        image_id: string;
+        url: string;
+        width: number;
+        checksum: string;
+        static getTypeUrl(prefix?: string): string;
+    }
+
+    namespace Screenshot {
+        interface $Properties {
+            id?: (number|null);
+            alpha_channel?: (boolean|null);
+            animated?: (boolean|null);
+            game?: (proto.Game.$Properties|null);
+            height?: (number|null);
+            image_id?: (string|null);
+            url?: (string|null);
+            width?: (number|null);
+            checksum?: (string|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.Screenshot.$Properties;
+    }
+
+    interface ISearchResult extends proto.SearchResult.$Properties {
+    }
+
+    class SearchResult {
+        constructor(properties?: proto.SearchResult.$Properties);
+        $unknowns?: Uint8Array[];
+        searches: proto.Search.$Properties[];
+        static getTypeUrl(prefix?: string): string;
+    }
+
+    namespace SearchResult {
+        interface $Properties {
+            searches?: (proto.Search.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.SearchResult.$Properties;
+    }
+
+    interface ISearch extends proto.Search.$Properties {
+    }
+
+    class Search {
+        constructor(properties?: proto.Search.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        alternative_name: string;
+        character?: (proto.Character.$Properties|null);
+        collection?: (proto.Collection.$Properties|null);
+        company?: (proto.Company.$Properties|null);
+        description: string;
+        game?: (proto.Game.$Properties|null);
+        name: string;
+        platform?: (proto.Platform.$Properties|null);
+        published_at?: (google.protobuf.Timestamp.$Properties|null);
+        test_dummy?: (proto.TestDummy.$Properties|null);
+        theme?: (proto.Theme.$Properties|null);
+        checksum: string;
+        static getTypeUrl(prefix?: string): string;
+    }
+
+    namespace Search {
+        interface $Properties {
+            id?: (number|null);
+            alternative_name?: (string|null);
+            character?: (proto.Character.$Properties|null);
+            collection?: (proto.Collection.$Properties|null);
+            company?: (proto.Company.$Properties|null);
+            description?: (string|null);
+            game?: (proto.Game.$Properties|null);
+            name?: (string|null);
+            platform?: (proto.Platform.$Properties|null);
+            published_at?: (google.protobuf.Timestamp.$Properties|null);
+            test_dummy?: (proto.TestDummy.$Properties|null);
+            theme?: (proto.Theme.$Properties|null);
+            checksum?: (string|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.Search.$Properties;
+    }
+
+    interface ITestDummyResult extends proto.TestDummyResult.$Properties {
+    }
+
+    class TestDummyResult {
+        constructor(properties?: proto.TestDummyResult.$Properties);
+        $unknowns?: Uint8Array[];
+        testdummies: proto.TestDummy.$Properties[];
+        static getTypeUrl(prefix?: string): string;
+    }
+
+    namespace TestDummyResult {
+        interface $Properties {
+            testdummies?: (proto.TestDummy.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.TestDummyResult.$Properties;
+    }
+
+    interface ITestDummy extends proto.TestDummy.$Properties {
+    }
+
+    class TestDummy {
+        constructor(properties?: proto.TestDummy.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        bool_value: boolean;
+        created_at?: (google.protobuf.Timestamp.$Properties|null);
+        enum_test: proto.TestDummyEnumTestEnum;
+        float_value: number;
+        game?: (proto.Game.$Properties|null);
+        integer_array: number[];
+        integer_value: number;
+        name: string;
+        new_integer_value: number;
+        private: boolean;
+        slug: string;
+        string_array: string[];
+        test_dummies: proto.TestDummy.$Properties[];
+        test_dummy?: (proto.TestDummy.$Properties|null);
+        updated_at?: (google.protobuf.Timestamp.$Properties|null);
+        url: string;
+        checksum: string;
+        static getTypeUrl(prefix?: string): string;
+    }
+
+    namespace TestDummy {
+        interface $Properties {
+            id?: (number|null);
+            bool_value?: (boolean|null);
+            created_at?: (google.protobuf.Timestamp.$Properties|null);
+            enum_test?: (proto.TestDummyEnumTestEnum|null);
+            float_value?: (number|null);
+            game?: (proto.Game.$Properties|null);
+            integer_array?: (number[]|null);
+            integer_value?: (number|null);
+            name?: (string|null);
+            new_integer_value?: (number|null);
+            "private"?: (boolean|null);
+            slug?: (string|null);
+            string_array?: (string[]|null);
+            test_dummies?: (proto.TestDummy.$Properties[]|null);
+            test_dummy?: (proto.TestDummy.$Properties|null);
+            updated_at?: (google.protobuf.Timestamp.$Properties|null);
+            url?: (string|null);
+            checksum?: (string|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.TestDummy.$Properties;
     }
 
     enum TestDummyEnumTestEnum {
@@ -2966,96 +4438,144 @@ export namespace proto {
         ENUM2 = 2
     }
 
-    interface IThemeResult {
-        themes?: (proto.ITheme[]|null);
+    interface IThemeResult extends proto.ThemeResult.$Properties {
     }
 
-    class ThemeResult implements IThemeResult {
-        constructor(properties?: proto.IThemeResult);
-        public themes: proto.ITheme[];
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    class ThemeResult {
+        constructor(properties?: proto.ThemeResult.$Properties);
+        $unknowns?: Uint8Array[];
+        themes: proto.Theme.$Properties[];
+        static getTypeUrl(prefix?: string): string;
     }
 
-    interface ITheme {
-        id?: (number|null);
-        created_at?: (number|null);
-        name?: (string|null);
-        slug?: (string|null);
-        updated_at?: (number|null);
-        url?: (string|null);
-        checksum?: (string|null);
+    namespace ThemeResult {
+        interface $Properties {
+            themes?: (proto.Theme.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.ThemeResult.$Properties;
     }
 
-    class Theme implements ITheme {
-        constructor(properties?: proto.ITheme);
-        public id: number;
-        public created_at?: (number|null);
-        public name: string;
-        public slug: string;
-        public updated_at?: (number|null);
-        public url: string;
-        public checksum: string;
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    interface ITheme extends proto.Theme.$Properties {
     }
 
-    interface IWebsiteResult {
-        websites?: (proto.IWebsite[]|null);
+    class Theme {
+        constructor(properties?: proto.Theme.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        created_at?: (google.protobuf.Timestamp.$Properties|null);
+        name: string;
+        slug: string;
+        updated_at?: (google.protobuf.Timestamp.$Properties|null);
+        url: string;
+        checksum: string;
+        static getTypeUrl(prefix?: string): string;
     }
 
-    class WebsiteResult implements IWebsiteResult {
-        constructor(properties?: proto.IWebsiteResult);
-        public websites: proto.IWebsite[];
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    namespace Theme {
+        interface $Properties {
+            id?: (number|null);
+            created_at?: (google.protobuf.Timestamp.$Properties|null);
+            name?: (string|null);
+            slug?: (string|null);
+            updated_at?: (google.protobuf.Timestamp.$Properties|null);
+            url?: (string|null);
+            checksum?: (string|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.Theme.$Properties;
     }
 
-    interface IWebsite {
-        id?: (number|null);
-        category?: (proto.WebsiteCategoryEnum|null);
-        game?: (proto.IGame|null);
-        trusted?: (boolean|null);
-        url?: (string|null);
-        checksum?: (string|null);
-        type?: (proto.IWebsiteType|null);
+    interface IWebsiteResult extends proto.WebsiteResult.$Properties {
     }
 
-    class Website implements IWebsite {
-        constructor(properties?: proto.IWebsite);
-        public id: number;
-        public category: proto.WebsiteCategoryEnum;
-        public game?: (proto.IGame|null);
-        public trusted: boolean;
-        public url: string;
-        public checksum: string;
-        public type?: (proto.IWebsiteType|null);
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    class WebsiteResult {
+        constructor(properties?: proto.WebsiteResult.$Properties);
+        $unknowns?: Uint8Array[];
+        websites: proto.Website.$Properties[];
+        static getTypeUrl(prefix?: string): string;
     }
 
-    interface IWebsiteTypeResult {
-        websitetypes?: (proto.IWebsiteType[]|null);
+    namespace WebsiteResult {
+        interface $Properties {
+            websites?: (proto.Website.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.WebsiteResult.$Properties;
     }
 
-    class WebsiteTypeResult implements IWebsiteTypeResult {
-        constructor(properties?: proto.IWebsiteTypeResult);
-        public websitetypes: proto.IWebsiteType[];
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    interface IWebsite extends proto.Website.$Properties {
     }
 
-    interface IWebsiteType {
-        id?: (number|null);
-        type?: (string|null);
-        created_at?: (number|null);
-        updated_at?: (number|null);
-        checksum?: (string|null);
+    class Website {
+        constructor(properties?: proto.Website.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        category: proto.WebsiteCategoryEnum;
+        game?: (proto.Game.$Properties|null);
+        trusted: boolean;
+        url: string;
+        checksum: string;
+        type?: (proto.WebsiteType.$Properties|null);
+        static getTypeUrl(prefix?: string): string;
     }
 
-    class WebsiteType implements IWebsiteType {
-        constructor(properties?: proto.IWebsiteType);
-        public id: number;
-        public type: string;
-        public created_at?: (number|null);
-        public updated_at?: (number|null);
-        public checksum: string;
-        public static getTypeUrl(typeUrlPrefix?: string): string;
+    namespace Website {
+        interface $Properties {
+            id?: (number|null);
+            category?: (proto.WebsiteCategoryEnum|null);
+            game?: (proto.Game.$Properties|null);
+            trusted?: (boolean|null);
+            url?: (string|null);
+            checksum?: (string|null);
+            type?: (proto.WebsiteType.$Properties|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.Website.$Properties;
+    }
+
+    interface IWebsiteTypeResult extends proto.WebsiteTypeResult.$Properties {
+    }
+
+    class WebsiteTypeResult {
+        constructor(properties?: proto.WebsiteTypeResult.$Properties);
+        $unknowns?: Uint8Array[];
+        websitetypes: proto.WebsiteType.$Properties[];
+        static getTypeUrl(prefix?: string): string;
+    }
+
+    namespace WebsiteTypeResult {
+        interface $Properties {
+            websitetypes?: (proto.WebsiteType.$Properties[]|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.WebsiteTypeResult.$Properties;
+    }
+
+    interface IWebsiteType extends proto.WebsiteType.$Properties {
+    }
+
+    class WebsiteType {
+        constructor(properties?: proto.WebsiteType.$Properties);
+        $unknowns?: Uint8Array[];
+        id: number;
+        type: string;
+        created_at?: (google.protobuf.Timestamp.$Properties|null);
+        updated_at?: (google.protobuf.Timestamp.$Properties|null);
+        checksum: string;
+        static getTypeUrl(prefix?: string): string;
+    }
+
+    namespace WebsiteType {
+        interface $Properties {
+            id?: (number|null);
+            type?: (string|null);
+            created_at?: (google.protobuf.Timestamp.$Properties|null);
+            updated_at?: (google.protobuf.Timestamp.$Properties|null);
+            checksum?: (string|null);
+            $unknowns?: Uint8Array[];
+        }
+        type $Shape = proto.WebsiteType.$Properties;
     }
 }
 
@@ -3063,16 +4583,24 @@ export namespace google {
 
     namespace protobuf {
 
-        interface ITimestamp {
-            seconds?: (number|null);
-            nanos?: (number|null);
+        interface ITimestamp extends google.protobuf.Timestamp.$Properties {
         }
 
-        class Timestamp implements ITimestamp {
-            constructor(properties?: number);
-            public seconds: number;
-            public nanos: number;
-            public static getTypeUrl(typeUrlPrefix?: string): string;
+        class Timestamp {
+            constructor(properties?: google.protobuf.Timestamp.$Properties);
+            $unknowns?: Uint8Array[];
+            seconds: number;
+            nanos: number;
+            static getTypeUrl(prefix?: string): string;
+        }
+
+        namespace Timestamp {
+            interface $Properties {
+                seconds?: (number|null);
+                nanos?: (number|null);
+                $unknowns?: Uint8Array[];
+            }
+            type $Shape = google.protobuf.Timestamp.$Properties;
         }
     }
 }
